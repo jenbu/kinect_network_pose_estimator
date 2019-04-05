@@ -1,0 +1,8 @@
+prefix=/home/erlendb/Programmering/Master/test_ws/install
+
+Name: cloud_segmentation
+Description: Description of cloud_segmentation
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/erlendb/Programmering/Master/test_ws/install/lib 
+Requires: 

@@ -1,0 +1,2 @@
+cloud_segmentation:darknet_ros/darknet_ros:darknet_ros/darknet_ros_msgs
+-DCATKIN_DEVEL_PREFIX=/home/erlendb/Programmering/Master/test_ws/devel -DCMAKE_INSTALL_PREFIX=/home/erlendb/Programmering/Master/test_ws/install -G Unix Makefiles
