@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/erlendb/Programmering/Master/test_ws/src/pose_estimator/cmake-build-debug/devel/setup.sh

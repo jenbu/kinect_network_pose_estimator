@@ -124,7 +124,6 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/erlendb/Programmering/Master/test_ws/src/cmake-build-debug/gtest/cmake_install.cmake")
   include("/home/erlendb/Programmering/Master/test_ws/src/cmake-build-debug/darknet_ros/darknet_ros_msgs/cmake_install.cmake")
   include("/home/erlendb/Programmering/Master/test_ws/src/cmake-build-debug/darknet_ros/darknet_ros/cmake_install.cmake")
-  include("/home/erlendb/Programmering/Master/test_ws/src/cmake-build-debug/cloud_segmentation/cmake_install.cmake")
 
 endif()
 

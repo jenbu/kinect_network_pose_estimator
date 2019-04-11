@@ -1,0 +1,8 @@
+prefix=/home/erlendb/Programmering/Master/test_ws/devel
+
+Name: eb_darknet
+Description: Description of eb_darknet
+Version: 1.1.4
+Cflags: -I/home/erlendb/Programmering/Master/test_ws/src/yolo_eb/darknet_ros/darknet_ros/include -I/usr/include
+Libs: -L/home/erlendb/Programmering/Master/test_ws/devel/lib -leb_darknet_lib /usr/lib/x86_64-linux-gnu/libboost_thread.so -l-lpthread /usr/lib/x86_64-linux-gnu/libboost_chrono.so /usr/lib/x86_64-linux-gnu/libboost_system.so /usr/lib/x86_64-linux-gnu/libboost_date_time.so /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+Requires: cv_bridge roscpp actionlib rospy std_msgs darknet_ros_msgs_eb image_transport

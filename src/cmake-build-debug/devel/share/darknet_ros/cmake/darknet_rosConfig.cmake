@@ -67,7 +67,7 @@ set(darknet_ros_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(darknet_ros_SOURCE_PREFIX /home/erlendb/Programmering/Master/test_ws/src/darknet_ros/darknet_ros)
+  set(darknet_ros_SOURCE_PREFIX /home/erlendb/Programmering/Master/test_ws/src/yolo_eb/darknet_ros/darknet_ros)
   set(darknet_ros_DEVEL_PREFIX /home/erlendb/Programmering/Master/test_ws/src/cmake-build-debug/devel)
   set(darknet_ros_INSTALL_PREFIX "")
   set(darknet_ros_PREFIX ${darknet_ros_DEVEL_PREFIX})
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(darknet_ros_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/erlendb/Programmering/Master/test_ws/src/darknet_ros/darknet_ros/include;/usr/include " STREQUAL " ")
+if(NOT "/home/erlendb/Programmering/Master/test_ws/src/yolo_eb/darknet_ros/darknet_ros/include;/usr/include " STREQUAL " ")
   set(darknet_ros_INCLUDE_DIRS "")
-  set(_include_dirs "/home/erlendb/Programmering/Master/test_ws/src/darknet_ros/darknet_ros/include;/usr/include")
+  set(_include_dirs "/home/erlendb/Programmering/Master/test_ws/src/yolo_eb/darknet_ros/darknet_ros/include;/usr/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "https://github.com/leggedrobotics/darknet_ros " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/erlendb/Programmering/Master/test_ws/src/darknet_ros/darknet_ros/i
         message(FATAL_ERROR "Project 'darknet_ros' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'darknet_ros' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/erlendb/Programmering/Master/test_ws/src/darknet_ros/darknet_ros/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'darknet_ros' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/erlendb/Programmering/Master/test_ws/src/yolo_eb/darknet_ros/darknet_ros/${idir}'.  ${_report}")
     endif()
     _list_append_unique(darknet_ros_INCLUDE_DIRS ${include})
   endforeach()
@@ -160,7 +160,7 @@ foreach(t ${darknet_ros_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "cv_bridge;roscpp;actionlib;rospy;std_msgs;darknet_ros_msgs;image_transport")
+set(depends "cv_bridge;roscpp;actionlib;rospy;std_msgs;darknet_ros_msgs_eb;image_transport")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls

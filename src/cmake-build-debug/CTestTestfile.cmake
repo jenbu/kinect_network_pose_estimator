@@ -7,4 +7,3 @@
 subdirs("gtest")
 subdirs("darknet_ros/darknet_ros_msgs")
 subdirs("darknet_ros/darknet_ros")
-subdirs("cloud_segmentation")

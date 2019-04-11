@@ -1,0 +1,8 @@
+prefix=/home/erlendb/Programmering/Master/test_ws/devel
+
+Name: darknet_ros_msgs_eb
+Description: Description of darknet_ros_msgs_eb
+Version: 1.1.4
+Cflags: -I/home/erlendb/Programmering/Master/test_ws/devel/include
+Libs: -L/home/erlendb/Programmering/Master/test_ws/devel/lib 
+Requires: actionlib_msgs geometry_msgs sensor_msgs message_runtime std_msgs
