@@ -19,8 +19,6 @@
 #include <darknet_ros_msgs_eb/BoundingBox.h>
 #include <darknet_ros_msgs_eb/BoundingBoxes.h>
 
-#include <../pose_estimator.cpp>
-
 
 #include <pcl/point_cloud.h>
 #include <pcl/point_types.h>
@@ -29,6 +27,8 @@
 #include <pcl/visualization/cloud_viewer.h>
 #include <pcl/filters/statistical_outlier_removal.h>
 #include <pcl/filters/voxel_grid.h>
+#include <pcl/common/transforms.h>
+
 
 #include <message_filters/subscriber.h>
 #include <message_filters/time_synchronizer.h>
@@ -51,7 +51,7 @@ class Receiver
 private:
     std::mutex lock;
     bool running, save, running_viewers;
-    bool updateImage, updateCloud;
+    bool updateImage[6], updateCloud[6];
     size_t frame;
 
     ros::NodeHandle nh;
@@ -59,13 +59,18 @@ private:
 
     ros::AsyncSpinner spinner;
 
-    cv::Mat color_image, depth_image;
-    cv::Mat cameraMatrixColor, cameraMatrixDepth;
-    cv::Mat lookupX, lookupY;
+    cv::Mat color_image[6], depth_image[6];
+    cv::Mat cameraMatrixColor[6], cameraMatrixDepth[6];
+    cv::Mat lookupX[6], lookupY[6];
 
-    darknet_ros_msgs_eb::BoundingBoxes detection_inf;
+    darknet_ros_msgs_eb::BoundingBoxes detection_inf[6];
 
-    pcl::PointCloud<pcl::PointXYZRGBA>::Ptr cloud, box_cloud, pin_cloud;
+    //Transformation matrix
+    Eigen::Matrix4f to_world_matrix[6];
+    Eigen::Matrix4f j2_toworld = Eigen::Matrix4f::Identity(); Eigen::Matrix4f j3_toworld = Eigen::Matrix4f::Identity();
+
+    pcl::PointCloud<pcl::PointXYZRGBA>::Ptr cloud[6], box_cloud[6], pin_cloud[6];
+    pcl::PointCloud<pcl::PointXYZRGBA>::Ptr cloud_world[6], box_cloud_world[6], pin_cloud_world[6];
     pcl::PointCloud<pcl::PointNormal>::Ptr cloud_normal, aligned_boxEnd, filtered_cloud, segmented;
     pcl::PCDWriter writer;
     pcl::PLYReader reader;
@@ -81,10 +86,14 @@ private:
 
 public:
     Receiver() :
-            running(false), updateImage(false), updateCloud(false), nh("a"), spinner(0), running_viewers(true)
+            running(false), nh("a"), spinner(0), running_viewers(true)
     {
-        cameraMatrixColor = cv::Mat::zeros(3, 3, CV_64F);
-        cameraMatrixDepth = cv::Mat::zeros(3, 3, CV_64F);
+        for(int i = 0; i < 6; i++)
+        {
+            cameraMatrixColor[i] = cv::Mat::zeros(3, 3, CV_64F);
+            cameraMatrixDepth[i] = cv::Mat::zeros(3, 3, CV_64F);
+        }
+
     }
 
     ~Receiver()
@@ -111,22 +120,38 @@ private:
         running = true;
         save = false;
 
-        bool bridge_source = true;
+        for(int i= 0; i < 6; i++)
+        {
+            updateCloud[i] = false;
+            updateImage[i] = false;
+        }
 
 
-
-
-
-        message_filters::Subscriber<Image> image_color_sub(nh, "/jetson2/qhd/image_color", 1);
-        message_filters::Subscriber<CameraInfo> info_color_sub(nh, "/jetson2/sd/camera_info", 1);
-        message_filters::Subscriber<Image> image_depth_sub(nh, "/jetson2/sd/image_depth", 1);
-        message_filters::Subscriber<CameraInfo> info_depth_sub(nh, "/jetson2/sd/camera_info", 1);
-        message_filters::Subscriber<darknet_ros_msgs_eb::BoundingBoxes> bounding_boxes_j2(nh, "/jetson2/bounding_boxes", 1);
         typedef message_filters::sync_policies::ApproximateTime<Image, CameraInfo, Image, CameraInfo, darknet_ros_msgs_eb::BoundingBoxes> ApproxSyncPolicy;
-        message_filters::Synchronizer<ApproxSyncPolicy> *syncApprox;
 
-        syncApprox = new message_filters::Synchronizer<ApproxSyncPolicy>(ApproxSyncPolicy(5), image_color_sub, info_color_sub, image_depth_sub, info_depth_sub, bounding_boxes_j2);
-        syncApprox->registerCallback(boost::bind(&Receiver::callback, this, _1, _2, _3, _4, _5));
+
+        message_filters::Subscriber<Image> image_color_sub_j2(nh, "/jetson2/qhd/image_color", 1);
+        message_filters::Subscriber<CameraInfo> info_color_sub_j2(nh, "/jetson2/sd/camera_info", 1);
+        message_filters::Subscriber<Image> image_depth_sub_j2(nh, "/jetson2/sd/image_depth", 1);
+        message_filters::Subscriber<CameraInfo> info_depth_sub_j2(nh, "/jetson2/sd/camera_info", 1);
+        message_filters::Subscriber<darknet_ros_msgs_eb::BoundingBoxes> bounding_boxes_j2(nh, "/jetson2/bounding_boxes", 1);
+
+        message_filters::Synchronizer<ApproxSyncPolicy> *syncApprox_j2;
+        syncApprox_j2 = new message_filters::Synchronizer<ApproxSyncPolicy>(ApproxSyncPolicy(5), image_color_sub_j2, info_color_sub_j2, image_depth_sub_j2, info_depth_sub_j2, bounding_boxes_j2);
+        syncApprox_j2->registerCallback(boost::bind(&Receiver::callback, this, _1, _2, _3, _4, _5, 1));
+
+        message_filters::Subscriber<Image> image_color_sub_j3(nh, "/jetson3/qhd/image_color", 1);
+        message_filters::Subscriber<CameraInfo> info_color_sub_j3(nh, "/jetson3/sd/camera_info", 1);
+        message_filters::Subscriber<Image> image_depth_sub_j3(nh, "/jetson3/sd/image_depth", 1);
+        message_filters::Subscriber<CameraInfo> info_depth_sub_j3(nh, "/jetson3/sd/camera_info", 1);
+        message_filters::Subscriber<darknet_ros_msgs_eb::BoundingBoxes> bounding_boxes_j3(nh, "/jetson3/bounding_boxes", 1);
+
+        message_filters::Synchronizer<ApproxSyncPolicy> *syncApprox_j3;
+        syncApprox_j3 = new message_filters::Synchronizer<ApproxSyncPolicy>(ApproxSyncPolicy(5), image_color_sub_j3, info_color_sub_j3, image_depth_sub_j3, info_depth_sub_j3, bounding_boxes_j3);
+        syncApprox_j3->registerCallback(boost::bind(&Receiver::callback, this, _1, _2, _3, _4, _5, 2));
+
+
+        //message_filters::Synchronizer<ApproxSyncPolicy> *syncApprox;
 
         //TimeSynchronizer</*Image,*/ CameraInfo, Image, CameraInfo/*, darknet_ros_msgs::BoundingBoxes*/> sync(/*image_color_sub,*/ info_color_sub, image_depth_sub,  info_depth_sub, /*bounding_boxes_j2,*/ 10);
         //sync.registerCallback(boost::bind(&Receiver::callback, this, _1, _2, _3/*, _4, _5*/));
@@ -134,12 +159,14 @@ private:
         std::chrono::milliseconds duration(1);
 
 
+        initKinectToWorldTransMatrices(to_world_matrix[1], to_world_matrix[2]);
+
 
 
         spinner.start();
 
         //sover helt til man får tak i data fra publishere
-        while (!updateImage || !updateCloud) {
+        while (!updateImage[1] || !updateCloud[1] || !updateImage[2] || !updateCloud[2]) {
             if (!ros::ok()) {
                 return;
             }
@@ -147,41 +174,51 @@ private:
             std::this_thread::sleep_for(duration);
         }
         cout << "får messeges" << endl;
-        cloud = pcl::PointCloud<pcl::PointXYZRGBA>::Ptr(new pcl::PointCloud<pcl::PointXYZRGBA>());
-        box_cloud = pcl::PointCloud<pcl::PointXYZRGBA>::Ptr(new pcl::PointCloud<pcl::PointXYZRGBA>());
-        pin_cloud = pcl::PointCloud<pcl::PointXYZRGBA>::Ptr(new pcl::PointCloud<pcl::PointXYZRGBA>());
+
+        for(int i = 0; i < 6; i++)
+        {
+            updateCloud[i] = false;
+            updateImage[i] = false;
+
+            cloud[i] = pcl::PointCloud<pcl::PointXYZRGBA>::Ptr(new pcl::PointCloud<pcl::PointXYZRGBA>());
+            box_cloud[i] = pcl::PointCloud<pcl::PointXYZRGBA>::Ptr(new pcl::PointCloud<pcl::PointXYZRGBA>());
+            pin_cloud[i] = pcl::PointCloud<pcl::PointXYZRGBA>::Ptr(new pcl::PointCloud<pcl::PointXYZRGBA>());
+            cloud_world[i] = pcl::PointCloud<pcl::PointXYZRGBA>::Ptr(new pcl::PointCloud<pcl::PointXYZRGBA>());
+            box_cloud_world[i] = pcl::PointCloud<pcl::PointXYZRGBA>::Ptr(new pcl::PointCloud<pcl::PointXYZRGBA>());
+            pin_cloud_world[i] = pcl::PointCloud<pcl::PointXYZRGBA>::Ptr(new pcl::PointCloud<pcl::PointXYZRGBA>());
 
 
-        cloud->height = color_image.rows;
-        cloud->width = color_image.cols;
-        cloud->is_dense = false;
-        cloud->points.resize(cloud->height*cloud->width);
-        box_cloud->height = depth_image.rows;
-        box_cloud->width = depth_image.cols;
-        box_cloud->is_dense = false;
-        box_cloud->points.resize(box_cloud->height*box_cloud->width);
+            cloud[i]->height = color_image[i].rows;
+            cloud[i]->width = color_image[i].cols;
+            cloud[i]->is_dense = false;
+            cloud[i]->points.resize(cloud[i]->height*cloud[i]->width);
+            box_cloud[i]->height = depth_image[i].rows;
+            box_cloud[i]->width = depth_image[i].cols;
+            box_cloud[i]->is_dense = false;
+            box_cloud[i]->points.resize(box_cloud[i]->height*box_cloud[i]->width);
+            pin_cloud[i]->height = depth_image[i].rows;
+            pin_cloud[i]->width = depth_image[i].cols;
+            pin_cloud[i]->is_dense = false;
+            pin_cloud[i]->points.resize(pin_cloud[i]->height*pin_cloud[i]->width);
 
-        pin_cloud->height = depth_image.rows;
-        pin_cloud->width = depth_image.cols;
-        pin_cloud->is_dense = false;
-        pin_cloud->points.resize(pin_cloud->height*pin_cloud->width);
 
+        }
 
-        createLookup(this->color_image.cols, this->color_image.rows);
+        createLookup(this->color_image[1].cols, this->color_image[1].rows);
 
         cloudViewer();
 
     }
 
     void callback(const sensor_msgs::Image::ConstPtr &img_color, const sensor_msgs::CameraInfo::ConstPtr info_color, const sensor_msgs::Image::ConstPtr &img_depth,
-                  const sensor_msgs::CameraInfo::ConstPtr info_depth, const darknet_ros_msgs_eb::BoundingBoxes::ConstPtr det_info)
+                  const sensor_msgs::CameraInfo::ConstPtr info_depth, const darknet_ros_msgs_eb::BoundingBoxes::ConstPtr det_info, int jetson_index)
     {
-        //cout << "hei" << endl;
+        cout << "Jetson" << jetson_index << " callback" << endl;
         cv::Mat color, depth;
         cv::Mat color_cropped, depth_cropped;
 
-        readCameraInfo(info_color, cameraMatrixColor);
-        readCameraInfo(info_depth, cameraMatrixDepth);
+        readCameraInfo(info_color, cameraMatrixColor[jetson_index]);
+        readCameraInfo(info_depth, cameraMatrixDepth[jetson_index]);
 
         readImage(img_color, color);
         readImage(img_depth, depth);
@@ -195,43 +232,64 @@ private:
         }
 
 
-
         lock.lock();
-        this->color_image = color;
-        this->depth_image = depth;
-        this->detection_inf = *det_info;
-        updateImage = true;
-        updateCloud = true;
+        this->color_image[jetson_index] = color;
+        this->depth_image[jetson_index] = depth;
+        this->detection_inf[jetson_index] = *det_info;
+        updateImage[jetson_index] = true;
+        updateCloud[jetson_index] = true;
         lock.unlock();
 
     }
 
     void cloudViewer()
     {
-        darknet_ros_msgs_eb::BoundingBoxes det_inf;
-        cv::Mat color, depth;
+        darknet_ros_msgs_eb::BoundingBoxes det_inf[6];
+        cv::Mat color[6], depth[6];
         CvPoint p1, p2;
+        ostringstream os;
 
         pcl::PointCloud<pcl::PointXYZRGBA>::Ptr filtered_cloud(new pcl::PointCloud<pcl::PointXYZRGBA>());
-        pcl::visualization::PCLVisualizer::Ptr visualizer(new pcl::visualization::PCLVisualizer("Cloud viewer"));
-        const std::string cloudName = "rendered";
+        pcl::visualization::PCLVisualizer::Ptr visualizer(new pcl::visualization::PCLVisualizer("Visualizer"));
+        std::string box_cloudName[6];
+        std::string cloud_name[6];
+        std::string pin_cloudName[6];
 
         lock.lock();
-        color = this->color_image;
-        depth = this->depth_image;
-        det_inf = this->detection_inf;
-        updateCloud = false;
-        updateImage = false;
+        for(int i = 1; i < 3; i++)
+        {
+            color[i] = this->color_image[i];
+            depth[i] = this->depth_image[i];
+            det_inf[i] = this->detection_inf[i];
+            updateCloud[i] = false;
+            updateImage[i] = false;
+        }
         lock.unlock();
 
-        createCloud(depth, color, box_cloud, pin_cloud, cloud, det_inf);
-        visualizer->addPointCloud(cloud, ColorHandlerT(cloud, 255.0, 255.0, 255.0) ,"Full cloud");
-        visualizer->addPointCloud(box_cloud, ColorHandlerT(cloud, 0.0, 255.0, 0.0), cloudName);
-        visualizer->addPointCloud(pin_cloud, ColorHandlerT(cloud, 255.0, 0.0, 0.0), "pin");
-        visualizer->setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 1, cloudName);
+        //cv::imshow("abc", color[1]);
+        //cv::waitKey(3000);
+        for(int i = 1; i < 3; i++)
+        {
+            createCloud(depth[i], color[i], box_cloud[i], pin_cloud[i], cloud[i], det_inf[i], i);
+            os << "Cloud" << i;  cloud_name[i] = os.str(); os.str(std::string());
+            os << "Box-Cloud" << i; box_cloudName[i] = os.str(); os.str(std::string());
+            os << "Pin-Cloud" << i; pin_cloudName[i] = os.str(); os.str(std::string());
+            cout << "cloud_name: " << cloud_name[i] << " box_cloudName: " << box_cloudName[i] << " pin_cloudName: " << pin_cloudName[i] << endl;
+            visualizer->addPointCloud(cloud_world[i], ColorHandlerT(cloud_world[i], 255.0, 255.0, 255.0), cloud_name[i]);
+            //visualizer->addPointCloud(box_cloud[i], ColorHandlerT(box_cloud[i], 0.0, 255.0, 0.0), box_cloudName[i]);
+            //visualizer->addPointCloud(pin_cloud[i], ColorHandlerT(pin_cloud[i], 255.0, 0.0, 0.0), pin_cloudName[i]);
+        }
+
+        /*createCloud(depth[1], color[1], box_cloud[1], pin_cloud[1], cloud[1], det_inf[1], 1);
+        visualizer->addPointCloud(cloud[1], ColorHandlerT(cloud[1], 255.0, 255.0, 255.0), "Cloud");
+        visualizer->addPointCloud(box_cloud[1], ColorHandlerT(box_cloud[1], 0.0, 255.0, 0.0), "Box-end");
+        visualizer->addPointCloud(pin_cloud[1], ColorHandlerT(pin_cloud[1], 255.0, 0.0, 0.0), "Pin-end");
+        */
+
+        //visualizer->setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 1, "Visualizer");
         visualizer->initCameraParameters();
         visualizer->setBackgroundColor(0, 0, 0);
-        visualizer->setSize(color.cols, color.rows);
+        //visualizer->setSize(color[1].cols, color[1].rows);
         visualizer->setShowFPS(true);
         visualizer->setCameraPosition(0, 0, 0, 0, -1, 0);
         visualizer->registerKeyboardCallback(&Receiver::keyboardEvent, *this);
@@ -239,38 +297,47 @@ private:
 
         while(running && ros::ok())
         {
-            if(updateCloud && updateImage)
+            if(updateCloud[1] && updateCloud[2])
             {
                 lock.lock();
-                color = this->color_image;
-                depth = this->depth_image;
-                det_inf = this->detection_inf;
-                updateCloud = false;
-                updateImage = false;
+                for(int i = 1; i < 3; i++)
+                {
+                    color[i] = this->color_image[i];
+                    depth[i] = this->depth_image[i];
+                    det_inf[i] = this->detection_inf[i];
+                    updateCloud[i] = false;
+                    updateImage[i] = false;
+                }
                 lock.unlock();
-
-                //QHD_WIDTH_DZ += 1;
-                //IR_HEIGHT_DZ += 1;
+                cout << "inni i loop" << endl;
 
                 cout << "QHD DZ:" <<QHD_WIDTH_DZ << endl;
                 cout << "IR DZ:" << IR_HEIGHT_DZ << endl;
 
-                createCloud(depth, color, box_cloud, pin_cloud, cloud, det_inf);
-                //filter_cloud(cloud, filtered_cloud);
-                visualizer->updatePointCloud(cloud, ColorHandlerT(cloud, 255.0, 255.0, 255.0) ,"Full cloud");
-                visualizer->updatePointCloud(box_cloud, ColorHandlerT(cloud, 0.0, 255.0, 0.0), cloudName);
-                visualizer->updatePointCloud(pin_cloud, ColorHandlerT(cloud, 255.0, 0.0, 0.0), "pin");
-
-                for(int i = 0; i < det_inf.bounding_boxes.size(); i++)
+                for(int i = 1; i < 3; i++)
                 {
-                    p1.x = det_inf.bounding_boxes[i].xmin; p1.y = det_inf.bounding_boxes[i].ymin;
-                    p2.x = det_inf.bounding_boxes[i].xmax; p2.y = det_inf.bounding_boxes[i].ymax;
-                    cv::rectangle(color, p1, p2, (255.0, 0.0, 0.0));
-                    cv::putText(color, det_inf.bounding_boxes[i].Class, p1, cv::FONT_HERSHEY_PLAIN, 0.5, (255.0, 255.0, 255.0));
+                    createCloud(depth[i], color[i], box_cloud[i], pin_cloud[i], cloud[i], det_inf[i], i);
+                    visualizer->updatePointCloud(cloud_world[i], ColorHandlerT(cloud_world[i], 255.0, 255.0, 255.0), cloud_name[i]);
+                    //visualizer->updatePointCloud(box_cloud[i], ColorHandlerT(box_cloud[i], 0.0, 255.0, 0.0), box_cloudName[i]);
+                    //visualizer->updatePointCloud(pin_cloud[i], ColorHandlerT(pin_cloud[i], 255.0, 0.0, 0.0), pin_cloudName[i]);
+                }
+
+                /*createCloud(depth[1], color[1], box_cloud[1], pin_cloud[1], cloud[1], det_inf[1], 1);
+                visualizer->updatePointCloud(cloud[1], ColorHandlerT(cloud[1], 255.0, 255.0, 255.0), "Cloud");
+                visualizer->updatePointCloud(box_cloud[1], ColorHandlerT(box_cloud[1], 0.0, 255.0, 0.0), "Box-end");
+                visualizer->updatePointCloud(pin_cloud[1], ColorHandlerT(pin_cloud[1], 255.0, 0.0, 0.0), "Pin-end");
+                */
+
+                for(int i = 0; i < det_inf[1].bounding_boxes.size(); i++)
+                {
+                    p1.x = det_inf[1].bounding_boxes[i].xmin; p1.y = det_inf[1].bounding_boxes[i].ymin;
+                    p2.x = det_inf[1].bounding_boxes[i].xmax; p2.y = det_inf[1].bounding_boxes[i].ymax;
+                    cv::rectangle(color[1], p1, p2, (255.0, 0.0, 0.0));
+                    cv::putText(color[1], det_inf[1].bounding_boxes[i].Class, p1, cv::FONT_HERSHEY_PLAIN, 0.5, (255.0, 255.0, 255.0));
 
                 }
 
-                cv::imshow("ROI detector", color);
+                cv::imshow("ROI detector", color[1]);
                 //cv::imshow("depth", depth);
 
             }
@@ -290,7 +357,7 @@ private:
     }
 
     void createCloud(const cv::Mat &depth, const cv::Mat &color, pcl::PointCloud<pcl::PointXYZRGBA>::Ptr &cloud_box, pcl::PointCloud<pcl::PointXYZRGBA>::Ptr &cloud_pin,
-            pcl::PointCloud<pcl::PointXYZRGBA>::Ptr &cloud, const darknet_ros_msgs_eb::BoundingBoxes &det_inf) const
+            pcl::PointCloud<pcl::PointXYZRGBA>::Ptr &cloud, const darknet_ros_msgs_eb::BoundingBoxes &det_inf, int index) const
     {
 
         //cout << det_inf.bounding_boxes[0] << endl;
@@ -306,6 +373,8 @@ private:
         cloud_pin->resize((size_t)depth.cols*depth.rows);
         cloud->clear();
         cloud->resize((size_t)depth.cols*depth.rows);
+        cloud_world[index]->clear();
+        cloud_world[index]->resize((size_t)depth.cols*depth.rows);
         int width;
         pcl::PointXYZRGBA *itP;
         cv::Vec3b color_pixel;
@@ -349,8 +418,8 @@ private:
                     else if(det_inf.bounding_boxes[t].Class == "pin-end")
                         itP = &cloud_pin->points[r * width];
 
-                    const float y = lookupY.at<float>(0, r);
-                    const float *itX = lookupX.ptr<float>();
+                    const float y = lookupY[index].at<float>(0, r);
+                    const float *itX = lookupX[index].ptr<float>();
 
                     for(int i = 0; i < c_min; i++)
                         itX++;
@@ -392,8 +461,8 @@ private:
             itP = &cloud->points[r * depth.cols];
 
 
-            const float y = lookupY.at<float>(0, r);
-            const float *itX = lookupX.ptr<float>();
+            const float y = lookupY[index].at<float>(0, r);
+            const float *itX = lookupX[index].ptr<float>();
 
 
             for(size_t c = 0; c < depth.cols; ++c, ++itP, ++itX)
@@ -422,8 +491,15 @@ private:
             }
         }
 
-
-
+        pcl::transformPointCloud(*cloud, *cloud_world[index], to_world_matrix[index]);
+        //pcl::transformPointCloud(*cloud_pin, *pin_cloud_world[index], to_world_matrix[index]);
+        //pcl::transformPointCloud(*cloud_box, *box_cloud[index], to_world_matrix[index]);
+        /*for(int i = 0; i < cloud->points.size(); i++)
+        {
+            cloud_world[index]->points[i].x = cloud->points[i].x - to_world_matrix[index](0,3);
+            cloud_world[index]->points[i].y = cloud->points[i].y - to_world_matrix[index](1,3);
+            cloud_world[index]->points[i].z = cloud->points[i].z - to_world_matrix[index](2,3);
+        }*/
 
     }
 
@@ -431,10 +507,10 @@ private:
     {
         x1 -= QHD_WIDTH_DZ; x2 -= QHD_WIDTH_DZ;
 
-        double qhd_height = this->color_image.rows;
-        double qhd_width = this->color_image.cols-2*QHD_WIDTH_DZ;
-        double sd_height = this->depth_image.rows-2*IR_HEIGHT_DZ; //pga IR kamera er høyere enn hd kameraet
-        double sd_width = this->depth_image.cols;
+        double qhd_height = this->color_image[1].rows;
+        double qhd_width = this->color_image[1].cols-2*QHD_WIDTH_DZ;
+        double sd_height = this->depth_image[1].rows-2*IR_HEIGHT_DZ; //pga IR kamera er høyere enn hd kameraet
+        double sd_width = this->depth_image[1].cols;
 
         double width_factor = sd_width/qhd_width;
         double height_factor = sd_height/qhd_height;
@@ -464,27 +540,32 @@ private:
 
     void createLookup(size_t width, size_t height)
     {
-        //fx og fy er focal lengde, lengde/piksel. er begge like har man helt kvadratisk bilde.
-        const float fx = 1.0f / cameraMatrixColor.at<double>(0,0);
-        const float fy = 1.0f / cameraMatrixColor.at<double>(1,1);
-        //Principal point cx og cy sier hvor på bilde-planet pinhole treffer.
-        const float cx = cameraMatrixColor.at<double>(0,2);
-        const float cy = cameraMatrixColor.at<double>(1,2);
-        float *it;
 
-        lookupY = cv::Mat(1, height, CV_32F);
-        it = lookupY.ptr<float>();
-        for(size_t r = 0; r < height; ++r, ++it)
+        for(int i = 1; i < 3; i++)
         {
-            *it = (r - cy) * fy;
+            //fx og fy er focal lengde, lengde/piksel. er begge like har man helt kvadratisk bilde.
+            const float fx = 1.0f / cameraMatrixColor[i].at<double>(0,0);
+            const float fy = 1.0f / cameraMatrixColor[i].at<double>(1,1);
+            //Principal point cx og cy sier hvor på bilde-planet pinhole treffer.
+            const float cx = cameraMatrixColor[i].at<double>(0,2);
+            const float cy = cameraMatrixColor[i].at<double>(1,2);
+            float *it;
+
+            lookupY[i] = cv::Mat(1, height, CV_32F);
+            it = lookupY[i].ptr<float>();
+            for(size_t r = 0; r < height; ++r, ++it)
+            {
+                *it = (r - cy) * fy;
+            }
+
+            lookupX[i] = cv::Mat(1, width, CV_32F);
+            it = lookupX[i].ptr<float>();
+            for(size_t c = 0; c < width; ++c, ++it)
+            {
+                *it = (c - cx) * fx;
+            }
         }
 
-        lookupX = cv::Mat(1, width, CV_32F);
-        it = lookupX.ptr<float>();
-        for(size_t c = 0; c < width; ++c, ++it)
-        {
-            *it = (c - cx) * fx;
-        }
     }
 
     void keyboardEvent(const pcl::visualization::KeyboardEvent &event, void *)
@@ -535,7 +616,47 @@ private:
         ++frame;
     }
 
+    void initKinectToWorldTransMatrices(Eigen::Matrix4f &m2, Eigen::Matrix4f &m3)
+    {
+        float j2_z = -0.709; float j2_y = 3.830; float j2_x = 2.274;
+        float j2_theta_z = 2.611;
+        float j2_theta_y = -0.436;
+        float j2_theta_x = -0.683;
+        Eigen::Matrix3f j2_rotz; j2_rotz << cos(j2_theta_z),  sin(j2_theta_z), 0.0,
+                                            -sin(j2_theta_z), cos(j2_theta_z), 0.0,
+                                            0.0,               0.0,            1.0;
+        Eigen::Matrix3f j2_roty; j2_roty << cos(j2_theta_y), 0.0,            -sin(j2_theta_y),
+                                            0.0,             1.0, 0.0,
+                                            sin(j2_theta_y), 0.0,             cos(j2_theta_y);
+        Eigen::Matrix3f j2_rotx; j2_rotx << 1.0,             0.0,             0.0,
+                                            0.0,          cos(j2_theta_x),    sin(j2_theta_x),
+                                            0.0,          -sin(j2_theta_x),   cos(j2_theta_x);
+        Eigen::Matrix3f j2_rot = j2_rotz*j2_roty*j2_rotx;
+        m2 << j2_rot(0, 0), j2_rot(0, 1), j2_rot(0, 2), j2_x,
+              j2_rot(1, 0), j2_rot(1, 1), j2_rot(1, 2), j2_y,
+              j2_rot(2, 0), j2_rot(2, 1), j2_rot(2, 2), j2_z,
+              0.0,            0.0,          0.0,         1.0;
 
+        float j3_z = -5.539; float j3_y = -4.945; float j3_x = 9.072;
+        float j3_theta_z = 3.12;
+        float j3_theta_y = 0.637;
+        float j3_theta_x = 1.537;
+        Eigen::Matrix3f j3_rotz; j3_rotz << cos(j3_theta_z), sin(j3_theta_z),  0.0,
+                                           -sin(j3_theta_z), cos(j3_theta_z),  0.0,
+                                            0.0,              0.0,             1.0;
+        Eigen::Matrix3f j3_roty; j3_roty << cos(j3_theta_y),  0.0,            -sin(j3_theta_y),
+                                            0.0,              1.0,             0.0,
+                                            sin(j3_theta_y),  0.0,             cos(j3_theta_y);
+        Eigen::Matrix3f j3_rotx; j3_rotx << 1.0,              0.0,             0.0,
+                                            0.0,              cos(j3_theta_x), sin(j3_theta_x),
+                                            0.0,             -sin(j3_theta_x), cos(j3_theta_x);
+        Eigen::Matrix3f j3_rot = j3_rotz*j3_roty*j3_rotx;
+        m3 << j3_rot(0, 0), j3_rot(0, 1), j3_rot(0, 2), j3_x,
+              j3_rot(1, 0), j3_rot(1, 1), j3_rot(1, 2), j3_y,
+              j3_rot(2, 0), j3_rot(2, 1), j3_rot(2, 2), j3_z,
+              0.0,            0.0,          0.0,         1.0;
+
+    }
 
 };
 
