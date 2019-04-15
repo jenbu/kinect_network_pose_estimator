@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/cloud_segmentation.dir/src/cloud_segmentation.cpp.o"
-  "CMakeFiles/cloud_segmentation.dir/pose_estimator.cpp.o"
+  "CMakeFiles/cloud_segmentation.dir/src/pose_estimator.cpp.o"
   "/home/erlendb/Programmering/Master/test_ws/devel/lib/pose_estimator/cloud_segmentation.pdb"
   "/home/erlendb/Programmering/Master/test_ws/devel/lib/pose_estimator/cloud_segmentation"
 )

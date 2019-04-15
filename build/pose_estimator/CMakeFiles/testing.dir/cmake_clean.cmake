@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/testing.dir/src/testing.cpp.o"
-  "CMakeFiles/testing.dir/pose_estimator.cpp.o"
+  "CMakeFiles/testing.dir/src/pose_estimator.cpp.o"
   "/home/erlendb/Programmering/Master/test_ws/devel/lib/pose_estimator/testing.pdb"
   "/home/erlendb/Programmering/Master/test_ws/devel/lib/pose_estimator/testing"
 )

@@ -2,7 +2,7 @@
 //#include <pcl/io/pcd_io.h>
 //#include <pcl/io/ply_io.h>
 
-#include "../pose_estimator.h"
+#include "pose_estimator.h"
 
 std::string path1 = "/home/erlendb/Pictures/Masteroppgave_bilder/Bilder_poseTesting/pin_end/4.1:18.0.10139977279143937_cloud.pcd";
 std::string path2 = "/home/erlendb/Pictures/Masteroppgave_bilder/Bilder_poseTesting/pin_end/4.1:18.0.43139977279143938_cloud.pcd";

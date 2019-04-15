@@ -1568,15 +1568,15 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/erlendb/Programmering/Master/test_ws/src/pose_estimator/pose_estimator.cpp">
-			<Option target="testing"/>
-			<Option target="cloud_segmentation"/>
-		</Unit>
-		<Unit filename="/home/erlendb/Programmering/Master/test_ws/src/pose_estimator/pose_estimator.h">
-			<Option target="testing"/>
-			<Option target="cloud_segmentation"/>
-		</Unit>
 		<Unit filename="/home/erlendb/Programmering/Master/test_ws/src/pose_estimator/src/cloud_segmentation.cpp">
+			<Option target="cloud_segmentation"/>
+		</Unit>
+		<Unit filename="/home/erlendb/Programmering/Master/test_ws/src/pose_estimator/src/pose_estimator.cpp">
+			<Option target="testing"/>
+			<Option target="cloud_segmentation"/>
+		</Unit>
+		<Unit filename="/home/erlendb/Programmering/Master/test_ws/src/pose_estimator/src/pose_estimator.h">
+			<Option target="testing"/>
 			<Option target="cloud_segmentation"/>
 		</Unit>
 		<Unit filename="/home/erlendb/Programmering/Master/test_ws/src/pose_estimator/src/testing.cpp">

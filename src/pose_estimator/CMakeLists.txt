@@ -163,11 +163,11 @@ link_directories(${PCL_LIBRARY_DIRS})
 ## The recommended prefix ensures that target names across packages don't collide
 
 file(GLOB SOURCES
-        pose_estimator.h
-        pose_estimator.cpp
+        src/pose_estimator.h
+        src/pose_estimator.cpp
 )
 
-add_executable(testing src/testing.cpp pose_estimator.cpp)
+add_executable(testing src/testing.cpp src/pose_estimator.cpp)
 target_link_libraries(testing
         ${catkin_LIBRARIES}
         ${OpenCV_LIBRARIES}
@@ -175,7 +175,7 @@ target_link_libraries(testing
         )
 
 
-add_executable(cloud_segmentation src/cloud_segmentation.cpp pose_estimator.cpp)
+add_executable(cloud_segmentation src/cloud_segmentation.cpp src/pose_estimator.cpp)
 target_link_libraries(cloud_segmentation
         ${catkin_LIBRARIES}
         ${OpenCV_LIBRARIES}

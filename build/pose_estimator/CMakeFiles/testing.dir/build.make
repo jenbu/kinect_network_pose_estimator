@@ -70,29 +70,29 @@ pose_estimator/CMakeFiles/testing.dir/src/testing.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testing.dir/src/testing.cpp.s"
 	cd /home/erlendb/Programmering/Master/test_ws/build/pose_estimator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/erlendb/Programmering/Master/test_ws/src/pose_estimator/src/testing.cpp -o CMakeFiles/testing.dir/src/testing.cpp.s
 
-pose_estimator/CMakeFiles/testing.dir/pose_estimator.cpp.o: pose_estimator/CMakeFiles/testing.dir/flags.make
-pose_estimator/CMakeFiles/testing.dir/pose_estimator.cpp.o: /home/erlendb/Programmering/Master/test_ws/src/pose_estimator/pose_estimator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/erlendb/Programmering/Master/test_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object pose_estimator/CMakeFiles/testing.dir/pose_estimator.cpp.o"
-	cd /home/erlendb/Programmering/Master/test_ws/build/pose_estimator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/testing.dir/pose_estimator.cpp.o -c /home/erlendb/Programmering/Master/test_ws/src/pose_estimator/pose_estimator.cpp
+pose_estimator/CMakeFiles/testing.dir/src/pose_estimator.cpp.o: pose_estimator/CMakeFiles/testing.dir/flags.make
+pose_estimator/CMakeFiles/testing.dir/src/pose_estimator.cpp.o: /home/erlendb/Programmering/Master/test_ws/src/pose_estimator/src/pose_estimator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/erlendb/Programmering/Master/test_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object pose_estimator/CMakeFiles/testing.dir/src/pose_estimator.cpp.o"
+	cd /home/erlendb/Programmering/Master/test_ws/build/pose_estimator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/testing.dir/src/pose_estimator.cpp.o -c /home/erlendb/Programmering/Master/test_ws/src/pose_estimator/src/pose_estimator.cpp
 
-pose_estimator/CMakeFiles/testing.dir/pose_estimator.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testing.dir/pose_estimator.cpp.i"
-	cd /home/erlendb/Programmering/Master/test_ws/build/pose_estimator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/erlendb/Programmering/Master/test_ws/src/pose_estimator/pose_estimator.cpp > CMakeFiles/testing.dir/pose_estimator.cpp.i
+pose_estimator/CMakeFiles/testing.dir/src/pose_estimator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/testing.dir/src/pose_estimator.cpp.i"
+	cd /home/erlendb/Programmering/Master/test_ws/build/pose_estimator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/erlendb/Programmering/Master/test_ws/src/pose_estimator/src/pose_estimator.cpp > CMakeFiles/testing.dir/src/pose_estimator.cpp.i
 
-pose_estimator/CMakeFiles/testing.dir/pose_estimator.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testing.dir/pose_estimator.cpp.s"
-	cd /home/erlendb/Programmering/Master/test_ws/build/pose_estimator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/erlendb/Programmering/Master/test_ws/src/pose_estimator/pose_estimator.cpp -o CMakeFiles/testing.dir/pose_estimator.cpp.s
+pose_estimator/CMakeFiles/testing.dir/src/pose_estimator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/testing.dir/src/pose_estimator.cpp.s"
+	cd /home/erlendb/Programmering/Master/test_ws/build/pose_estimator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/erlendb/Programmering/Master/test_ws/src/pose_estimator/src/pose_estimator.cpp -o CMakeFiles/testing.dir/src/pose_estimator.cpp.s
 
 # Object files for target testing
 testing_OBJECTS = \
 "CMakeFiles/testing.dir/src/testing.cpp.o" \
-"CMakeFiles/testing.dir/pose_estimator.cpp.o"
+"CMakeFiles/testing.dir/src/pose_estimator.cpp.o"
 
 # External object files for target testing
 testing_EXTERNAL_OBJECTS =
 
 /home/erlendb/Programmering/Master/test_ws/devel/lib/pose_estimator/testing: pose_estimator/CMakeFiles/testing.dir/src/testing.cpp.o
-/home/erlendb/Programmering/Master/test_ws/devel/lib/pose_estimator/testing: pose_estimator/CMakeFiles/testing.dir/pose_estimator.cpp.o
+/home/erlendb/Programmering/Master/test_ws/devel/lib/pose_estimator/testing: pose_estimator/CMakeFiles/testing.dir/src/pose_estimator.cpp.o
 /home/erlendb/Programmering/Master/test_ws/devel/lib/pose_estimator/testing: pose_estimator/CMakeFiles/testing.dir/build.make
 /home/erlendb/Programmering/Master/test_ws/devel/lib/pose_estimator/testing: /opt/ros/kinetic/lib/libcompressed_image_transport.so
 /home/erlendb/Programmering/Master/test_ws/devel/lib/pose_estimator/testing: /opt/ros/kinetic/lib/libcompressed_depth_image_transport.so

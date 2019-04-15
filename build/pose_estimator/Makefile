@@ -317,36 +317,6 @@ cloud_segmentation/fast:
 	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/cloud_segmentation.dir/build.make pose_estimator/CMakeFiles/cloud_segmentation.dir/build
 .PHONY : cloud_segmentation/fast
 
-pose_estimator.o: pose_estimator.cpp.o
-
-.PHONY : pose_estimator.o
-
-# target to build an object file
-pose_estimator.cpp.o:
-	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/testing.dir/build.make pose_estimator/CMakeFiles/testing.dir/pose_estimator.cpp.o
-	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/cloud_segmentation.dir/build.make pose_estimator/CMakeFiles/cloud_segmentation.dir/pose_estimator.cpp.o
-.PHONY : pose_estimator.cpp.o
-
-pose_estimator.i: pose_estimator.cpp.i
-
-.PHONY : pose_estimator.i
-
-# target to preprocess a source file
-pose_estimator.cpp.i:
-	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/testing.dir/build.make pose_estimator/CMakeFiles/testing.dir/pose_estimator.cpp.i
-	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/cloud_segmentation.dir/build.make pose_estimator/CMakeFiles/cloud_segmentation.dir/pose_estimator.cpp.i
-.PHONY : pose_estimator.cpp.i
-
-pose_estimator.s: pose_estimator.cpp.s
-
-.PHONY : pose_estimator.s
-
-# target to generate assembly for a file
-pose_estimator.cpp.s:
-	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/testing.dir/build.make pose_estimator/CMakeFiles/testing.dir/pose_estimator.cpp.s
-	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/cloud_segmentation.dir/build.make pose_estimator/CMakeFiles/cloud_segmentation.dir/pose_estimator.cpp.s
-.PHONY : pose_estimator.cpp.s
-
 src/cloud_segmentation.o: src/cloud_segmentation.cpp.o
 
 .PHONY : src/cloud_segmentation.o
@@ -373,6 +343,36 @@ src/cloud_segmentation.s: src/cloud_segmentation.cpp.s
 src/cloud_segmentation.cpp.s:
 	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/cloud_segmentation.dir/build.make pose_estimator/CMakeFiles/cloud_segmentation.dir/src/cloud_segmentation.cpp.s
 .PHONY : src/cloud_segmentation.cpp.s
+
+src/pose_estimator.o: src/pose_estimator.cpp.o
+
+.PHONY : src/pose_estimator.o
+
+# target to build an object file
+src/pose_estimator.cpp.o:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/testing.dir/build.make pose_estimator/CMakeFiles/testing.dir/src/pose_estimator.cpp.o
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/cloud_segmentation.dir/build.make pose_estimator/CMakeFiles/cloud_segmentation.dir/src/pose_estimator.cpp.o
+.PHONY : src/pose_estimator.cpp.o
+
+src/pose_estimator.i: src/pose_estimator.cpp.i
+
+.PHONY : src/pose_estimator.i
+
+# target to preprocess a source file
+src/pose_estimator.cpp.i:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/testing.dir/build.make pose_estimator/CMakeFiles/testing.dir/src/pose_estimator.cpp.i
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/cloud_segmentation.dir/build.make pose_estimator/CMakeFiles/cloud_segmentation.dir/src/pose_estimator.cpp.i
+.PHONY : src/pose_estimator.cpp.i
+
+src/pose_estimator.s: src/pose_estimator.cpp.s
+
+.PHONY : src/pose_estimator.s
+
+# target to generate assembly for a file
+src/pose_estimator.cpp.s:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/testing.dir/build.make pose_estimator/CMakeFiles/testing.dir/src/pose_estimator.cpp.s
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/cloud_segmentation.dir/build.make pose_estimator/CMakeFiles/cloud_segmentation.dir/src/pose_estimator.cpp.s
+.PHONY : src/pose_estimator.cpp.s
 
 src/testing.o: src/testing.cpp.o
 
@@ -424,12 +424,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... list_install_components"
 	@echo "... install"
-	@echo "... pose_estimator.o"
-	@echo "... pose_estimator.i"
-	@echo "... pose_estimator.s"
 	@echo "... src/cloud_segmentation.o"
 	@echo "... src/cloud_segmentation.i"
 	@echo "... src/cloud_segmentation.s"
+	@echo "... src/pose_estimator.o"
+	@echo "... src/pose_estimator.i"
+	@echo "... src/pose_estimator.s"
 	@echo "... src/testing.o"
 	@echo "... src/testing.i"
 	@echo "... src/testing.s"
