@@ -28,18 +28,18 @@
       <config projectName="Project" targetName="roscpp_generate_messages_lisp" />
       <config projectName="Project" targetName="run_tests_eb_darknet_rostest_test_object_detection.test" />
       <config projectName="Project" targetName="_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsActionGoal" />
+      <config projectName="Project" targetName="actionlib_msgs_generate_messages_lisp" />
       <config projectName="Project" targetName="_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsActionResult" />
       <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_cpp" />
-      <config projectName="Project" targetName="clean_test_results_eb_darknet" />
       <config projectName="Project" targetName="rosgraph_msgs_generate_messages_nodejs" />
       <config projectName="Project" targetName="roscpp_generate_messages_py" />
-      <config projectName="Project" targetName="actionlib_generate_messages_py" />
-      <config projectName="Project" targetName="actionlib_generate_messages_eus" />
+      <config projectName="Project" targetName="darknet_ros_msgs_eb_genpy" />
+      <config projectName="Project" targetName="clean_test_results_eb_darknet" />
       <config projectName="Project" targetName="_run_tests_eb_darknet" />
       <config projectName="Project" targetName="clean_test_results" />
       <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_lisp" />
       <config projectName="Project" targetName="compressed_depth_image_transport_gencfg" />
-      <config projectName="Project" targetName="actionlib_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="actionlib_generate_messages_py" />
       <config projectName="Project" targetName="roscpp_generate_messages_cpp" />
       <config projectName="Project" targetName="rosgraph_msgs_generate_messages_lisp" />
       <config projectName="Project" targetName="geometry_msgs_generate_messages_cpp" />
@@ -64,13 +64,12 @@
       <config projectName="Project" targetName="std_msgs_generate_messages_py" />
       <config projectName="Project" targetName="_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsResult" />
       <config projectName="Project" targetName="geometry_msgs_generate_messages_eus" />
-      <config projectName="Project" targetName="_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsGoal" />
+      <config projectName="Project" targetName="actionlib_generate_messages_eus" />
       <config projectName="Project" targetName="eb_darknet_object_detection-test" />
       <config projectName="Project" targetName="sensor_msgs_generate_messages_cpp" />
       <config projectName="Project" targetName="testing" />
       <config projectName="Project" targetName="darknet_ros_msgs_eb_geneus" />
       <config projectName="Project" targetName="darknet_ros_msgs_eb_generate_messages_py" />
-      <config projectName="Project" targetName="darknet_ros_msgs_eb_genpy" />
       <config projectName="Project" targetName="doxygen" />
       <config projectName="Project" targetName="_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsActionFeedback" />
       <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_nodejs" />
@@ -86,6 +85,7 @@
       <config projectName="Project" targetName="_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsAction" />
       <config projectName="Project" targetName="rosgraph_msgs_generate_messages_cpp" />
       <config projectName="Project" targetName="roscpp_generate_messages_nodejs" />
+      <config projectName="Project" targetName="_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsGoal" />
       <config projectName="Project" targetName="geometry_msgs_generate_messages_py" />
     </generated>
   </component>
@@ -96,28 +96,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df18ee9f-c264-432e-9a90-9e70e42448d7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../build/Project.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../build/Project.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/pose_estimator.cpp.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/src/cloud_segmentation.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/src/cloud_segmentation.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/pose_estimator.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/pose_estimator.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/src/pose_estimator.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/src/pose_estimator.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/src/testing.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/src/testing.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../devel/lib/pose_estimator/cloud_segmentation" beforeDir="false" afterPath="$PROJECT_DIR$/../devel/lib/pose_estimator/cloud_segmentation" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devel/lib/pose_estimator/testing" beforeDir="false" afterPath="$PROJECT_DIR$/../devel/lib/pose_estimator/testing" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pose_estimator/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pose_estimator/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pose_estimator/pose_estimator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/pose_estimator/src/pose_estimator.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pose_estimator/pose_estimator.h" beforeDir="false" afterPath="$PROJECT_DIR$/pose_estimator/src/pose_estimator.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pose_estimator/src/cloud_segmentation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/pose_estimator/src/cloud_segmentation.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/src/pose_estimator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/pose_estimator/src/pose_estimator.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pose_estimator/src/testing.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/pose_estimator/src/testing.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -137,28 +127,55 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pose_estimator/src/cloud_segmentation.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="689" column="65" lean-forward="true" selection-start-line="689" selection-start-column="65" selection-end-line="689" selection-end-column="65" />
+            <state relative-caret-position="4920">
+              <caret line="328" column="28" selection-start-line="328" selection-start-column="28" selection-end-line="328" selection-end-column="28" />
               <folding>
                 <element signature="e#3#22#0" expanded="true" />
-                <element signature="e#15786#21026#0" />
-                <element signature="e#21032#21811#0" />
-                <element signature="e#21817#22040#0" />
-                <element signature="e#22046#22303#0" />
-                <element signature="e#22310#23338#0" />
-                <element signature="e#23344#23770#0" />
-                <element signature="e#23776#25052#0" />
-                <element signature="e#25058#26318#0" />
+                <element signature="e#8800#9939#0" />
+                <element signature="e#17575#22815#0" />
+                <element signature="e#22821#23600#0" />
+                <element signature="e#23606#23829#0" />
+                <element signature="e#23835#24092#0" />
+                <element signature="e#24099#25127#0" />
+                <element signature="e#25133#25559#0" />
+                <element signature="e#25565#26835#0" />
+                <element signature="e#26841#28101#0" />
+                <element signature="e#28107#28639#0" />
+                <element signature="e#30851#30895#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pose_estimator/src/testing.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="104">
+              <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+              <folding>
+                <element signature="e#60#112#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pose_estimator/src/pose_estimator.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="690">
+              <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
+              <folding>
+                <element signature="e#111#128#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pose_estimator/src/pose_estimator.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="45" column="19" lean-forward="true" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
+            <state relative-caret-position="2085">
+              <caret line="139" column="34" selection-start-line="139" selection-start-column="34" selection-end-line="139" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -194,14 +211,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>width</find>
-      <find>YoloObjectDete</find>
-      <find>bridge_source</find>
-      <find>cloud</find>
-      <find>ColorHandlerT</find>
-      <find>createLookup</find>
-      <find>lookupY</find>
-      <find>createCloud</find>
       <find>lookup</find>
       <find>initKinect</find>
       <find>initKin</find>
@@ -218,12 +227,20 @@
       <find>point</find>
       <find>tree</find>
       <find>cloud_normal_box</find>
-      <find>aligned_boxEnd</find>
       <find>conver</find>
-      <find>concatenated_box</find>
       <find>clearAll</find>
       <find>cloud_filtered</find>
       <find>poseEstimation</find>
+      <find>concatenated_box_</find>
+      <find>set</find>
+      <find>aligned_box</find>
+      <find>aligned_boxEnd</find>
+      <find>segmented_bo</find>
+      <find>pass_seg</find>
+      <find>avgX</find>
+      <find>temp</find>
+      <find>concatenated_box_filtered</find>
+      <find>concatenated_box</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -256,8 +273,9 @@
         <option value="$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/src/YoloObjectDetector.cpp" />
         <option value="$PROJECT_DIR$/pose_estimator/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/pose_estimator/src/pose_estimator.h" />
-        <option value="$PROJECT_DIR$/pose_estimator/src/cloud_segmentation.cpp" />
         <option value="$PROJECT_DIR$/pose_estimator/src/pose_estimator.cpp" />
+        <option value="$PROJECT_DIR$/pose_estimator/src/cloud_segmentation.cpp" />
+        <option value="$PROJECT_DIR$/pose_estimator/src/testing.cpp" />
       </list>
     </option>
   </component>
@@ -274,14 +292,42 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
       <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="47feb1d3:ProjectViewModuleNode" />
+            </path>
+            <path>
+              <item name="src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pose_estimator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pose_estimator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../build" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../kinect_ws/src/CMakeLists.txt" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -304,7 +350,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="CMake Application.cloud_segmentation">
+  <component name="RunManager" selected="CMake Application.testing">
     <configuration name="_catkin_empty_exported_target" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_catkin_empty_exported_target" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -731,21 +777,16 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="CMake Application.clean_test_results" />
-      <item itemvalue="CMake Application.download_extra_data" />
-      <item itemvalue="CMake Application.doxygen" />
-      <item itemvalue="CMake Application.run_tests" />
-      <item itemvalue="CMake Application.tests" />
-      <item itemvalue="CMake Application.cloud_segmentation" />
-      <item itemvalue="CMake Application.compressed_depth_image_transport_gencfg" />
-      <item itemvalue="CMake Application.compressed_image_transport_gencfg" />
-      <item itemvalue="CMake Application.dynamic_reconfigure_gencfg" />
-      <item itemvalue="CMake Application.dynamic_reconfigure_generate_messages_cpp" />
-      <item itemvalue="CMake Application.dynamic_reconfigure_generate_messages_eus" />
-      <item itemvalue="CMake Application.dynamic_reconfigure_generate_messages_lisp" />
-      <item itemvalue="CMake Application.dynamic_reconfigure_generate_messages_nodejs" />
-      <item itemvalue="CMake Application.dynamic_reconfigure_generate_messages_py" />
-      <item itemvalue="CMake Application.testing" />
+      <item itemvalue="CMake Application._catkin_empty_exported_target" />
+      <item itemvalue="CMake Application._darknet_ros_msgs_eb_generate_messages_check_deps_BoundingBox" />
+      <item itemvalue="CMake Application._darknet_ros_msgs_eb_generate_messages_check_deps_BoundingBoxes" />
+      <item itemvalue="CMake Application._darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsActionFeedback" />
+      <item itemvalue="CMake Application._darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsActionGoal" />
+      <item itemvalue="CMake Application._darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsActionResult" />
+      <item itemvalue="CMake Application._darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsAction" />
+      <item itemvalue="CMake Application._darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsFeedback" />
+      <item itemvalue="CMake Application._darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsGoal" />
+      <item itemvalue="CMake Application._darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsResult" />
       <item itemvalue="CMake Application._run_tests_eb_darknet" />
       <item itemvalue="CMake Application._run_tests_eb_darknet_rostest" />
       <item itemvalue="CMake Application._run_tests_eb_darknet_rostest_test_object_detection.test" />
@@ -754,38 +795,16 @@
       <item itemvalue="CMake Application.actionlib_generate_messages_lisp" />
       <item itemvalue="CMake Application.actionlib_generate_messages_nodejs" />
       <item itemvalue="CMake Application.actionlib_generate_messages_py" />
-      <item itemvalue="CMake Application.clean_test_results_eb_darknet" />
-      <item itemvalue="CMake Application.eb_darknet" />
-      <item itemvalue="CMake Application.eb_darknet_lib" />
-      <item itemvalue="CMake Application.eb_darknet_object_detection-test" />
-      <item itemvalue="CMake Application.roscpp_generate_messages_cpp" />
-      <item itemvalue="CMake Application.roscpp_generate_messages_eus" />
-      <item itemvalue="CMake Application.roscpp_generate_messages_lisp" />
-      <item itemvalue="CMake Application.roscpp_generate_messages_nodejs" />
-      <item itemvalue="CMake Application.roscpp_generate_messages_py" />
-      <item itemvalue="CMake Application.rosgraph_msgs_generate_messages_cpp" />
-      <item itemvalue="CMake Application.rosgraph_msgs_generate_messages_eus" />
-      <item itemvalue="CMake Application.rosgraph_msgs_generate_messages_lisp" />
-      <item itemvalue="CMake Application.rosgraph_msgs_generate_messages_nodejs" />
-      <item itemvalue="CMake Application.rosgraph_msgs_generate_messages_py" />
-      <item itemvalue="CMake Application.run_tests_eb_darknet" />
-      <item itemvalue="CMake Application.run_tests_eb_darknet_rostest" />
-      <item itemvalue="CMake Application.run_tests_eb_darknet_rostest_test_object_detection.test" />
-      <item itemvalue="CMake Application._catkin_empty_exported_target" />
-      <item itemvalue="CMake Application._darknet_ros_msgs_eb_generate_messages_check_deps_BoundingBox" />
-      <item itemvalue="CMake Application._darknet_ros_msgs_eb_generate_messages_check_deps_BoundingBoxes" />
-      <item itemvalue="CMake Application._darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsAction" />
-      <item itemvalue="CMake Application._darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsActionFeedback" />
-      <item itemvalue="CMake Application._darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsActionGoal" />
-      <item itemvalue="CMake Application._darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsActionResult" />
-      <item itemvalue="CMake Application._darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsFeedback" />
-      <item itemvalue="CMake Application._darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsGoal" />
-      <item itemvalue="CMake Application._darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsResult" />
       <item itemvalue="CMake Application.actionlib_msgs_generate_messages_cpp" />
       <item itemvalue="CMake Application.actionlib_msgs_generate_messages_eus" />
       <item itemvalue="CMake Application.actionlib_msgs_generate_messages_lisp" />
       <item itemvalue="CMake Application.actionlib_msgs_generate_messages_nodejs" />
       <item itemvalue="CMake Application.actionlib_msgs_generate_messages_py" />
+      <item itemvalue="CMake Application.clean_test_results" />
+      <item itemvalue="CMake Application.clean_test_results_eb_darknet" />
+      <item itemvalue="CMake Application.cloud_segmentation" />
+      <item itemvalue="CMake Application.compressed_depth_image_transport_gencfg" />
+      <item itemvalue="CMake Application.compressed_image_transport_gencfg" />
       <item itemvalue="CMake Application.darknet_ros_msgs_eb_gencpp" />
       <item itemvalue="CMake Application.darknet_ros_msgs_eb_generate_messages" />
       <item itemvalue="CMake Application.darknet_ros_msgs_eb_generate_messages_cpp" />
@@ -797,11 +816,40 @@
       <item itemvalue="CMake Application.darknet_ros_msgs_eb_genlisp" />
       <item itemvalue="CMake Application.darknet_ros_msgs_eb_gennodejs" />
       <item itemvalue="CMake Application.darknet_ros_msgs_eb_genpy" />
+      <item itemvalue="CMake Application.download_extra_data" />
+      <item itemvalue="CMake Application.doxygen" />
+      <item itemvalue="CMake Application.dynamic_reconfigure_gencfg" />
+      <item itemvalue="CMake Application.dynamic_reconfigure_generate_messages_cpp" />
+      <item itemvalue="CMake Application.dynamic_reconfigure_generate_messages_eus" />
+      <item itemvalue="CMake Application.dynamic_reconfigure_generate_messages_lisp" />
+      <item itemvalue="CMake Application.dynamic_reconfigure_generate_messages_nodejs" />
+      <item itemvalue="CMake Application.dynamic_reconfigure_generate_messages_py" />
+      <item itemvalue="CMake Application.eb_darknet" />
+      <item itemvalue="CMake Application.eb_darknet_lib" />
+      <item itemvalue="CMake Application.eb_darknet_object_detection-test" />
       <item itemvalue="CMake Application.geometry_msgs_generate_messages_cpp" />
       <item itemvalue="CMake Application.geometry_msgs_generate_messages_eus" />
       <item itemvalue="CMake Application.geometry_msgs_generate_messages_lisp" />
       <item itemvalue="CMake Application.geometry_msgs_generate_messages_nodejs" />
       <item itemvalue="CMake Application.geometry_msgs_generate_messages_py" />
+      <item itemvalue="CMake Application.gmock" />
+      <item itemvalue="CMake Application.gmock_main" />
+      <item itemvalue="CMake Application.gtest" />
+      <item itemvalue="CMake Application.gtest_main" />
+      <item itemvalue="CMake Application.roscpp_generate_messages_cpp" />
+      <item itemvalue="CMake Application.roscpp_generate_messages_eus" />
+      <item itemvalue="CMake Application.roscpp_generate_messages_lisp" />
+      <item itemvalue="CMake Application.roscpp_generate_messages_nodejs" />
+      <item itemvalue="CMake Application.roscpp_generate_messages_py" />
+      <item itemvalue="CMake Application.rosgraph_msgs_generate_messages_cpp" />
+      <item itemvalue="CMake Application.rosgraph_msgs_generate_messages_eus" />
+      <item itemvalue="CMake Application.rosgraph_msgs_generate_messages_lisp" />
+      <item itemvalue="CMake Application.rosgraph_msgs_generate_messages_nodejs" />
+      <item itemvalue="CMake Application.rosgraph_msgs_generate_messages_py" />
+      <item itemvalue="CMake Application.run_tests" />
+      <item itemvalue="CMake Application.run_tests_eb_darknet" />
+      <item itemvalue="CMake Application.run_tests_eb_darknet_rostest" />
+      <item itemvalue="CMake Application.run_tests_eb_darknet_rostest_test_object_detection.test" />
       <item itemvalue="CMake Application.sensor_msgs_generate_messages_cpp" />
       <item itemvalue="CMake Application.sensor_msgs_generate_messages_eus" />
       <item itemvalue="CMake Application.sensor_msgs_generate_messages_lisp" />
@@ -812,10 +860,8 @@
       <item itemvalue="CMake Application.std_msgs_generate_messages_lisp" />
       <item itemvalue="CMake Application.std_msgs_generate_messages_nodejs" />
       <item itemvalue="CMake Application.std_msgs_generate_messages_py" />
-      <item itemvalue="CMake Application.gmock" />
-      <item itemvalue="CMake Application.gmock_main" />
-      <item itemvalue="CMake Application.gtest" />
-      <item itemvalue="CMake Application.gtest_main" />
+      <item itemvalue="CMake Application.testing" />
+      <item itemvalue="CMake Application.tests" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -848,17 +894,20 @@
       <workItem from="1555329467636" duration="3304000" />
       <workItem from="1555333232515" duration="3274000" />
       <workItem from="1555336985831" duration="4223000" />
+      <workItem from="1555401743008" duration="4578000" />
+      <workItem from="1555406684410" duration="9663000" />
+      <workItem from="1555417467847" duration="896000" />
+      <workItem from="1555422643513" duration="22000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95961000" />
+    <option name="totallyTimeSpent" value="111120000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.19181868" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19237147" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -873,14 +922,14 @@
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="CMake" order="12" weight="0.28988528" />
+      <window_info active="true" anchor="bottom" id="CMake" order="12" visible="true" weight="0.2833843" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.19181868" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18794914" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1051,6 +1100,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pose_estimator/src/cloud_segmentation.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4920">
+          <caret line="328" column="28" selection-start-line="328" selection-start-column="28" selection-end-line="328" selection-end-column="28" />
+          <folding>
+            <element signature="e#3#22#0" expanded="true" />
+            <element signature="e#8800#9939#0" />
+            <element signature="e#17575#22815#0" />
+            <element signature="e#22821#23600#0" />
+            <element signature="e#23606#23829#0" />
+            <element signature="e#23835#24092#0" />
+            <element signature="e#24099#25127#0" />
+            <element signature="e#25133#25559#0" />
+            <element signature="e#25565#26835#0" />
+            <element signature="e#26841#28101#0" />
+            <element signature="e#28107#28639#0" />
+            <element signature="e#30851#30895#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pose_estimator/src/pose_estimator.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
+          <folding>
+            <element signature="e#111#128#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pose_estimator/src/pose_estimator.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2085">
+          <caret line="139" column="34" selection-start-line="139" selection-start-column="34" selection-end-line="139" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/launch/darknet_ros_gdb.launch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pose_estimator/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2550">
@@ -1065,45 +1159,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pose_estimator/src/pose_estimator.h">
+    <entry file="file://$PROJECT_DIR$/pose_estimator/src/testing.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="59" column="55" lean-forward="true" selection-start-line="59" selection-start-column="55" selection-end-line="59" selection-end-column="55" />
+        <state relative-caret-position="104">
+          <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
           <folding>
-            <element signature="e#111#128#0" expanded="true" />
+            <element signature="e#60#112#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/launch/darknet_ros_gdb.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pose_estimator/src/cloud_segmentation.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="689" column="65" lean-forward="true" selection-start-line="689" selection-start-column="65" selection-end-line="689" selection-end-column="65" />
-          <folding>
-            <element signature="e#3#22#0" expanded="true" />
-            <element signature="e#15786#21026#0" />
-            <element signature="e#21032#21811#0" />
-            <element signature="e#21817#22040#0" />
-            <element signature="e#22046#22303#0" />
-            <element signature="e#22310#23338#0" />
-            <element signature="e#23344#23770#0" />
-            <element signature="e#23776#25052#0" />
-            <element signature="e#25058#26318#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pose_estimator/src/pose_estimator.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="45" column="19" lean-forward="true" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
         </state>
       </provider>
     </entry>

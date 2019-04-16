@@ -36,7 +36,7 @@ bool PoseEstimator::start(pcl::PointCloud<pcl::PointNormal>::Ptr cloud, pcl::Poi
     {
         voxel_filter();
         extract_cylinder();
-        /*
+
         start_time = std::chrono::high_resolution_clock::now();
         pose_estimate();
         now_time = std::chrono::high_resolution_clock::now();
@@ -51,7 +51,7 @@ bool PoseEstimator::start(pcl::PointCloud<pcl::PointNormal>::Ptr cloud, pcl::Poi
         else{
             return false;
         }
-         */
+
     } else{
         cout << "a model is not assigned!" << endl;
     }

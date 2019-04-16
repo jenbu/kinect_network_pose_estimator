@@ -58,6 +58,7 @@ private:
     ros::Publisher pub;
 
     PoseEstimator pose_est;
+    pcl::PassThrough<pcl::PointXYZRGBA> pass_seg;
 
     ros::AsyncSpinner spinner;
 
@@ -67,14 +68,16 @@ private:
 
     darknet_ros_msgs_eb::BoundingBoxes detection_inf[6];
 
+
     //Transformation matrix
     Eigen::Matrix4f to_world_matrix[6];
     Eigen::Matrix4f j2_toworld = Eigen::Matrix4f::Identity(); Eigen::Matrix4f j3_toworld = Eigen::Matrix4f::Identity();
 
+    pcl::PointCloud<pcl::PointXYZRGBA>::Ptr temp;
     pcl::PointCloud<pcl::PointXYZRGBA>::Ptr cloud[6], box_cloud[6], pin_cloud[6];
     pcl::PointCloud<pcl::PointXYZRGBA>::Ptr cloud_world[6], box_cloud_world[6], pin_cloud_world[6];
-    pcl::PointCloud<pcl::PointXYZRGBA>::Ptr concatenated_world, concatenated_pin, concatenated_box, segmented_box, aligned_box;
-    pcl::PointCloud<pcl::PointNormal>::Ptr cloud_normal_box, cloud_normal_pin, aligned_boxEnd, filtered_cloud, segmented_box_normal;
+    pcl::PointCloud<pcl::PointXYZRGBA>::Ptr concatenated_world, concatenated_pin, concatenated_box, segmented_box, aligned_box, aligned_pin, concatenated_box_filtered, concatenated_pin_filtered;
+    pcl::PointCloud<pcl::PointNormal>::Ptr cloud_normal_box, cloud_normal_pin, aligned_boxEnd, aligned_pin_normal, filtered_cloud, segmented_box_normal;
     pcl::PCDWriter writer;
     pcl::PLYReader reader;
     std::ostringstream oss;
@@ -162,15 +165,20 @@ private:
         segmented_box_normal = pcl::PointCloud<pcl::PointNormal>::Ptr(new pcl::PointCloud<pcl::PointNormal>());
         cloud_normal_box = pcl::PointCloud<pcl::PointNormal>::Ptr(new pcl::PointCloud<pcl::PointNormal>());
         cloud_normal_pin = pcl::PointCloud<pcl::PointNormal>::Ptr(new pcl::PointCloud<pcl::PointNormal>());
+        aligned_pin_normal = pcl::PointCloud<pcl::PointNormal>::Ptr(new pcl::PointCloud<pcl::PointNormal>());
         aligned_boxEnd = pcl::PointCloud<pcl::PointNormal>::Ptr(new pcl::PointCloud<pcl::PointNormal>());
+        aligned_pin = pcl::PointCloud<pcl::PointXYZRGBA>::Ptr(new pcl::PointCloud<pcl::PointXYZRGBA>());
         reader.read("/home/erlendb/Blender/box_end7_m.ply", *aligned_boxEnd);
-        pose_est.setModel(aligned_boxEnd);
+        reader.read("/home/erlendb/Blender/pin_end1.ply", *aligned_pin);
 
         concatenated_world = pcl::PointCloud<pcl::PointXYZRGBA>::Ptr(new pcl::PointCloud<pcl::PointXYZRGBA>());
         concatenated_box = pcl::PointCloud<pcl::PointXYZRGBA>::Ptr(new pcl::PointCloud<pcl::PointXYZRGBA>());
         concatenated_pin = pcl::PointCloud<pcl::PointXYZRGBA>::Ptr(new pcl::PointCloud<pcl::PointXYZRGBA>());
         segmented_box = pcl::PointCloud<pcl::PointXYZRGBA>::Ptr(new pcl::PointCloud<pcl::PointXYZRGBA>());
         aligned_box = pcl::PointCloud<pcl::PointXYZRGBA>::Ptr(new pcl::PointCloud<pcl::PointXYZRGBA>());
+        concatenated_pin_filtered = pcl::PointCloud<pcl::PointXYZRGBA>::Ptr(new pcl::PointCloud<pcl::PointXYZRGBA>());
+        concatenated_box_filtered = pcl::PointCloud<pcl::PointXYZRGBA>::Ptr(new pcl::PointCloud<pcl::PointXYZRGBA>());
+        temp = pcl::PointCloud<pcl::PointXYZRGBA>::Ptr(new pcl::PointCloud<pcl::PointXYZRGBA>());
         pcl::copyPointCloud(*aligned_boxEnd, *aligned_box);
         spinner.start();
 
@@ -258,6 +266,7 @@ private:
         CvPoint p1, p2;
         ostringstream os;
 
+
         pcl::PointCloud<pcl::PointXYZRGBA>::Ptr filtered_cloud(new pcl::PointCloud<pcl::PointXYZRGBA>());
         pcl::visualization::PCLVisualizer::Ptr visualizer(new pcl::visualization::PCLVisualizer("Visualizer"));
         std::string box_cloudName[6];
@@ -288,13 +297,18 @@ private:
             os << "Pin-Cloud" << i; pin_cloudName[i] = os.str(); os.str(std::string());
             cout << "cloud_name: " << cloud_name[i] << " box_cloudName: " << box_cloudName[i] << " pin_cloudName: " << pin_cloudName[i] << endl;
         }
-        poseEstimation(concatenated_box, concatenated_pin);
+        //poseEstimation(concatenated_box, concatenated_pin);
+
+
 
         //visualizer->addPointCloud(concatenated_world, ColorHandlerT(concatenated_world, 255.0, 255.0, 255.0), "World cloud");
-        visualizer->addPointCloud(concatenated_box, ColorHandlerT(concatenated_box, 0.0, 255.0, 0.0), "Box cloud");
+        visualizer->addPointCloud(concatenated_box_filtered, ColorHandlerT(concatenated_box_filtered, 0.0, 255.0, 255.0), "box-filtered");
+        visualizer->addPointCloud(concatenated_pin_filtered, ColorHandlerT(concatenated_pin_filtered, 0.0, 255.0, 255.0), "pin-filtered");
+        //visualizer->addPointCloud(concatenated_box, ColorHandlerT(concatenated_box, 0.0, 255.0, 0.0), "Box cloud");
         //visualizer->addPointCloud(concatenated_pin, ColorHandlerT(concatenated_pin, 0.0, 255.0, 0.0), "Pin cloud");
         //visualizer->addPointCloud(segmented_box, ColorHandlerT(segmented_box, 255.0, 255.0, 0.0), "seg cloud");
-        visualizer->addPointCloud(aligned_box, ColorHandlerT(aligned_box, 255.0, 0.0, 255.0), "box-model");
+        //visualizer->addPointCloud(aligned_box, ColorHandlerT(aligned_box, 255.0, 0.0, 255.0), "box-model");
+        //visualizer->addPointCloud(aligned_pin, ColorHandlerT(aligned_pin, 255.0, 0.0, 255.0), "pin-model");
 
         //visualizer->setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 1, "Visualizer");
         visualizer->initCameraParameters();
@@ -305,6 +319,7 @@ private:
         visualizer->registerKeyboardCallback(&Receiver::keyboardEvent, *this);
 
         int iterator = 0;
+        double avgX, avgY;
 
         while(running && ros::ok())
         {
@@ -338,20 +353,28 @@ private:
                     *concatenated_pin += *pin_cloud_world[i];
                     *concatenated_box += *box_cloud_world[i];
 
-                    //visualizer->updatePointCloud(cloud_world[i], ColorHandlerT(cloud_world[i], 255.0, 255.0, 255.0), cloud_name[i]);
-                    //visualizer->updatePointCloud(box_cloud_world[i], ColorHandlerT(box_cloud_world[i], 0.0, 255.0, 0.0), box_cloudName[i]);
-                    //visualizer->updatePointCloud(pin_cloud_world[i], ColorHandlerT(pin_cloud_world[i], 255.0, 0.0, 0.0), pin_cloudName[i]);
                 }
 
-                if(iterator==3)
+                if(iterator==5)
                 {
-                    poseEstimation(concatenated_box, concatenated_pin);
+
+                    narrowPointCloud(concatenated_box, concatenated_box_filtered);
+                    narrowPointCloud(concatenated_pin, concatenated_pin_filtered);
+
+                    //poseEstimation(concatenated_box_filtered, concatenated_pin);
                     //visualizer->updatePointCloud(concatenated_world, ColorHandlerT(concatenated_world, 255.0, 255.0, 255.0), "World cloud");
-                    visualizer->updatePointCloud(concatenated_box, ColorHandlerT(concatenated_box, 255.0, 0.0, 0.0), "Box cloud");
+                    //visualizer->updatePointCloud(concatenated_box, ColorHandlerT(concatenated_box, 255.0, 0.0, 0.0), "Box cloud");
                     //visualizer->updatePointCloud(concatenated_pin, ColorHandlerT(concatenated_pin, 0.0, 255.0, 0.0), "Pin cloud");
                     //visualizer->updatePointCloud(segmented_box, ColorHandlerT(segmented_box, 255.0, 255.0, 0.0), "seg cloud");
-                    visualizer->updatePointCloud(aligned_box, ColorHandlerT(aligned_box, 255.0, 0.0, 255.0), "box-model");
-
+                    //visualizer->updatePointCloud(aligned_box, ColorHandlerT(aligned_box, 255.0, 0.0, 255.0), "box-model");
+                    visualizer->updatePointCloud(concatenated_box_filtered, ColorHandlerT(concatenated_box_filtered, 0.0, 255.0, 255.0), "box-filtered");
+                    visualizer->updatePointCloud(concatenated_pin_filtered, ColorHandlerT(concatenated_pin_filtered, 0.0, 255.0, 0.0), "pin-filtered");
+                    //visualizer->updatePointCloud(aligned_pin, ColorHandlerT(aligned_pin, 255.0, 0.0, 255.0), "pin-model");
+                    if(save)
+                    {
+                        save = false;
+                        saveCloudAndImages(concatenated_box_filtered, color[1], depth[1]);
+                    }
                     concatenated_world->clear();
                     concatenated_world->resize((size_t)depth[1].cols*depth[1].rows);
                     concatenated_pin->clear();
@@ -360,7 +383,10 @@ private:
                     concatenated_box->resize((size_t)depth[1].cols*depth[1].rows);
                     segmented_box->clear();
                     segmented_box->resize((size_t)depth[1].cols*depth[1].rows);
-
+                    concatenated_box_filtered->clear();
+                    concatenated_box_filtered->resize((size_t)depth[1].cols*depth[1].rows);
+                    concatenated_pin_filtered->clear();
+                    concatenated_pin_filtered->resize(3000);
 
                     iterator = 0;
                 }
@@ -380,11 +406,7 @@ private:
                 iterator += 1;
 
             }
-            if(save)
-            {
-                save = false;
-                //saveCloudAndImages(pin_cloud, color, depth, depth);
-            }
+
             cv::waitKey(10);
             visualizer->spinOnce(1000);
 
@@ -618,7 +640,7 @@ private:
         }
     }
 
-    void saveCloudAndImages(/*const pcl::PointCloud<pcl::PointXYZRGBA>::ConstPtr cloud,*/ const cv::Mat &color, const cv::Mat &depth)
+    void saveCloudAndImages(const pcl::PointCloud<pcl::PointXYZRGBA>::ConstPtr cloud, const cv::Mat &color, const cv::Mat &depth)
     {
         time_t t = time(NULL);
         tm* tPtr = localtime(&t);
@@ -637,7 +659,7 @@ private:
 
 
         //cout << "Saving cloud: " << cloudName << endl;
-        //writer.writeBinary(cloudName, *cloud);
+        writer.writeBinary(cloudName, *cloud);
         //OUT_INFO("saving color: " << colorName);
         cv::imwrite(colorName, color);
         //OUT_INFO("saving depth: " << depthName);
@@ -682,15 +704,50 @@ private:
     void poseEstimation(const pcl::PointCloud<pcl::PointXYZRGBA>::Ptr &input_box_cloud, const pcl::PointCloud<pcl::PointXYZRGBA>::Ptr &input_pin_cloud)
     {
         pcl::copyPointCloud(*input_box_cloud, *cloud_normal_box);
-        pose_est.start(cloud_normal_box, aligned_boxEnd);
+        pcl::copyPointCloud(*aligned_pin, *aligned_pin_normal);
+        //pose_est.setModel(aligned_boxEnd);
+        pose_est.setModel(aligned_pin_normal);
+        pose_est.start(cloud_normal_box, aligned_pin_normal);
         pose_est.getSegmented(segmented_box_normal);
         pcl::copyPointCloud(*segmented_box_normal, *segmented_box);
-        pcl::copyPointCloud(*aligned_boxEnd, *aligned_box);
+        pcl::copyPointCloud(*aligned_pin_normal, *aligned_pin);
 
         pcl::copyPointCloud(*input_pin_cloud, *cloud_normal_pin);
 
     }
 
+    void narrowPointCloud(pcl::PointCloud<pcl::PointXYZRGBA>::Ptr &concatenated_cloud, pcl::PointCloud<pcl::PointXYZRGBA>::Ptr &concatenated_cloud_filtered)
+    {
+        pcl::PointCloud<pcl::PointXYZRGBA>::Ptr temp = pcl::PointCloud<pcl::PointXYZRGBA>::Ptr(new pcl::PointCloud<pcl::PointXYZRGBA>());
+        pass_seg.setInputCloud(concatenated_cloud);
+        pass_seg.setFilterFieldName("z");
+        pass_seg.setFilterLimits(0.45, 1.5);
+        pass_seg.filter(*temp);
+        double sumX, sumY;
+        double avgX, avgY;
+
+        sumX = 0.0; sumY = 0.0;
+        for(int k = 0; k < temp->points.size(); k++)
+        {
+            sumX += temp->points[k].x;
+            sumY += temp->points[k].y;
+        }
+        avgX = sumX/temp->points.size();
+        avgY = sumY/temp->points.size();
+
+        pass_seg.setInputCloud(concatenated_cloud);
+        pass_seg.setFilterFieldName("z");
+        pass_seg.setFilterLimits(0.0, 1.5);
+        pass_seg.filter(*concatenated_cloud);
+        pass_seg.setInputCloud(concatenated_cloud);
+        pass_seg.setFilterFieldName("x");
+        pass_seg.setFilterLimits((avgX-0.15), (avgX+0.15));
+        pass_seg.filter(*concatenated_cloud);
+        pass_seg.setInputCloud(concatenated_cloud);
+        pass_seg.setFilterFieldName("y");
+        pass_seg.setFilterLimits((avgY-0.15), (avgY+0.15));
+        pass_seg.filter(*concatenated_cloud_filtered);
+    }
 };
 
 
