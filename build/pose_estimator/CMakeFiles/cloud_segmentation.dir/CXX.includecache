@@ -110,10 +110,6 @@ opencv2/opencv.hpp
 pcl/filters/extract_indices.h
 -
 
-/home/erlendb/Programmering/Master/test_ws/src/pose_estimator/src/pose_estimator.cpp
-pose_estimator.h
-/home/erlendb/Programmering/Master/test_ws/src/pose_estimator/src/pose_estimator.h
-
 /home/erlendb/Programmering/Master/test_ws/src/pose_estimator/src/pose_estimator.h
 chrono
 -

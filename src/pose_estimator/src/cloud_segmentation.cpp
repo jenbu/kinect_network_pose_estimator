@@ -317,10 +317,13 @@ private:
         visualizer->addPointCloud(aligned_box, ColorHandlerT(aligned_box, 255.0, 0.0, 255.0), "box-model");
         //visualizer->addPointCloud(aligned_pin, ColorHandlerT(aligned_pin, 255.0, 0.0, 255.0), "pin-model");
 
-        //visualizer->setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 1, "Visualizer");
+
+        //Add pose text
+        os << "Box-end\n" << "x: " << -1 << endl << "y: " << -1 << endl << "z: " << -1 << endl;
+        visualizer->addText(os.str(), 10, 10, "box_text"); os.str(std::string());
+
         visualizer->initCameraParameters();
         visualizer->setBackgroundColor(0, 0, 0);
-        //visualizer->setSize(color[1].cols, color[1].rows);
         visualizer->setShowFPS(true);
         visualizer->setCameraPosition(0, 0, 0, 0, -1, 0);
         visualizer->registerKeyboardCallback(&Receiver::keyboardEvent, *this);
@@ -381,6 +384,19 @@ private:
                     visualizer->updatePointCloud(concatenated_box_filtered, ColorHandlerT(concatenated_box_filtered, 0.0, 0.0, 255.0), "box-filtered");
                     visualizer->updatePointCloud(concatenated_pin_filtered, ColorHandlerT(concatenated_pin_filtered, 0.0, 0.0, 255.0), "pin-filtered");
                     //visualizer->updatePointCloud(aligned_pin, ColorHandlerT(aligned_pin, 255.0, 0.0, 255.0), "pin-model");
+
+                    if(pose_box.size() > 0)
+                    {
+                        os << "Box-end\n" << "x: " << pose_box[0] << endl << "y: " << pose_box[1] << endl << "z: " << pose_box[2] << endl;
+                        visualizer->updateText(os.str(), 10, 10, "box_text"); os.str(std::string());
+                    }
+                    else
+                    {
+                        os << "Box-end\n" << "x: " << -1 << endl << "y: " << -1 << endl << "z: " << -1 << endl;
+                        visualizer->updateText(os.str(), 10, 10, "box_text"); os.str(std::string());
+                    }
+
+
                     if(save)
                     {
                         save = false;
@@ -734,8 +750,8 @@ private:
         pose_est.start(cloud_normal_pin, aligned_box_normal);
         pose_est.getPose(pose_box);
         pcl::copyPointCloud(*aligned_box_normal, *aligned_box);
-        //if(pose_box.size() > 0)
-        cout << "Box pose:" << pose_box[0] << "0" << pose_box[1] << " " <<pose_box[2] << endl;
+        if(pose_box.size() > 0)
+            cout << "Box pose: " << pose_box[0] << " " << pose_box[1] << " " << pose_box[2] << endl;
 
     }
 
