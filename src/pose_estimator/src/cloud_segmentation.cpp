@@ -89,8 +89,8 @@ private:
 
     const int QHD_WIDTH = 960;
     const int QHD_HEIGHT = 540;
-    int QHD_WIDTH_DZ = 90;//dødsone som ikke overlapper med depthmap på hver side
-    int IR_HEIGHT_DZ = 40;//Sone på topp og bunn på depthmap som ikke overlapper med hd
+    int QHD_WIDTH_DZ = 20;//dødsone som ikke overlapper med depthmap på hver side
+    int IR_HEIGHT_DZ = 34;//Sone på topp og bunn på depthmap som ikke overlapper med hd
 
 
 public:
@@ -293,7 +293,7 @@ private:
 
         //cv::imshow("abc", color[1]);
         //cv::waitKey(3000);
-        for(int i = 1; i < 3; i++)
+        for(int i = 1; i < 1; i++)
         {
             createCloud(depth[i], color[i], box_cloud[i], pin_cloud[i], cloud[i], det_inf[i], i);
             *concatenated_world += *cloud_world[i];
@@ -308,13 +308,13 @@ private:
 
 
 
-        //visualizer->addPointCloud(concatenated_world, ColorHandlerT(concatenated_world, 255.0, 255.0, 255.0), "World cloud");
+        visualizer->addPointCloud(concatenated_world, ColorHandlerT(concatenated_world, 255.0, 255.0, 255.0), "World cloud");
         visualizer->addPointCloud(concatenated_box, ColorHandlerT(concatenated_box, 255.0, 0.0, 0.0), "Box cloud");
         visualizer->addPointCloud(concatenated_pin, ColorHandlerT(concatenated_pin, 0.0, 255.0, 0.0), "Pin cloud");
-        visualizer->addPointCloud(concatenated_box_filtered, ColorHandlerT(concatenated_box_filtered, 0.0, 0.0, 255.0), "box-filtered");
-        visualizer->addPointCloud(concatenated_pin_filtered, ColorHandlerT(concatenated_pin_filtered, 0.0, 0.0, 255.0), "pin-filtered");
+        //visualizer->addPointCloud(concatenated_box_filtered, ColorHandlerT(concatenated_box_filtered, 0.0, 0.0, 255.0), "box-filtered");
+        //visualizer->addPointCloud(concatenated_pin_filtered, ColorHandlerT(concatenated_pin_filtered, 0.0, 0.0, 255.0), "pin-filtered");
         //visualizer->addPointCloud(segmented_box, ColorHandlerT(segmented_box, 255.0, 255.0, 0.0), "seg cloud");
-        visualizer->addPointCloud(aligned_box, ColorHandlerT(aligned_box, 255.0, 0.0, 255.0), "box-model");
+        //visualizer->addPointCloud(aligned_box, ColorHandlerT(aligned_box, 255.0, 0.0, 255.0), "box-model");
         //visualizer->addPointCloud(aligned_pin, ColorHandlerT(aligned_pin, 255.0, 0.0, 255.0), "pin-model");
 
 
@@ -365,9 +365,10 @@ private:
 
                 }
 
-                if(iterator==5)
+                if(iterator==1)
                 {
 
+                    /*
                     narrowPointCloud(concatenated_box, concatenated_box_filtered);
                     narrowPointCloud(concatenated_pin, concatenated_pin_filtered);
                     sor_seg.setInputCloud (concatenated_pin_filtered);
@@ -375,16 +376,18 @@ private:
                     sor_seg.setInputCloud(concatenated_box_filtered);
                     sor_seg.filter(*concatenated_box_filtered);
                     poseEstimation(concatenated_box_filtered, concatenated_pin_filtered);
-                    //poseEstimation(concatenated_box_filtered, concatenated_pin);
-                    //visualizer->updatePointCloud(concatenated_world, ColorHandlerT(concatenated_world, 255.0, 255.0, 255.0), "World cloud");
+                    */
+                     //poseEstimation(concatenated_box_filtered, concatenated_pin);
+                    visualizer->updatePointCloud(concatenated_world, ColorHandlerT(concatenated_world, 255.0, 255.0, 255.0), "World cloud");
                     visualizer->updatePointCloud(concatenated_box, ColorHandlerT(concatenated_box, 255.0, 0.0, 0.0), "Box cloud");
                     visualizer->updatePointCloud(concatenated_pin, ColorHandlerT(concatenated_pin, 0.0, 255.0, 0.0), "Pin cloud");
                     //visualizer->updatePointCloud(segmented_box, ColorHandlerT(segmented_box, 255.0, 255.0, 0.0), "seg cloud");
-                    visualizer->updatePointCloud(aligned_box, ColorHandlerT(aligned_box, 255.0, 0.0, 255.0), "box-model");
-                    visualizer->updatePointCloud(concatenated_box_filtered, ColorHandlerT(concatenated_box_filtered, 0.0, 0.0, 255.0), "box-filtered");
-                    visualizer->updatePointCloud(concatenated_pin_filtered, ColorHandlerT(concatenated_pin_filtered, 0.0, 0.0, 255.0), "pin-filtered");
+                    //visualizer->updatePointCloud(aligned_box, ColorHandlerT(aligned_box, 255.0, 0.0, 255.0), "box-model");
+                    //visualizer->updatePointCloud(concatenated_box_filtered, ColorHandlerT(concatenated_box_filtered, 0.0, 0.0, 255.0), "box-filtered");
+                    //visualizer->updatePointCloud(concatenated_pin_filtered, ColorHandlerT(concatenated_pin_filtered, 0.0, 0.0, 255.0), "pin-filtered");
                     //visualizer->updatePointCloud(aligned_pin, ColorHandlerT(aligned_pin, 255.0, 0.0, 255.0), "pin-model");
 
+                    /*
                     if(pose_box.size() > 0)
                     {
                         os << "Box-end\n" << "x: " << pose_box[0] << endl << "y: " << pose_box[1] << endl << "z: " << pose_box[2] << endl;
@@ -395,7 +398,7 @@ private:
                         os << "Box-end\n" << "x: " << -1 << endl << "y: " << -1 << endl << "z: " << -1 << endl;
                         visualizer->updateText(os.str(), 10, 10, "box_text"); os.str(std::string());
                     }
-
+                    */
 
                     if(save)
                     {
@@ -485,10 +488,10 @@ private:
                 qhdTosd(x1, x2, y1, y2);
 
 
-                r_min = y1;
-                r_max = y2+30;
-                c_min = x1;
-                c_max = x2+30;
+                r_min = y1-10;
+                r_max = y2;//+30;
+                c_min = x1-10;
+                c_max = x2+10;
                 width = c_max - c_min;
                 if(r_min < 0)
                     r_min = 0;
@@ -588,7 +591,8 @@ private:
     void qhdTosd(int &x1, int &x2, int &y1, int &y2) const
     {
         x1 -= QHD_WIDTH_DZ; x2 -= QHD_WIDTH_DZ;
-
+        y1 += IR_HEIGHT_DZ; y2 += IR_HEIGHT_DZ;
+        cout << "QHD_WIDTH_DZ in qhdTosd()" << QHD_WIDTH_DZ << endl;
         double qhd_height = this->color_image[1].rows;
         double qhd_width = this->color_image[1].cols-2*QHD_WIDTH_DZ;
         double sd_height = this->depth_image[1].rows-2*IR_HEIGHT_DZ; //pga IR kamera er høyere enn hd kameraet
@@ -664,6 +668,23 @@ private:
                 case 's':
                     save = true;
                     break;
+                case 'k':
+                    QHD_WIDTH_DZ -= 1;
+                    cout << "QHD_WIDTH_DZ: " << QHD_WIDTH_DZ << endl;
+                    break;
+                case 'l':
+                    QHD_WIDTH_DZ += 1;
+                    cout << "QHD_WIDTH_DZ: " << QHD_WIDTH_DZ << endl;
+                    break;
+                case 'n':
+                    IR_HEIGHT_DZ -= 1;
+                    cout << "IR_HEIGHT_DZ: " << IR_HEIGHT_DZ << endl;
+                    break;
+                case 'm':
+                    IR_HEIGHT_DZ += 1;
+                    cout << "IR_HEIGHT_DZ: " << IR_HEIGHT_DZ << endl;
+                    break;
+
             }
         }
     }
