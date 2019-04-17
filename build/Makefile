@@ -1260,6 +1260,19 @@ testing/fast:
 .PHONY : testing/fast
 
 #=============================================================================
+# Target rules for targets named kinect_network
+
+# Build rule for target.
+kinect_network: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 kinect_network
+.PHONY : kinect_network
+
+# fast build rule for target.
+kinect_network/fast:
+	$(MAKE) -f pose_estimator/CMakeFiles/kinect_network.dir/build.make pose_estimator/CMakeFiles/kinect_network.dir/build
+.PHONY : kinect_network/fast
+
+#=============================================================================
 # Target rules for targets named cloud_segmentation
 
 # Build rule for target.
@@ -1369,6 +1382,7 @@ help:
 	@echo "... dynamic_reconfigure_gencfg"
 	@echo "... compressed_depth_image_transport_gencfg"
 	@echo "... testing"
+	@echo "... kinect_network"
 	@echo "... cloud_segmentation"
 .PHONY : help
 

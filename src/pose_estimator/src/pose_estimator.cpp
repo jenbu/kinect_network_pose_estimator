@@ -135,10 +135,10 @@ void PoseEstimator::extract_cylinder()
      extract_normals.setIndices (inliers_plane);
      extract_normals.filter(*cloud_normals2);
 
-     sor.setInputCloud(cloud_filtered2);
-     sor.setMeanK (50);
-     sor.setStddevMulThresh (0.5);
-     sor.filter (*cloud_filtered2);
+     //sor.setInputCloud(cloud_filtered2);
+     //sor.setMeanK (50);
+     //sor.setStddevMulThresh (0.5);
+     //sor.filter (*cloud_filtered2);
      segmented_pipe = cloud_filtered2;
 
      /*
@@ -200,7 +200,7 @@ void PoseEstimator::pose_estimate()
     align.setInputTarget (segmented_pipe);
     align.setTargetFeatures (scene_features);
     align.setRANSACOutlierRejectionThreshold(0.1);
-    align.setMaximumIterations (50000); // Number of RANSAC iterations
+    align.setMaximumIterations (80000); // Number of RANSAC iterations
     align.setNumberOfSamples (3); // Number of points to sample for generating/prerejecting a pose
     align.setCorrespondenceRandomness (28); // Number of nearest features to use
     align.setSimilarityThreshold (0.75f); // Polygonal edge length similarity threshold
@@ -212,7 +212,7 @@ void PoseEstimator::pose_estimate()
         aligned = true;
         // Print results
         printf("\n");
-        Eigen::Matrix4f transformation = align.getFinalTransformation();
+        transformation = align.getFinalTransformation();
         pcl::console::print_info("    | %6.3f %6.3f %6.3f | \n", transformation(0, 0), transformation(0, 1),
                                  transformation(0, 2));
         pcl::console::print_info("R = | %6.3f %6.3f %6.3f | \n", transformation(1, 0), transformation(1, 1),
@@ -232,6 +232,8 @@ void PoseEstimator::pose_estimate()
         posX = transformation(0,3);
         posY = transformation(1,3);
         posZ = transformation(2,3);
+        pose.empty();
+        pose.push_back(posX); pose.push_back(posY); pose.push_back(posZ); pose.push_back(pitch); pose.push_back(roll); pose.push_back(yaw);
 
         os << "Relative position:\n"<< "x: " << posX << " Pitch: " << pitch << "\ny: " << posY << " Roll: " << roll << "\nz: " << posZ << " Yaw: " << yaw << endl;
         Eigen::Matrix3f matrix;
@@ -256,7 +258,21 @@ bool PoseEstimator::setModel(pcl::PointCloud<pcl::PointNormal>::Ptr model)
 void PoseEstimator::getSegmented(pcl::PointCloud<pcl::PointNormal>::Ptr &seg_cloud)
 {
     seg_cloud = segmented_pipe;
+}
 
+void PoseEstimator::getPose(std::vector<float> &input_vec)
+{
+    if(aligned)
+    {
+        for(int i = 0; i < pose.size(); i++)
+        {
+            input_vec.push_back(pose[i]);
+        }
+    }
+    else
+    {
+        cout << "not aligned, cant get pose" << endl;
+    }
 }
 
 void PoseEstimator::getFiltered(pcl::PointCloud<pcl::PointNormal>::Ptr &filtered_cloud)

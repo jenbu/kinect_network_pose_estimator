@@ -9,6 +9,7 @@
 #define PROJECT_POSE_ESTIMATOR_H
 #include <chrono>
 #include <sstream>
+#include <vector>
 
 #include <pcl/ModelCoefficients.h>
 #include <pcl/io/pcd_io.h>
@@ -71,11 +72,14 @@ private:
 
     std::chrono::time_point<std::chrono::high_resolution_clock> start_time, now_time;
 
+
+    Eigen::Matrix4f transformation;
     //Translation and rotation values
     Eigen::Vector3f translation_vector;
     Eigen::Quaternionf rotation;
     float yaw, roll, pitch;
     float posX, posY, posZ;
+    std::vector<float> pose;
 
 //Functions
 public:
@@ -86,6 +90,7 @@ public:
     bool setModel(pcl::PointCloud<pcl::PointNormal>::Ptr model);
     void getSegmented(pcl::PointCloud<pcl::PointNormal>::Ptr &seg_cloud);
     void getFiltered(pcl::PointCloud<pcl::PointNormal>::Ptr &filtered_cloud);
+    void getPose(std::vector<float> &input_vec);
 
 
 private:

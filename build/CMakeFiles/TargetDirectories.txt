@@ -109,6 +109,7 @@
 /home/erlendb/Programmering/Master/test_ws/build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/actionlib_generate_messages_cpp.dir
 /home/erlendb/Programmering/Master/test_ws/build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/actionlib_generate_messages_py.dir
 /home/erlendb/Programmering/Master/test_ws/build/pose_estimator/CMakeFiles/install/strip.dir
+/home/erlendb/Programmering/Master/test_ws/build/pose_estimator/CMakeFiles/install/local.dir
 /home/erlendb/Programmering/Master/test_ws/build/pose_estimator/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir
 /home/erlendb/Programmering/Master/test_ws/build/pose_estimator/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir
 /home/erlendb/Programmering/Master/test_ws/build/pose_estimator/CMakeFiles/compressed_image_transport_gencfg.dir
@@ -118,10 +119,10 @@
 /home/erlendb/Programmering/Master/test_ws/build/pose_estimator/CMakeFiles/dynamic_reconfigure_gencfg.dir
 /home/erlendb/Programmering/Master/test_ws/build/pose_estimator/CMakeFiles/compressed_depth_image_transport_gencfg.dir
 /home/erlendb/Programmering/Master/test_ws/build/pose_estimator/CMakeFiles/testing.dir
+/home/erlendb/Programmering/Master/test_ws/build/pose_estimator/CMakeFiles/kinect_network.dir
+/home/erlendb/Programmering/Master/test_ws/build/pose_estimator/CMakeFiles/install.dir
 /home/erlendb/Programmering/Master/test_ws/build/pose_estimator/CMakeFiles/test.dir
-/home/erlendb/Programmering/Master/test_ws/build/pose_estimator/CMakeFiles/install/local.dir
 /home/erlendb/Programmering/Master/test_ws/build/pose_estimator/CMakeFiles/edit_cache.dir
 /home/erlendb/Programmering/Master/test_ws/build/pose_estimator/CMakeFiles/cloud_segmentation.dir
 /home/erlendb/Programmering/Master/test_ws/build/pose_estimator/CMakeFiles/rebuild_cache.dir
 /home/erlendb/Programmering/Master/test_ws/build/pose_estimator/CMakeFiles/list_install_components.dir
-/home/erlendb/Programmering/Master/test_ws/build/pose_estimator/CMakeFiles/install.dir

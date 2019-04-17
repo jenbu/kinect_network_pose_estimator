@@ -554,5 +554,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "pose_estimator/CMakeFiles/dynamic_reconfigure_gencfg.dir/DependInfo.cmake"
   "pose_estimator/CMakeFiles/compressed_depth_image_transport_gencfg.dir/DependInfo.cmake"
   "pose_estimator/CMakeFiles/testing.dir/DependInfo.cmake"
+  "pose_estimator/CMakeFiles/kinect_network.dir/DependInfo.cmake"
   "pose_estimator/CMakeFiles/cloud_segmentation.dir/DependInfo.cmake"
   )

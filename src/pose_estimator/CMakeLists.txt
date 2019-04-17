@@ -182,6 +182,13 @@ target_link_libraries(cloud_segmentation
         ${PCL_LIBRARIES}
         )
 
+add_executable(kinect_network src/kinect_network.cpp src/pose_estimator.cpp)
+target_link_libraries(kinect_network
+        ${catkin_LIBRARIES}
+        ${OpenCV_LIBRARIES}
+        ${PCL_LIBRARIES}
+        )
+
 #add_executable (build_tree src/pose_est.cpp)
 #target_link_libraries (build_tree ${PCL_LIBRARIES}
 #        ${Boost_LIBRARIES} ${FLANN_LIBRARY} ${HDF5_LIBRARIES}

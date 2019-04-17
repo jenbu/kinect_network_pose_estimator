@@ -68,17 +68,6 @@ install/strip/fast: preinstall/fast
 	/opt/clion-2019.1/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/opt/clion-2019.1/bin/cmake/linux/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -90,6 +79,29 @@ install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
 	/opt/clion-2019.1/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/opt/clion-2019.1/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/opt/clion-2019.1/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/opt/clion-2019.1/bin/cmake/linux/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -122,18 +134,6 @@ list_install_components:
 list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/opt/clion-2019.1/bin/cmake/linux/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/opt/clion-2019.1/bin/cmake/linux/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -303,6 +303,21 @@ testing/fast:
 .PHONY : testing/fast
 
 # Convenience name for target.
+pose_estimator/CMakeFiles/kinect_network.dir/rule:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pose_estimator/CMakeFiles/kinect_network.dir/rule
+.PHONY : pose_estimator/CMakeFiles/kinect_network.dir/rule
+
+# Convenience name for target.
+kinect_network: pose_estimator/CMakeFiles/kinect_network.dir/rule
+
+.PHONY : kinect_network
+
+# fast build rule for target.
+kinect_network/fast:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/kinect_network.dir/build.make pose_estimator/CMakeFiles/kinect_network.dir/build
+.PHONY : kinect_network/fast
+
+# Convenience name for target.
 pose_estimator/CMakeFiles/cloud_segmentation.dir/rule:
 	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pose_estimator/CMakeFiles/cloud_segmentation.dir/rule
 .PHONY : pose_estimator/CMakeFiles/cloud_segmentation.dir/rule
@@ -344,6 +359,33 @@ src/cloud_segmentation.cpp.s:
 	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/cloud_segmentation.dir/build.make pose_estimator/CMakeFiles/cloud_segmentation.dir/src/cloud_segmentation.cpp.s
 .PHONY : src/cloud_segmentation.cpp.s
 
+src/kinect_network.o: src/kinect_network.cpp.o
+
+.PHONY : src/kinect_network.o
+
+# target to build an object file
+src/kinect_network.cpp.o:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/kinect_network.dir/build.make pose_estimator/CMakeFiles/kinect_network.dir/src/kinect_network.cpp.o
+.PHONY : src/kinect_network.cpp.o
+
+src/kinect_network.i: src/kinect_network.cpp.i
+
+.PHONY : src/kinect_network.i
+
+# target to preprocess a source file
+src/kinect_network.cpp.i:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/kinect_network.dir/build.make pose_estimator/CMakeFiles/kinect_network.dir/src/kinect_network.cpp.i
+.PHONY : src/kinect_network.cpp.i
+
+src/kinect_network.s: src/kinect_network.cpp.s
+
+.PHONY : src/kinect_network.s
+
+# target to generate assembly for a file
+src/kinect_network.cpp.s:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/kinect_network.dir/build.make pose_estimator/CMakeFiles/kinect_network.dir/src/kinect_network.cpp.s
+.PHONY : src/kinect_network.cpp.s
+
 src/pose_estimator.o: src/pose_estimator.cpp.o
 
 .PHONY : src/pose_estimator.o
@@ -351,6 +393,7 @@ src/pose_estimator.o: src/pose_estimator.cpp.o
 # target to build an object file
 src/pose_estimator.cpp.o:
 	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/testing.dir/build.make pose_estimator/CMakeFiles/testing.dir/src/pose_estimator.cpp.o
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/kinect_network.dir/build.make pose_estimator/CMakeFiles/kinect_network.dir/src/pose_estimator.cpp.o
 	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/cloud_segmentation.dir/build.make pose_estimator/CMakeFiles/cloud_segmentation.dir/src/pose_estimator.cpp.o
 .PHONY : src/pose_estimator.cpp.o
 
@@ -361,6 +404,7 @@ src/pose_estimator.i: src/pose_estimator.cpp.i
 # target to preprocess a source file
 src/pose_estimator.cpp.i:
 	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/testing.dir/build.make pose_estimator/CMakeFiles/testing.dir/src/pose_estimator.cpp.i
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/kinect_network.dir/build.make pose_estimator/CMakeFiles/kinect_network.dir/src/pose_estimator.cpp.i
 	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/cloud_segmentation.dir/build.make pose_estimator/CMakeFiles/cloud_segmentation.dir/src/pose_estimator.cpp.i
 .PHONY : src/pose_estimator.cpp.i
 
@@ -371,6 +415,7 @@ src/pose_estimator.s: src/pose_estimator.cpp.s
 # target to generate assembly for a file
 src/pose_estimator.cpp.s:
 	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/testing.dir/build.make pose_estimator/CMakeFiles/testing.dir/src/pose_estimator.cpp.s
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/kinect_network.dir/build.make pose_estimator/CMakeFiles/kinect_network.dir/src/pose_estimator.cpp.s
 	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/cloud_segmentation.dir/build.make pose_estimator/CMakeFiles/cloud_segmentation.dir/src/pose_estimator.cpp.s
 .PHONY : src/pose_estimator.cpp.s
 
@@ -408,6 +453,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
+	@echo "... install/local"
 	@echo "... dynamic_reconfigure_generate_messages_lisp"
 	@echo "... dynamic_reconfigure_generate_messages_eus"
 	@echo "... compressed_image_transport_gencfg"
@@ -417,16 +463,19 @@ help:
 	@echo "... dynamic_reconfigure_gencfg"
 	@echo "... compressed_depth_image_transport_gencfg"
 	@echo "... testing"
+	@echo "... kinect_network"
+	@echo "... install"
 	@echo "... test"
-	@echo "... install/local"
 	@echo "... edit_cache"
 	@echo "... cloud_segmentation"
 	@echo "... rebuild_cache"
 	@echo "... list_install_components"
-	@echo "... install"
 	@echo "... src/cloud_segmentation.o"
 	@echo "... src/cloud_segmentation.i"
 	@echo "... src/cloud_segmentation.s"
+	@echo "... src/kinect_network.o"
+	@echo "... src/kinect_network.i"
+	@echo "... src/kinect_network.s"
 	@echo "... src/pose_estimator.o"
 	@echo "... src/pose_estimator.i"
 	@echo "... src/pose_estimator.s"

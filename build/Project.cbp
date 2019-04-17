@@ -1423,6 +1423,150 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/erlendb/Programmering/Master/test_ws/build/pose_estimator/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="kinect_network">
+				<Option output="/home/erlendb/Programmering/Master/test_ws/devel/lib/pose_estimator/kinect_network" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/erlendb/Programmering/Master/test_ws/devel/lib/pose_estimator"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;pose_estimator&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add option="-DvtkFiltersFlowPaths_AUTOINIT=1(vtkFiltersParallelFlowPaths)"/>
+					<Add option="-DvtkIOExodus_AUTOINIT=1(vtkIOParallelExodus)"/>
+					<Add option="-DvtkIOGeometry_AUTOINIT=1(vtkIOMPIParallel)"/>
+					<Add option="-DvtkIOImage_AUTOINIT=1(vtkIOMPIImage)"/>
+					<Add option="-DvtkIOSQL_AUTOINIT=2(vtkIOMySQL,vtkIOPostgreSQL)"/>
+					<Add option="-DvtkRenderingContext2D_AUTOINIT=1(vtkRenderingContextOpenGL)"/>
+					<Add option="-DvtkRenderingCore_AUTOINIT=4(vtkInteractionStyle,vtkRenderingFreeType,vtkRenderingFreeTypeOpenGL,vtkRenderingOpenGL)"/>
+					<Add option="-DvtkRenderingFreeType_AUTOINIT=2(vtkRenderingFreeTypeFontConfig,vtkRenderingMatplotlib)"/>
+					<Add option="-DvtkRenderingLIC_AUTOINIT=1(vtkRenderingParallelLIC)"/>
+					<Add option="-DvtkRenderingVolume_AUTOINIT=1(vtkRenderingVolumeOpenGL)"/>
+					<Add option="-Dqh_QHpointer"/>
+					<Add option="-DDISABLE_PCAP"/>
+					<Add option="-DDISABLE_PNG"/>
+					<Add option="-DDISABLE_LIBUSB_1_0"/>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add directory="/home/erlendb/Programmering/Master/test_ws/devel/include"/>
+					<Add directory="/home/erlendb/Programmering/Master/kinect_ws/src/iai_kinect2/kinect2_bridge/include"/>
+					<Add directory="/home/erlendb/Programmering/Master/kinect_ws/src/iai_kinect2/kinect2_registration/include"/>
+					<Add directory="/opt/ros/kinetic/include"/>
+					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/home/erlendb/anaconda2/include"/>
+					<Add directory="/usr/include/vtk-6.2"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/freetype2"/>
+					<Add directory="/usr/include/jsoncpp"/>
+					<Add directory="/usr/lib/openmpi/include/openmpi/opal/mca/event/libevent2021/libevent"/>
+					<Add directory="/usr/lib/openmpi/include/openmpi/opal/mca/event/libevent2021/libevent/include"/>
+					<Add directory="/usr/lib/openmpi/include"/>
+					<Add directory="/usr/lib/openmpi/include/openmpi"/>
+					<Add directory="/usr/include/python2.7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include/hdf5/openmpi"/>
+					<Add directory="/usr/include/libxml2"/>
+					<Add directory="/usr/include/tcl"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.3.1-dev"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv"/>
+					<Add directory="/usr/local/include/pcl-1.9"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/ni"/>
+					<Add directory="/usr/include/openni2"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/erlendb/Programmering/Master/test_ws/build/pose_estimator/Makefile&quot;  VERBOSE=1 kinect_network"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/erlendb/Programmering/Master/test_ws/build/pose_estimator/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/erlendb/Programmering/Master/test_ws/build/pose_estimator/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/erlendb/Programmering/Master/test_ws/build/pose_estimator/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="kinect_network/fast">
+				<Option output="/home/erlendb/Programmering/Master/test_ws/devel/lib/pose_estimator/kinect_network" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/erlendb/Programmering/Master/test_ws/devel/lib/pose_estimator"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;pose_estimator&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add option="-DvtkFiltersFlowPaths_AUTOINIT=1(vtkFiltersParallelFlowPaths)"/>
+					<Add option="-DvtkIOExodus_AUTOINIT=1(vtkIOParallelExodus)"/>
+					<Add option="-DvtkIOGeometry_AUTOINIT=1(vtkIOMPIParallel)"/>
+					<Add option="-DvtkIOImage_AUTOINIT=1(vtkIOMPIImage)"/>
+					<Add option="-DvtkIOSQL_AUTOINIT=2(vtkIOMySQL,vtkIOPostgreSQL)"/>
+					<Add option="-DvtkRenderingContext2D_AUTOINIT=1(vtkRenderingContextOpenGL)"/>
+					<Add option="-DvtkRenderingCore_AUTOINIT=4(vtkInteractionStyle,vtkRenderingFreeType,vtkRenderingFreeTypeOpenGL,vtkRenderingOpenGL)"/>
+					<Add option="-DvtkRenderingFreeType_AUTOINIT=2(vtkRenderingFreeTypeFontConfig,vtkRenderingMatplotlib)"/>
+					<Add option="-DvtkRenderingLIC_AUTOINIT=1(vtkRenderingParallelLIC)"/>
+					<Add option="-DvtkRenderingVolume_AUTOINIT=1(vtkRenderingVolumeOpenGL)"/>
+					<Add option="-Dqh_QHpointer"/>
+					<Add option="-DDISABLE_PCAP"/>
+					<Add option="-DDISABLE_PNG"/>
+					<Add option="-DDISABLE_LIBUSB_1_0"/>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add directory="/home/erlendb/Programmering/Master/test_ws/devel/include"/>
+					<Add directory="/home/erlendb/Programmering/Master/kinect_ws/src/iai_kinect2/kinect2_bridge/include"/>
+					<Add directory="/home/erlendb/Programmering/Master/kinect_ws/src/iai_kinect2/kinect2_registration/include"/>
+					<Add directory="/opt/ros/kinetic/include"/>
+					<Add directory="/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/home/erlendb/anaconda2/include"/>
+					<Add directory="/usr/include/vtk-6.2"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/freetype2"/>
+					<Add directory="/usr/include/jsoncpp"/>
+					<Add directory="/usr/lib/openmpi/include/openmpi/opal/mca/event/libevent2021/libevent"/>
+					<Add directory="/usr/lib/openmpi/include/openmpi/opal/mca/event/libevent2021/libevent/include"/>
+					<Add directory="/usr/lib/openmpi/include"/>
+					<Add directory="/usr/lib/openmpi/include/openmpi"/>
+					<Add directory="/usr/include/python2.7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include/hdf5/openmpi"/>
+					<Add directory="/usr/include/libxml2"/>
+					<Add directory="/usr/include/tcl"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.3.1-dev"/>
+					<Add directory="/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv"/>
+					<Add directory="/usr/local/include/pcl-1.9"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/ni"/>
+					<Add directory="/usr/include/openni2"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/erlendb/Programmering/Master/test_ws/build/pose_estimator/Makefile&quot;  VERBOSE=1 kinect_network/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/erlendb/Programmering/Master/test_ws/build/pose_estimator/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/erlendb/Programmering/Master/test_ws/build/pose_estimator/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/erlendb/Programmering/Master/test_ws/build/pose_estimator/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="cloud_segmentation">
 				<Option output="/home/erlendb/Programmering/Master/test_ws/devel/lib/pose_estimator/cloud_segmentation" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/erlendb/Programmering/Master/test_ws/devel/lib/pose_estimator"/>
@@ -1571,12 +1715,17 @@
 		<Unit filename="/home/erlendb/Programmering/Master/test_ws/src/pose_estimator/src/cloud_segmentation.cpp">
 			<Option target="cloud_segmentation"/>
 		</Unit>
+		<Unit filename="/home/erlendb/Programmering/Master/test_ws/src/pose_estimator/src/kinect_network.cpp">
+			<Option target="kinect_network"/>
+		</Unit>
 		<Unit filename="/home/erlendb/Programmering/Master/test_ws/src/pose_estimator/src/pose_estimator.cpp">
 			<Option target="testing"/>
+			<Option target="kinect_network"/>
 			<Option target="cloud_segmentation"/>
 		</Unit>
 		<Unit filename="/home/erlendb/Programmering/Master/test_ws/src/pose_estimator/src/pose_estimator.h">
 			<Option target="testing"/>
+			<Option target="kinect_network"/>
 			<Option target="cloud_segmentation"/>
 		</Unit>
 		<Unit filename="/home/erlendb/Programmering/Master/test_ws/src/pose_estimator/src/testing.cpp">
