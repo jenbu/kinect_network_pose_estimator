@@ -136,10 +136,19 @@ private:
         }
 
 
-        typedef message_filters::sync_policies::ApproximateTime<Image, CameraInfo, Image, CameraInfo, darknet_ros_msgs_eb::BoundingBoxes> ApproxSyncPolicy;
+        typedef message_filters::sync_policies::ApproximateTime<CompressedImage, CameraInfo, Image, CameraInfo, darknet_ros_msgs_eb::BoundingBoxes> ApproxSyncPolicy;
 
+        message_filters::Subscriber<CompressedImage> image_color_sub_j1(nh, "/jetson1/qhd/image_color/compressed", 1);
+        message_filters::Subscriber<CameraInfo> info_color_sub_j1(nh, "/jetson1/sd/camera_info", 1);
+        message_filters::Subscriber<Image> image_depth_sub_j1(nh, "/jetson1/sd/image_depth", 1);
+        message_filters::Subscriber<CameraInfo> info_depth_sub_j1(nh, "/jetson1/sd/camera_info", 1);
+        message_filters::Subscriber<darknet_ros_msgs_eb::BoundingBoxes> bounding_boxes_j1(nh, "/jetson1/bounding_boxes", 1);
 
-        message_filters::Subscriber<Image> image_color_sub_j2(nh, "/jetson2/qhd/image_color", 1);
+        message_filters::Synchronizer<ApproxSyncPolicy> *syncApprox_j1;
+        syncApprox_j1 = new message_filters::Synchronizer<ApproxSyncPolicy>(ApproxSyncPolicy(5), image_color_sub_j1, info_color_sub_j1, image_depth_sub_j1, info_depth_sub_j1, bounding_boxes_j1);
+        syncApprox_j1->registerCallback(boost::bind(&Receiver::callback, this, _1, _2, _3, _4, _5, 0));
+
+        message_filters::Subscriber<CompressedImage> image_color_sub_j2(nh, "/jetson2/qhd/image_color/compressed", 1);
         message_filters::Subscriber<CameraInfo> info_color_sub_j2(nh, "/jetson2/sd/camera_info", 1);
         message_filters::Subscriber<Image> image_depth_sub_j2(nh, "/jetson2/sd/image_depth", 1);
         message_filters::Subscriber<CameraInfo> info_depth_sub_j2(nh, "/jetson2/sd/camera_info", 1);
@@ -149,7 +158,7 @@ private:
         syncApprox_j2 = new message_filters::Synchronizer<ApproxSyncPolicy>(ApproxSyncPolicy(5), image_color_sub_j2, info_color_sub_j2, image_depth_sub_j2, info_depth_sub_j2, bounding_boxes_j2);
         syncApprox_j2->registerCallback(boost::bind(&Receiver::callback, this, _1, _2, _3, _4, _5, 1));
 
-        message_filters::Subscriber<Image> image_color_sub_j3(nh, "/jetson3/qhd/image_color", 1);
+        message_filters::Subscriber<CompressedImage> image_color_sub_j3(nh, "/jetson3/qhd/image_color/compressed", 1);
         message_filters::Subscriber<CameraInfo> info_color_sub_j3(nh, "/jetson3/sd/camera_info", 1);
         message_filters::Subscriber<Image> image_depth_sub_j3(nh, "/jetson3/sd/image_depth", 1);
         message_filters::Subscriber<CameraInfo> info_depth_sub_j3(nh, "/jetson3/sd/camera_info", 1);
@@ -159,11 +168,40 @@ private:
         syncApprox_j3 = new message_filters::Synchronizer<ApproxSyncPolicy>(ApproxSyncPolicy(5), image_color_sub_j3, info_color_sub_j3, image_depth_sub_j3, info_depth_sub_j3, bounding_boxes_j3);
         syncApprox_j3->registerCallback(boost::bind(&Receiver::callback, this, _1, _2, _3, _4, _5, 2));
 
+        message_filters::Subscriber<CompressedImage> image_color_sub_j4(nh, "/jetson4/qhd/image_color/compressed", 1);
+        message_filters::Subscriber<CameraInfo> info_color_sub_j4(nh, "/jetson4/sd/camera_info", 1);
+        message_filters::Subscriber<Image> image_depth_sub_j4(nh, "/jetson4/sd/image_depth", 1);
+        message_filters::Subscriber<CameraInfo> info_depth_sub_j4(nh, "/jetson4/sd/camera_info", 1);
+        message_filters::Subscriber<darknet_ros_msgs_eb::BoundingBoxes> bounding_boxes_j4(nh, "/jetson4/bounding_boxes", 1);
+
+        message_filters::Synchronizer<ApproxSyncPolicy> *syncApprox_j4;
+        syncApprox_j4 = new message_filters::Synchronizer<ApproxSyncPolicy>(ApproxSyncPolicy(5), image_color_sub_j4, info_color_sub_j4, image_depth_sub_j4, info_depth_sub_j4, bounding_boxes_j4);
+        syncApprox_j4->registerCallback(boost::bind(&Receiver::callback, this, _1, _2, _3, _4, _5, 3));
+
+        message_filters::Subscriber<CompressedImage> image_color_sub_j5(nh, "/jetson5/qhd/image_color/compressed", 1);
+        message_filters::Subscriber<CameraInfo> info_color_sub_j5(nh, "/jetson5/sd/camera_info", 1);
+        message_filters::Subscriber<Image> image_depth_sub_j5(nh, "/jetson5/sd/image_depth", 1);
+        message_filters::Subscriber<CameraInfo> info_depth_sub_j5(nh, "/jetson5/sd/camera_info", 1);
+        message_filters::Subscriber<darknet_ros_msgs_eb::BoundingBoxes> bounding_boxes_j5(nh, "/jetson5/bounding_boxes", 1);
+
+        message_filters::Synchronizer<ApproxSyncPolicy> *syncApprox_j5;
+        syncApprox_j5 = new message_filters::Synchronizer<ApproxSyncPolicy>(ApproxSyncPolicy(5), image_color_sub_j5, info_color_sub_j5, image_depth_sub_j5, info_depth_sub_j5, bounding_boxes_j5);
+        syncApprox_j5->registerCallback(boost::bind(&Receiver::callback, this, _1, _2, _3, _4, _5, 4));
+
+        message_filters::Subscriber<CompressedImage> image_color_sub_j6(nh, "/jetson6/qhd/image_color/compressed", 1);
+        message_filters::Subscriber<CameraInfo> info_color_sub_j6(nh, "/jetson6/sd/camera_info", 1);
+        message_filters::Subscriber<Image> image_depth_sub_j6(nh, "/jetson6/sd/image_depth", 1);
+        message_filters::Subscriber<CameraInfo> info_depth_sub_j6(nh, "/jetson6/sd/camera_info", 1);
+        message_filters::Subscriber<darknet_ros_msgs_eb::BoundingBoxes> bounding_boxes_j6(nh, "/jetson6/bounding_boxes", 1);
+
+        message_filters::Synchronizer<ApproxSyncPolicy> *syncApprox_j6;
+        syncApprox_j6 = new message_filters::Synchronizer<ApproxSyncPolicy>(ApproxSyncPolicy(5), image_color_sub_j6, info_color_sub_j6, image_depth_sub_j6, info_depth_sub_j6, bounding_boxes_j6);
+        syncApprox_j6->registerCallback(boost::bind(&Receiver::callback, this, _1, _2, _3, _4, _5, 5));
 
         std::chrono::milliseconds duration(1);
 
 
-        initKinectToWorldTransMatrices(to_world_matrix[1], to_world_matrix[2]);
+        initKinectToWorldTransMatrices(to_world_matrix);
 
         segmented_box_normal = pcl::PointCloud<pcl::PointNormal>::Ptr(new pcl::PointCloud<pcl::PointNormal>());
         cloud_normal_box = pcl::PointCloud<pcl::PointNormal>::Ptr(new pcl::PointCloud<pcl::PointNormal>());
@@ -184,10 +222,10 @@ private:
         concatenated_box_filtered = pcl::PointCloud<pcl::PointXYZRGBA>::Ptr(new pcl::PointCloud<pcl::PointXYZRGBA>());
         temp = pcl::PointCloud<pcl::PointXYZRGBA>::Ptr(new pcl::PointCloud<pcl::PointXYZRGBA>());
         pcl::copyPointCloud(*aligned_boxEnd, *aligned_box);
-        spinner.start();
 
+        spinner.start();
         //sover helt til man får tak i data fra publishere
-        while (!updateImage[1] || !updateCloud[1] || !updateImage[2] || !updateCloud[2]) {
+        while (!updateImage[1] || !updateCloud[1]/* || !updateImage[2] || !updateCloud[2]*/) {
             if (!ros::ok()) {
                 return;
             }
@@ -231,7 +269,7 @@ private:
 
     }
 
-    void callback(const sensor_msgs::Image::ConstPtr &img_color, const sensor_msgs::CameraInfo::ConstPtr info_color, const sensor_msgs::Image::ConstPtr &img_depth,
+    void callback(const sensor_msgs::CompressedImage::ConstPtr &img_color, const sensor_msgs::CameraInfo::ConstPtr info_color, const sensor_msgs::Image::ConstPtr &img_depth,
                   const sensor_msgs::CameraInfo::ConstPtr info_depth, const darknet_ros_msgs_eb::BoundingBoxes::ConstPtr det_info, int jetson_index)
     {
         //cout << "Jetson" << (jetson_index+1) << " callback" << endl;
@@ -241,8 +279,7 @@ private:
         readCameraInfo(info_color, cameraMatrixColor[jetson_index]);
         readCameraInfo(info_depth, cameraMatrixDepth[jetson_index]);
 
-        readImage(img_color, color);
-        readImage(img_depth, depth);
+        readImage(img_color, color, img_depth, depth);
 
 
         if(color.type() == CV_16U)
@@ -271,7 +308,7 @@ private:
         ostringstream os;
         pcl::StatisticalOutlierRemoval<pcl::PointXYZRGBA> sor_seg;
         sor_seg.setMeanK (50);
-        sor_seg.setStddevMulThresh (0.3);
+        sor_seg.setStddevMulThresh (0.5);
 
 
         pcl::PointCloud<pcl::PointXYZRGBA>::Ptr filtered_cloud(new pcl::PointCloud<pcl::PointXYZRGBA>());
@@ -281,7 +318,7 @@ private:
         std::string pin_cloudName[6];
 
         lock.lock();
-        for(int i = 1; i < 3; i++)
+        for(int i = 0; i < 6; i++)
         {
             color[i] = this->color_image[i];
             depth[i] = this->depth_image[i];
@@ -293,7 +330,7 @@ private:
 
         //cv::imshow("abc", color[1]);
         //cv::waitKey(3000);
-        for(int i = 1; i < 1; i++)
+        for(int i = 0; i < 6; i++)
         {
             createCloud(depth[i], color[i], box_cloud[i], pin_cloud[i], cloud[i], det_inf[i], i);
             *concatenated_world += *cloud_world[i];
@@ -308,14 +345,14 @@ private:
 
 
 
-        visualizer->addPointCloud(concatenated_world, ColorHandlerT(concatenated_world, 255.0, 255.0, 255.0), "World cloud");
+        //visualizer->addPointCloud(concatenated_world, ColorHandlerT(concatenated_world, 255.0, 255.0, 255.0), "World cloud");
         visualizer->addPointCloud(concatenated_box, ColorHandlerT(concatenated_box, 255.0, 0.0, 0.0), "Box cloud");
         visualizer->addPointCloud(concatenated_pin, ColorHandlerT(concatenated_pin, 0.0, 255.0, 0.0), "Pin cloud");
-        //visualizer->addPointCloud(concatenated_box_filtered, ColorHandlerT(concatenated_box_filtered, 0.0, 0.0, 255.0), "box-filtered");
-        //visualizer->addPointCloud(concatenated_pin_filtered, ColorHandlerT(concatenated_pin_filtered, 0.0, 0.0, 255.0), "pin-filtered");
+        visualizer->addPointCloud(concatenated_box_filtered, ColorHandlerT(concatenated_box_filtered, 0.0, 0.0, 255.0), "box-filtered");
+        visualizer->addPointCloud(concatenated_pin_filtered, ColorHandlerT(concatenated_pin_filtered, 0.0, 0.0, 255.0), "pin-filtered");
         //visualizer->addPointCloud(segmented_box, ColorHandlerT(segmented_box, 255.0, 255.0, 0.0), "seg cloud");
-        //visualizer->addPointCloud(aligned_box, ColorHandlerT(aligned_box, 255.0, 0.0, 255.0), "box-model");
-        //visualizer->addPointCloud(aligned_pin, ColorHandlerT(aligned_pin, 255.0, 0.0, 255.0), "pin-model");
+        visualizer->addPointCloud(aligned_box, ColorHandlerT(aligned_box, 255.0, 0.0, 255.0), "box-model");
+        visualizer->addPointCloud(aligned_pin, ColorHandlerT(aligned_pin, 255.0, 0.0, 255.0), "pin-model");
 
 
         //Add pose text
@@ -333,11 +370,11 @@ private:
 
         while(running && ros::ok())
         {
-            if(updateCloud[1] && updateCloud[2])
+            if(updateCloud[0] && updateCloud[1] && updateCloud[2] &&  updateCloud[3] &&  updateCloud[4] &&  updateCloud[5])
             {
 
                 lock.lock();
-                for(int i = 1; i < 3; i++)
+                for(int i = 0; i < 6; i++)
                 {
                     color[i] = this->color_image[i];
                     depth[i] = this->depth_image[i];
@@ -353,10 +390,10 @@ private:
 
                 cout << "inni i loop" << endl;
 
-                cout << "QHD DZ:" <<QHD_WIDTH_DZ << endl;
-                cout << "IR DZ:" << IR_HEIGHT_DZ << endl;
+                //cout << "QHD DZ:" <<QHD_WIDTH_DZ << endl;
+                //cout << "IR DZ:" << IR_HEIGHT_DZ << endl;
 
-                for(int i = 1; i < 3; i++)
+                for(int i = 0; i < 6; i++)
                 {
                     createCloud(depth[i], color[i], box_cloud[i], pin_cloud[i], cloud[i], det_inf[i], i);
                     *concatenated_world += *cloud_world[i];
@@ -365,10 +402,10 @@ private:
 
                 }
 
-                if(iterator==1)
+                if(iterator==5)
                 {
 
-                    /*
+                    cout << "Begin processing" << endl;
                     narrowPointCloud(concatenated_box, concatenated_box_filtered);
                     narrowPointCloud(concatenated_pin, concatenated_pin_filtered);
                     sor_seg.setInputCloud (concatenated_pin_filtered);
@@ -376,18 +413,18 @@ private:
                     sor_seg.setInputCloud(concatenated_box_filtered);
                     sor_seg.filter(*concatenated_box_filtered);
                     poseEstimation(concatenated_box_filtered, concatenated_pin_filtered);
-                    */
+
                      //poseEstimation(concatenated_box_filtered, concatenated_pin);
-                    visualizer->updatePointCloud(concatenated_world, ColorHandlerT(concatenated_world, 255.0, 255.0, 255.0), "World cloud");
+                    //visualizer->updatePointCloud(concatenated_world, ColorHandlerT(concatenated_world, 255.0, 255.0, 255.0), "World cloud");
                     visualizer->updatePointCloud(concatenated_box, ColorHandlerT(concatenated_box, 255.0, 0.0, 0.0), "Box cloud");
                     visualizer->updatePointCloud(concatenated_pin, ColorHandlerT(concatenated_pin, 0.0, 255.0, 0.0), "Pin cloud");
                     //visualizer->updatePointCloud(segmented_box, ColorHandlerT(segmented_box, 255.0, 255.0, 0.0), "seg cloud");
-                    //visualizer->updatePointCloud(aligned_box, ColorHandlerT(aligned_box, 255.0, 0.0, 255.0), "box-model");
-                    //visualizer->updatePointCloud(concatenated_box_filtered, ColorHandlerT(concatenated_box_filtered, 0.0, 0.0, 255.0), "box-filtered");
-                    //visualizer->updatePointCloud(concatenated_pin_filtered, ColorHandlerT(concatenated_pin_filtered, 0.0, 0.0, 255.0), "pin-filtered");
-                    //visualizer->updatePointCloud(aligned_pin, ColorHandlerT(aligned_pin, 255.0, 0.0, 255.0), "pin-model");
+                    visualizer->updatePointCloud(aligned_box, ColorHandlerT(aligned_box, 255.0, 0.0, 255.0), "box-model");
+                    visualizer->updatePointCloud(concatenated_box_filtered, ColorHandlerT(concatenated_box_filtered, 0.0, 0.0, 255.0), "box-filtered");
+                    visualizer->updatePointCloud(concatenated_pin_filtered, ColorHandlerT(concatenated_pin_filtered, 0.0, 0.0, 255.0), "pin-filtered");
+                    visualizer->updatePointCloud(aligned_pin, ColorHandlerT(aligned_pin, 255.0, 0.0, 255.0), "pin-model");
 
-                    /*
+
                     if(pose_box.size() > 0)
                     {
                         os << "Box-end\n" << "x: " << pose_box[0] << endl << "y: " << pose_box[1] << endl << "z: " << pose_box[2] << endl;
@@ -398,7 +435,7 @@ private:
                         os << "Box-end\n" << "x: " << -1 << endl << "y: " << -1 << endl << "z: " << -1 << endl;
                         visualizer->updateText(os.str(), 10, 10, "box_text"); os.str(std::string());
                     }
-                    */
+
 
                     if(save)
                     {
@@ -490,8 +527,8 @@ private:
 
                 r_min = y1-10;
                 r_max = y2;//+30;
-                c_min = x1-10;
-                c_max = x2+10;
+                c_min = x1-15;
+                c_max = x2+15;
                 width = c_max - c_min;
                 if(r_min < 0)
                     r_min = 0;
@@ -592,7 +629,7 @@ private:
     {
         x1 -= QHD_WIDTH_DZ; x2 -= QHD_WIDTH_DZ;
         y1 += IR_HEIGHT_DZ; y2 += IR_HEIGHT_DZ;
-        cout << "QHD_WIDTH_DZ in qhdTosd()" << QHD_WIDTH_DZ << endl;
+        //cout << "QHD_WIDTH_DZ in qhdTosd()" << QHD_WIDTH_DZ << endl;
         double qhd_height = this->color_image[1].rows;
         double qhd_width = this->color_image[1].cols-2*QHD_WIDTH_DZ;
         double sd_height = this->depth_image[1].rows-2*IR_HEIGHT_DZ; //pga IR kamera er høyere enn hd kameraet
@@ -609,11 +646,12 @@ private:
         //cout << "width factor: " << width_factor << " x1: " << x1 << " x2: " << x2 << " y1: " << y1 << " y2: " << y2 << endl;
     }
 
-    void readImage(const sensor_msgs::Image::ConstPtr img, cv::Mat &outImg)
+    void readImage(const sensor_msgs::CompressedImage::ConstPtr img, cv::Mat &outImg, const sensor_msgs::Image::ConstPtr depth, cv::Mat &outDepth)
     {
         cv_bridge::CvImageConstPtr cv_ptr;
-        cv_ptr = cv_bridge::toCvShare(img, img->encoding);
-        cv_ptr->image.copyTo(outImg);
+        cv_ptr = cv_bridge::toCvShare(depth, depth->encoding);
+        cv_ptr->image.copyTo(outDepth);
+        outImg = cv::imdecode(cv::Mat(img->data), 1);
     }
 
     void readCameraInfo(const sensor_msgs::CameraInfo::ConstPtr cameraInfo, cv::Mat &cameraMatrix) const {
@@ -627,7 +665,7 @@ private:
     void createLookup(size_t width, size_t height)
     {
 
-        for(int i = 1; i < 3; i++)
+        for(int i = 0; i < 6; i++)
         {
             //fx og fy er focal lengde, lengde/piksel. er begge like har man helt kvadratisk bilde.
             const float fx = 1.0f / cameraMatrixColor[i].at<double>(0,0);
@@ -721,8 +759,20 @@ private:
         ++frame;
     }
 
-    void initKinectToWorldTransMatrices(Eigen::Matrix4f &m2, Eigen::Matrix4f &m3)
+    void initKinectToWorldTransMatrices(Eigen::Matrix4f m[6])
     {
+        float j1_x = 7.798;
+        float j1_y = 0.496;
+        float j1_z = 4.175;
+
+        Eigen::Quaterniond q_j1(-0.349, 0.872, 0.317, -0.133);
+        Eigen::Matrix3d j1_rot;
+        j1_rot = q_j1.normalized().toRotationMatrix();
+        m[0] << j1_rot(0, 0), j1_rot(0, 1), j1_rot(0, 2), j1_x,
+                j1_rot(1, 0), j1_rot(1, 1), j1_rot(1, 2), j1_y,
+                j1_rot(2, 0), j1_rot(2, 1), j1_rot(2, 2), j1_z,
+                0.0,            0.0,          0.0,         1.0;
+
         float j2_x = 1.729;
         float j2_y = 0.501;
         float j2_z = 4.135;
@@ -730,7 +780,7 @@ private:
         Eigen::Quaterniond q_j2(-0.311, 0.869, -0.369, 0.111);
         Eigen::Matrix3d j2_rot;
         j2_rot = q_j2.normalized().toRotationMatrix();
-        m2 <<   j2_rot(0, 0), j2_rot(0, 1), j2_rot(0, 2), j2_x,
+        m[1] <<   j2_rot(0, 0), j2_rot(0, 1), j2_rot(0, 2), j2_x,
                 j2_rot(1, 0), j2_rot(1, 1), j2_rot(1, 2), j2_y,
                 j2_rot(2, 0), j2_rot(2, 1), j2_rot(2, 2), j2_z,
                 0.0,            0.0,          0.0,         1.0;
@@ -743,12 +793,46 @@ private:
         Eigen::Matrix3d j3_rot;
         j3_rot = q_j3.normalized().toRotationMatrix();
         cout << j3_rot << endl;
-        m3 <<   j3_rot(0, 0), j3_rot(0, 1), j3_rot(0, 2), j3_x,
+        m[2] <<   j3_rot(0, 0), j3_rot(0, 1), j3_rot(0, 2), j3_x,
                 j3_rot(1, 0), j3_rot(1, 1), j3_rot(1, 2), j3_y,
                 j3_rot(2, 0), j3_rot(2, 1), j3_rot(2, 2), j3_z,
                 0.0,            0.0,          0.0,         1.0;
 
-        cout << m3 << endl;
+
+        float j4_x = 0.553;
+        float j4_y = 4.995;
+        float j4_z = 4.353;
+        Eigen::Quaterniond q_j4(-0.208, 0.681, -0.67, 0.211);
+        Eigen::Matrix3d j4_rot;
+        j4_rot = q_j4.normalized().toRotationMatrix();
+        m[3] << j4_rot(0, 0), j4_rot(0, 1), j4_rot(0, 2), j4_x,
+                j4_rot(1, 0), j4_rot(1, 1), j4_rot(1, 2), j4_y,
+                j4_rot(2, 0), j4_rot(2, 1), j4_rot(2, 2), j4_z,
+                0.0,            0.0,          0.0,         1.0;
+
+        float j5_x = 8.879;
+        float j5_y = 9.192;
+        float j5_z = 4.194;
+        Eigen::Quaterniond q_j5(-0.166, 0.417, 0.840, -0.306);
+        Eigen::Matrix3d j5_rot;
+        j5_rot = q_j5.normalized().toRotationMatrix();
+        m[4] << j5_rot(0, 0), j5_rot(0, 1), j5_rot(0, 2), j5_x,
+                j5_rot(1, 0), j5_rot(1, 1), j5_rot(1, 2), j5_y,
+                j5_rot(2, 0), j5_rot(2, 1), j5_rot(2, 2), j5_z,
+                0.0,            0.0,          0.0,         1.0;
+
+        float j6_x = 0.559;
+        float j6_y = 9.136;
+        float j6_z = 4.145;
+        Eigen::Quaterniond q_j6(0.174, -0.457, 0.812, -0.318);
+        Eigen::Matrix3d j6_rot;
+        j6_rot = q_j6.normalized().toRotationMatrix();
+        m[5] << j6_rot(0, 0), j6_rot(0, 1), j6_rot(0, 2), j6_x,
+                j6_rot(1, 0), j6_rot(1, 1), j6_rot(1, 2), j6_y,
+                j6_rot(2, 0), j6_rot(2, 1), j6_rot(2, 2), j6_z,
+                0.0,            0.0,          0.0,         1.0;
+
+
 
     }
 
@@ -756,19 +840,20 @@ private:
     {
         pose_box.empty(); pose_pin.empty();
 
-        pcl::copyPointCloud(*input_box_cloud, *cloud_normal_box);
+        cout << "Pin-end pose estimation" << endl;
+        pcl::copyPointCloud(*input_pin_cloud, *cloud_normal_pin);
         pcl::copyPointCloud(*aligned_pin, *aligned_pin_normal);
-        //pose_est.setModel(aligned_boxEnd);
-        //pose_est.setModel(aligned_pin_normal);
-        //pose_est.start(cloud_normal_box, aligned_pin_normal);
+        pose_est.setModel(aligned_pin_normal);
+        pose_est.start(cloud_normal_pin, aligned_pin_normal);
         //pose_est.getSegmented(segmented_box_normal);
         //pcl::copyPointCloud(*segmented_box_normal, *segmented_box);
-        //pcl::copyPointCloud(*aligned_pin_normal, *aligned_pin);
+        pcl::copyPointCloud(*aligned_pin_normal, *aligned_pin);
 
-        pcl::copyPointCloud(*input_pin_cloud, *cloud_normal_pin);
+        cout << "Box-end pose estimation" << endl;
+        pcl::copyPointCloud(*input_box_cloud, *cloud_normal_box);
         pcl::copyPointCloud(*aligned_box, *aligned_box_normal);
         pose_est.setModel(aligned_box_normal);
-        pose_est.start(cloud_normal_pin, aligned_box_normal);
+        pose_est.start(cloud_normal_box, aligned_box_normal);
         pose_est.getPose(pose_box);
         pcl::copyPointCloud(*aligned_box_normal, *aligned_box);
         if(pose_box.size() > 0)

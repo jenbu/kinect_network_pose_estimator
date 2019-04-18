@@ -34,8 +34,8 @@ bool PoseEstimator::start(pcl::PointCloud<pcl::PointNormal>::Ptr cloud, pcl::Poi
 
     if(model_assigned)
     {
-        voxel_filter();
-        extract_cylinder();
+        //voxel_filter();
+        //extract_cylinder();
 
         start_time = std::chrono::high_resolution_clock::now();
         pose_estimate();
@@ -81,12 +81,12 @@ void PoseEstimator::voxel_filter()
     //pass.filter(*cloud_filtered);
 
 
-    float leaf = 0.007f;
-    vg.setInputCloud (input_cloud);
-    vg.setLeafSize (leaf, leaf, leaf);
-    vg.filter (*cloud_filtered);
-    cloud_filtered_return = cloud_filtered;
-    std::cout << "PointCloud after filtering has: " << cloud_filtered->points.size ()  << " data points." << std::endl;
+    //float leaf = 0.007f;
+    //vg.setInputCloud (input_cloud);
+    //vg.setLeafSize (leaf, leaf, leaf);
+    //vg.filter (*cloud_filtered);
+    //cloud_filtered_return = cloud_filtered;
+    //std::cout << "PointCloud after filtering has: " << cloud_filtered->points.size ()  << " data points." << std::endl;
 
     //cloud_filtered = input_cloud;
     //sor.setInputCloud(cloud_filtered);
@@ -167,12 +167,12 @@ void PoseEstimator::extract_cylinder()
 
 void PoseEstimator::pose_estimate()
 {
-
+    segmented_pipe = input_cloud;
     // Downsample
-    leaf = 0.02;
-    //pcl::console::print_highlight ("Downsampling...\n");
+    leaf = 0.01f;
+    pcl::console::print_highlight ("Downsampling...\n");
 
-    vg.setLeafSize (0.01, 0.01, 0.01);
+    vg.setLeafSize (leaf, leaf, leaf);
     vg.setInputCloud (pipe_model);
     vg.filter (*pipe_model);
     vg.setLeafSize (leaf, leaf, leaf);
@@ -202,11 +202,12 @@ void PoseEstimator::pose_estimate()
     align.setRANSACOutlierRejectionThreshold(0.1);
     align.setMaximumIterations (80000); // Number of RANSAC iterations
     align.setNumberOfSamples (3); // Number of points to sample for generating/prerejecting a pose
-    align.setCorrespondenceRandomness (28); // Number of nearest features to use
+    align.setCorrespondenceRandomness (38); // Number of nearest features to use
     align.setSimilarityThreshold (0.75f); // Polygonal edge length similarity threshold
     align.setMaxCorrespondenceDistance (2.5f * leaf); // Inlier threshold
     align.setInlierFraction (0.45f); // Required inlier fraction for accepting a pose hypothesis
 
+    pcl::console::print_highlight ("Ransac pose-estimating\n");
     align.align (*pipe_model);
     if (align.hasConverged ()) {
         aligned = true;
