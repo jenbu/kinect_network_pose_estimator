@@ -9,69 +9,154 @@
 #include <pcl/io/ply_io.h>
 #include <pcl/visualization/cloud_viewer.h>
 #include <pcl/filters/statistical_outlier_removal.h>
+#include <pcl/registration/icp.h>
 #include <pcl/filters/voxel_grid.h>
 #include <pcl/common/transforms.h>
 #include <pcl/filters/radius_outlier_removal.h>
 #include <chrono>
+#include <pcl/console/time.h>   // TicToc
 
 
-std::string path1 = "/home/erlendb/Pictures/4.17:10.28.34140726359646744box_cloud.pcd";
-std::string path2 = "/home/erlendb/Pictures/4.17:10.28.34140726359646744pin_cloud.pcd";
+std::string path1 = "/home/erlendb/Pictures/4.19:13.32.170000box_cloud.pcd";
+std::string path2 = "/home/erlendb/Pictures/4.19:13.32.170000pin_cloud.pcd";
 std::string path3 = "/home/erlendb/Pictures/Masteroppgave_bilder/Bilder_poseTesting/pin_end/4.1:18.3.24139977279143939_cloud.pcd";
 std::string path4 = "/home/erlendb/Pictures/Masteroppgave_bilder/Bilder_poseTesting/pin_end/4.1:18.3.55139977279143940_cloud.pcd";
-std::string model_path = "/home/erlendb/Blender/pin_end_short.ply";
+std::string model_path = "/home/erlendb/Blender/box_end7_m.ply";
+std::string model_path_pin = "/home/erlendb/Blender/pin_end1.ply";
+
+void
+print4x4Matrix (const Eigen::Matrix4d & matrix)
+{
+    printf ("Rotation matrix :\n");
+    printf ("    | %6.3f %6.3f %6.3f | \n", matrix (0, 0), matrix (0, 1), matrix (0, 2));
+    printf ("R = | %6.3f %6.3f %6.3f | \n", matrix (1, 0), matrix (1, 1), matrix (1, 2));
+    printf ("    | %6.3f %6.3f %6.3f | \n", matrix (2, 0), matrix (2, 1), matrix (2, 2));
+    printf ("Translation vector :\n");
+    printf ("t = < %6.3f, %6.3f, %6.3f >\n\n", matrix (0, 3), matrix (1, 3), matrix (2, 3));
+}
+
 
 int main(int argc, char** args)
 {
-    typedef pcl::visualization::PointCloudColorHandlerCustom<pcl::PointXYZRGBA> ColorHandlerT;
-    pcl::PointCloud<pcl::PointXYZRGBA>::Ptr scene1 (new  pcl::PointCloud<pcl::PointXYZRGBA> ());
-    pcl::PointCloud<pcl::PointXYZRGBA>::Ptr scene1_filtered (new  pcl::PointCloud<pcl::PointXYZRGBA> ());
-    pcl::PointCloud<pcl::PointNormal>::Ptr scene2 (new  pcl::PointCloud<pcl::PointNormal> ());
-    pcl::PointCloud<pcl::PointNormal>::Ptr scene3 (new  pcl::PointCloud<pcl::PointNormal> ());
-    pcl::PointCloud<pcl::PointNormal>::Ptr scene4 (new  pcl::PointCloud<pcl::PointNormal> ());
-    pcl::PointCloud<pcl::PointNormal>::Ptr segmented (new  pcl::PointCloud<pcl::PointNormal> ());
-    pcl::PointCloud<pcl::PointNormal>::Ptr model (new  pcl::PointCloud<pcl::PointNormal> ());
+    typedef pcl::visualization::PointCloudColorHandlerCustom<pcl::PointXYZ> ColorHandlerT;
 
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_in (new pcl::PointCloud<pcl::PointXYZ>);  // Original point cloud
+    pcl::PointCloud<pcl::PointXYZ>::Ptr model (new pcl::PointCloud<pcl::PointXYZ>);  // Original point cloud
+    pcl::PointCloud<pcl::PointXYZ>::Ptr model_pin (new pcl::PointCloud<pcl::PointXYZ>);
+    pcl::PointCloud<pcl::PointXYZ>::Ptr scene (new pcl::PointCloud<pcl::PointXYZ>);  // Original point cloud
+    pcl::PointCloud<pcl::PointXYZ>::Ptr scene_pin (new pcl::PointCloud<pcl::PointXYZ>);  // Original point cloud
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_tr (new pcl::PointCloud<pcl::PointXYZ>);  // Transformed point cloud
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_icp (new pcl::PointCloud<pcl::PointXYZ>);  // ICP output point cloud
 
-    std::string examplePath = "/home/erlendb/Downloads/table_scene_lms400.pcd";
+    int iterations = 200;
     pcl::PCDReader reader12;
     pcl::PLYReader ply_reader12;
 
+    pcl::console::TicToc time;
+
+
+
+    ply_reader12.read<pcl::PointXYZ> (model_path, *model);
+    reader12.read<pcl::PointXYZ> (path1, *scene);
+    ply_reader12.read<pcl::PointXYZ> (model_path_pin, *model_pin);
+    reader12.read<pcl::PointXYZ> (path2, *scene_pin);
+
     //reader12.read(path1, *scene1);
-    std::chrono::time_point<std::chrono::high_resolution_clock> start_time, now_time;
+    Eigen::Matrix4d transformation_matrix_box, transformation_matrix_pin;
+    double sumX = 0, sumY = 0;
+    double avgX, avgY;
+    for(int i = 0; i < scene->points.size(); i++)
+    {
+        sumX += scene->points[i].x;
+        sumY += scene->points[i].y;
+    }
+    avgX = sumX/scene->points.size();
+    avgY = sumY/scene->points.size();
+    double theta = -M_PI / 2;  // The angle of rotation in radians
 
-    // Replace the path below with the path where you saved your file
-    reader12.read<pcl::PointXYZRGBA> (path2, *scene1);
+    /*transformation_matrix << cos(theta), 0, -sin(theta), 0,
+                             0         , 1, 0,           0,
+                             sin(theta), 0, cos(theta) , 0,
+                             0         , 0, 0,           1;
+    */
+    transformation_matrix_box << 1,              0,           0, (avgX),
+                                 0,     cos(theta),  sin(theta), (avgY),
+                                 0,     -sin(theta), cos(theta), 0.3,
+                                 0,              0,           0, 1;
 
-    std::cerr << "Cloud before filtering: " << std::endl;
-    std::cerr << *scene1 << std::endl;
+    sumX = 0; sumY = 0;
+    for(int i = 0; i < scene_pin->points.size(); i++)
+    {
+        sumX += scene_pin->points[i].x;
+        sumY += scene_pin->points[i].y;
+    }
+    avgX = sumX/scene_pin->points.size();
+    avgY = sumY/scene_pin->points.size();
 
-    // Create the filtering object
-    pcl::StatisticalOutlierRemoval<pcl::PointXYZRGBA> sor;
-    sor.setInputCloud (scene1);
-    sor.setMeanK (50);
-    sor.setStddevMulThresh (0.3);
-    start_time = std::chrono::high_resolution_clock::now();
-    sor.filter (*scene1_filtered);
-    now_time = std::chrono::high_resolution_clock::now();
-    double elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(now_time - start_time).count() / 1000.0;
-    cout << "time lapsed: " << elapsed << endl;
-
-
-    std::cerr << "Cloud after filtering: " << std::endl;
-    std::cerr << *scene1_filtered << std::endl;
-
-    //pcl::PCDWriter writer;
-    //writer.write<pcl::PointXYZ> ("table_scene_lms400_inliers.pcd", *scene1_filtered, false);
-
-    //sor.setNegative (true);
-    //sor.filter (*);
+    theta = M_PI / 2;
+    transformation_matrix_pin << 1,              0,           0, (avgX),
+                                 0,     cos(theta),  sin(theta), (avgY),
+                                 0,     -sin(theta), cos(theta), (0.55+0.3),
+                                 0,              0,           0, 1;
 
 
-    pcl::visualization::PCLVisualizer viewer;
+    pcl::transformPointCloud(*model, *model, transformation_matrix_box);
+    pcl::transformPointCloud(*model_pin, *model_pin, transformation_matrix_pin);
 
-    viewer.addPointCloud(scene1, ColorHandlerT(scene1, 255.0, 255.0, 255.0), "scene");
-    viewer.addPointCloud(scene1_filtered, ColorHandlerT(scene1_filtered, 255.0, 0.0, 0.0), "scene_filtered");
+
+    pcl::visualization::PCLVisualizer viewer("ICP demo");
+    viewer.addCoordinateSystem(2.0);
+    viewer.addPointCloud(scene, ColorHandlerT(scene, 255.0, 255.0, 255.0), "scene");
+    viewer.addPointCloud(model, ColorHandlerT(model, 255.0, 0.0, 255.0), "model");
+    viewer.addPointCloud(scene_pin, ColorHandlerT(scene_pin, 255.0, 255.0, 255.0), "scene_pin");
+    viewer.addPointCloud(model_pin, ColorHandlerT(model_pin, 255.0, 0.0, 255.0), "model_pin");
+    viewer.spinOnce(1000);
+
+    // The Iterative Closest Point algorithm
+    time.tic ();
+    pcl::IterativeClosestPoint<pcl::PointXYZ, pcl::PointXYZ> icp;
+    icp.setMaximumIterations (iterations);
+    icp.setInputSource (model);
+    icp.setInputTarget (scene);
+    icp.align (*model);
+    //icp.setMaximumIterations (1);  // We set this variable to 1 for the next time we will call .align () function
+    std::cout << "Applied " << iterations << " ICP iteration(s) in " << time.toc () << " ms" << std::endl;
+
+    if (icp.hasConverged ())
+    {
+        std::cout << "\nICP has converged, score is " << icp.getFitnessScore () << std::endl;
+        std::cout << "\nICP transformation " << iterations << " : cloud_icp -> cloud_in" << std::endl;
+        transformation_matrix_box = icp.getFinalTransformation ().cast<double>();
+        print4x4Matrix (transformation_matrix_box);
+    }
+    else
+    {
+        PCL_ERROR ("\nICP has not converged.\n");
+        return (-1);
+    }
+
+    icp.setInputSource (model_pin);
+    icp.setInputTarget (scene_pin);
+    icp.align (*model_pin);
+
+    if (icp.hasConverged ())
+    {
+        std::cout << "\nICP has converged, score is " << icp.getFitnessScore () << std::endl;
+        std::cout << "\nICP transformation " << iterations << " : cloud_icp -> cloud_in" << std::endl;
+        transformation_matrix_pin = icp.getFinalTransformation ().cast<double>();
+        print4x4Matrix (transformation_matrix_pin);
+    }
+    else
+    {
+        PCL_ERROR ("\nICP has not converged.\n");
+        return (-1);
+    }
+
+
+    viewer.updatePointCloud(scene, ColorHandlerT(scene, 255.0, 255.0, 255.0), "scene");
+    viewer.updatePointCloud(model, ColorHandlerT(model, 255.0, 0.0, 255.0), "model");
+    viewer.updatePointCloud(scene_pin, ColorHandlerT(scene_pin, 255.0, 255.0, 255.0), "scene_pin");
+    viewer.updatePointCloud(model_pin, ColorHandlerT(model_pin, 255.0, 0.0, 255.0), "model_pin");
 
     viewer.spin();
 

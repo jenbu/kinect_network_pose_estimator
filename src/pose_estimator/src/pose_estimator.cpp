@@ -37,6 +37,7 @@ bool PoseEstimator::start(pcl::PointCloud<pcl::PointNormal>::Ptr cloud, pcl::Poi
         //voxel_filter();
         //extract_cylinder();
 
+
         start_time = std::chrono::high_resolution_clock::now();
         pose_estimate();
         now_time = std::chrono::high_resolution_clock::now();
@@ -51,6 +52,7 @@ bool PoseEstimator::start(pcl::PointCloud<pcl::PointNormal>::Ptr cloud, pcl::Poi
         else{
             return false;
         }
+
 
     } else{
         cout << "a model is not assigned!" << endl;
@@ -101,6 +103,7 @@ void PoseEstimator::extract_cylinder()
 {
     //cout << "filtered_cloud" << cloud_filtered->points.size() << endl;
     // Estimate point normals
+    cloud_filtered = input_cloud;
     ne.setSearchMethod (tree);
     ne.setInputCloud (cloud_filtered);
     ne.setKSearch (50);
@@ -169,7 +172,7 @@ void PoseEstimator::pose_estimate()
 {
     segmented_pipe = input_cloud;
     // Downsample
-    leaf = 0.01f;
+    leaf = 0.008f;
     pcl::console::print_highlight ("Downsampling...\n");
 
     vg.setLeafSize (leaf, leaf, leaf);
@@ -202,7 +205,7 @@ void PoseEstimator::pose_estimate()
     align.setRANSACOutlierRejectionThreshold(0.1);
     align.setMaximumIterations (80000); // Number of RANSAC iterations
     align.setNumberOfSamples (3); // Number of points to sample for generating/prerejecting a pose
-    align.setCorrespondenceRandomness (38); // Number of nearest features to use
+    align.setCorrespondenceRandomness (20); // Number of nearest features to use
     align.setSimilarityThreshold (0.75f); // Polygonal edge length similarity threshold
     align.setMaxCorrespondenceDistance (2.5f * leaf); // Inlier threshold
     align.setInlierFraction (0.45f); // Required inlier fraction for accepting a pose hypothesis

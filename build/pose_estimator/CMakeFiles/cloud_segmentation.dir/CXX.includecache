@@ -87,6 +87,8 @@ pcl/filters/voxel_grid.h
 -
 pcl/common/transforms.h
 -
+pcl/registration/icp.h
+-
 ros/ros.h
 -
 ros/spinner.h
@@ -4854,6 +4856,8 @@ locale
 pcl/common/impl/io.hpp
 -
 
+/usr/local/include/pcl-1.9/pcl/common/point_operators.h
+
 /usr/local/include/pcl-1.9/pcl/common/point_tests.h
 Eigen/src/StlSupport/details.h
 -
@@ -5652,6 +5656,10 @@ boost/function.hpp
 boost/bind.hpp
 -
 
+/usr/local/include/pcl-1.9/pcl/registration/convergence_criteria.h
+pcl/pcl_macros.h
+-
+
 /usr/local/include/pcl-1.9/pcl/registration/correspondence_estimation.h
 string
 -
@@ -5700,6 +5708,16 @@ pcl/correspondence.h
 pcl/registration/impl/correspondence_types.hpp
 -
 
+/usr/local/include/pcl-1.9/pcl/registration/default_convergence_criteria.h
+pcl/registration/eigen.h
+-
+pcl/correspondence.h
+-
+pcl/registration/convergence_criteria.h
+-
+pcl/registration/impl/default_convergence_criteria.hpp
+-
+
 /usr/local/include/pcl-1.9/pcl/registration/eigen.h
 Eigen/Core
 -
@@ -5708,6 +5726,24 @@ Eigen/Geometry
 unsupported/Eigen/Polynomials
 -
 Eigen/Dense
+-
+
+/usr/local/include/pcl-1.9/pcl/registration/icp.h
+pcl/sample_consensus/ransac.h
+-
+pcl/sample_consensus/sac_model_registration.h
+-
+pcl/registration/registration.h
+-
+pcl/registration/transformation_estimation_svd.h
+-
+pcl/registration/transformation_estimation_point_to_plane_lls.h
+-
+pcl/registration/correspondence_estimation.h
+-
+pcl/registration/default_convergence_criteria.h
+-
+pcl/registration/impl/icp.hpp
 -
 
 /usr/local/include/pcl-1.9/pcl/registration/impl/correspondence_estimation.hpp
@@ -5724,9 +5760,23 @@ limits
 pcl/registration/eigen.h
 -
 
+/usr/local/include/pcl-1.9/pcl/registration/impl/default_convergence_criteria.hpp
+pcl/console/print.h
+-
+
+/usr/local/include/pcl-1.9/pcl/registration/impl/icp.hpp
+pcl/registration/boost.h
+-
+pcl/correspondence.h
+-
+
 /usr/local/include/pcl-1.9/pcl/registration/impl/registration.hpp
 
 /usr/local/include/pcl-1.9/pcl/registration/impl/sample_consensus_prerejective.hpp
+
+/usr/local/include/pcl-1.9/pcl/registration/impl/transformation_estimation_point_to_plane_lls.hpp
+pcl/cloud_iterator.h
+-
 
 /usr/local/include/pcl-1.9/pcl/registration/impl/transformation_estimation_svd.hpp
 pcl/common/eigen.h
@@ -5774,6 +5824,16 @@ pcl/common/transforms.h
 pcl/registration/correspondence_types.h
 -
 
+/usr/local/include/pcl-1.9/pcl/registration/transformation_estimation_point_to_plane_lls.h
+pcl/registration/transformation_estimation.h
+-
+pcl/registration/warp_point_rigid.h
+-
+pcl/cloud_iterator.h
+-
+pcl/registration/impl/transformation_estimation_point_to_plane_lls.hpp
+-
+
 /usr/local/include/pcl-1.9/pcl/registration/transformation_estimation_svd.h
 pcl/registration/transformation_estimation.h
 -
@@ -5790,6 +5850,10 @@ pcl/features/feature.h
 pcl/common/transforms.h
 -
 pcl/registration/correspondence_types.h
+-
+
+/usr/local/include/pcl-1.9/pcl/registration/warp_point_rigid.h
+pcl/registration/eigen.h
 -
 
 /usr/local/include/pcl-1.9/pcl/sample_consensus/boost.h
@@ -5908,6 +5972,16 @@ pcl/common/centroid.h
 pcl/common/eigen.h
 -
 pcl/common/concatenate.h
+-
+pcl/point_types.h
+-
+
+/usr/local/include/pcl-1.9/pcl/sample_consensus/impl/sac_model_registration.hpp
+pcl/sample_consensus/sac_model_registration.h
+-
+pcl/common/point_operators.h
+-
+pcl/common/eigen.h
 -
 pcl/point_types.h
 -
@@ -6132,6 +6206,22 @@ pcl/sample_consensus/sac_model.h
 pcl/sample_consensus/model_types.h
 -
 pcl/sample_consensus/impl/sac_model_plane.hpp
+-
+
+/usr/local/include/pcl-1.9/pcl/sample_consensus/sac_model_registration.h
+pcl/sample_consensus/eigen.h
+-
+pcl/sample_consensus/sac_model.h
+-
+pcl/sample_consensus/model_types.h
+-
+pcl/common/eigen.h
+-
+pcl/common/centroid.h
+-
+map
+-
+pcl/sample_consensus/impl/sac_model_registration.hpp
 -
 
 /usr/local/include/pcl-1.9/pcl/sample_consensus/sac_model_sphere.h
