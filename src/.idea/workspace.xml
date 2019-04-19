@@ -14,10 +14,10 @@
       <config projectName="Project" targetName="darknet_ros_msgs_eb_generate_messages_eus" />
       <config projectName="Project" targetName="rosgraph_msgs_generate_messages_eus" />
       <config projectName="Project" targetName="actionlib_generate_messages_cpp" />
+      <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_eus" />
       <config projectName="Project" targetName="sensor_msgs_generate_messages_py" />
       <config projectName="Project" targetName="download_extra_data" />
-      <config projectName="Project" targetName="_darknet_ros_msgs_eb_generate_messages_check_deps_BoundingBoxes" />
-      <config projectName="Project" targetName="darknet_ros_msgs_eb_gennodejs" />
+      <config projectName="Project" targetName="actionlib_msgs_generate_messages_eus" />
       <config projectName="Project" targetName="eb_darknet" />
       <config projectName="Project" targetName="gtest_main" />
       <config projectName="Project" targetName="eb_darknet_lib" />
@@ -30,12 +30,11 @@
       <config projectName="Project" targetName="_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsActionGoal" />
       <config projectName="Project" targetName="kinect_network" />
       <config projectName="Project" targetName="actionlib_msgs_generate_messages_lisp" />
-      <config projectName="Project" targetName="_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsActionResult" />
       <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_cpp" />
       <config projectName="Project" targetName="clean_test_results_eb_darknet" />
+      <config projectName="Project" targetName="darknet_ros_msgs_eb_gennodejs" />
       <config projectName="Project" targetName="rosgraph_msgs_generate_messages_nodejs" />
       <config projectName="Project" targetName="roscpp_generate_messages_py" />
-      <config projectName="Project" targetName="darknet_ros_msgs_eb_genpy" />
       <config projectName="Project" targetName="actionlib_generate_messages_eus" />
       <config projectName="Project" targetName="_run_tests_eb_darknet" />
       <config projectName="Project" targetName="clean_test_results" />
@@ -47,35 +46,36 @@
       <config projectName="Project" targetName="geometry_msgs_generate_messages_cpp" />
       <config projectName="Project" targetName="darknet_ros_msgs_eb_genlisp" />
       <config projectName="Project" targetName="actionlib_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="geometry_msgs_generate_messages_nodejs" />
       <config projectName="Project" targetName="gtest" />
       <config projectName="Project" targetName="gmock_main" />
-      <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_eus" />
+      <config projectName="Project" targetName="_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsActionResult" />
       <config projectName="Project" targetName="sensor_msgs_generate_messages_nodejs" />
       <config projectName="Project" targetName="darknet_ros_msgs_eb_gencpp" />
       <config projectName="Project" targetName="compressed_image_transport_gencfg" />
-      <config projectName="Project" targetName="_catkin_empty_exported_target" />
+      <config projectName="Project" targetName="_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsActionFeedback" />
       <config projectName="Project" targetName="run_tests_eb_darknet" />
       <config projectName="Project" targetName="dynamic_reconfigure_gencfg" />
-      <config projectName="Project" targetName="actionlib_msgs_generate_messages_eus" />
-      <config projectName="Project" targetName="darknet_ros_msgs_eb_generate_messages_lisp" />
       <config projectName="Project" targetName="actionlib_generate_messages_nodejs" />
       <config projectName="Project" targetName="std_msgs_generate_messages_nodejs" />
       <config projectName="Project" targetName="std_msgs_generate_messages_cpp" />
       <config projectName="Project" targetName="_run_tests_eb_darknet_rostest" />
+      <config projectName="Project" targetName="doxygen" />
       <config projectName="Project" targetName="roscpp_generate_messages_eus" />
       <config projectName="Project" targetName="std_msgs_generate_messages_py" />
       <config projectName="Project" targetName="_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsResult" />
       <config projectName="Project" targetName="geometry_msgs_generate_messages_eus" />
+      <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_nodejs" />
       <config projectName="Project" targetName="_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsGoal" />
       <config projectName="Project" targetName="eb_darknet_object_detection-test" />
       <config projectName="Project" targetName="sensor_msgs_generate_messages_cpp" />
       <config projectName="Project" targetName="testing" />
       <config projectName="Project" targetName="darknet_ros_msgs_eb_geneus" />
       <config projectName="Project" targetName="darknet_ros_msgs_eb_generate_messages_py" />
-      <config projectName="Project" targetName="doxygen" />
-      <config projectName="Project" targetName="_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsActionFeedback" />
-      <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_nodejs" />
-      <config projectName="Project" targetName="geometry_msgs_generate_messages_nodejs" />
+      <config projectName="Project" targetName="_catkin_empty_exported_target" />
+      <config projectName="Project" targetName="_darknet_ros_msgs_eb_generate_messages_check_deps_BoundingBoxes" />
+      <config projectName="Project" targetName="darknet_ros_msgs_eb_generate_messages_lisp" />
+      <config projectName="Project" targetName="darknet_ros_msgs_eb_genpy" />
       <config projectName="Project" targetName="sensor_msgs_generate_messages_lisp" />
       <config projectName="Project" targetName="darknet_ros_msgs_eb_generate_messages_cpp" />
       <config projectName="Project" targetName="geometry_msgs_generate_messages_lisp" />
@@ -97,19 +97,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df18ee9f-c264-432e-9a90-9e70e42448d7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/src/cloud_segmentation.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/src/cloud_segmentation.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/src/pose_estimator.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/src/pose_estimator.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/src/pose_estimator.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/src/pose_estimator.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/src/testing.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/src/testing.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../devel/lib/pose_estimator/cloud_segmentation" beforeDir="false" afterPath="$PROJECT_DIR$/../devel/lib/pose_estimator/cloud_segmentation" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../devel/lib/pose_estimator/testing" beforeDir="false" afterPath="$PROJECT_DIR$/../devel/lib/pose_estimator/testing" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pose_estimator/src/cloud_segmentation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/pose_estimator/src/cloud_segmentation.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pose_estimator/src/pose_estimator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/pose_estimator/src/pose_estimator.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pose_estimator/src/testing.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/pose_estimator/src/testing.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yolo_eb" beforeDir="false" afterPath="$PROJECT_DIR$/yolo_eb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/launch/launch_all.launch" beforeDir="false" afterPath="$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/launch/launch_all.launch" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/launch/local_launcher.launch" beforeDir="false" afterPath="$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/launch/local_launcher.launch" afterDir="false" />
@@ -126,47 +116,26 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/pose_estimator/src/testing.cpp">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="600">
-                    <caret line="124" selection-start-line="124" selection-end-line="135" selection-end-column="5" />
-                    <folding>
-                      <element signature="e#60#112#0" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pose_estimator/src/cloud_segmentation.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="1014" lean-forward="true" selection-start-line="1014" selection-end-line="1014" />
+            <state relative-caret-position="362">
+              <caret line="1024" column="88" lean-forward="true" selection-start-line="1024" selection-start-column="88" selection-end-line="1024" selection-end-column="88" />
               <folding>
                 <element signature="e#3#22#0" expanded="true" />
-                <element signature="e#25733#31015#0" />
-                <element signature="e#31021#31918#0" />
-                <element signature="e#31924#32278#0" />
-                <element signature="e#32284#32541#0" />
-                <element signature="e#32548#33576#0" />
-                <element signature="e#33582#35471#0" />
-                <element signature="e#35477#36988#0" />
-                <element signature="e#36994#40176#0" />
-                <element signature="e#40182#41507#0" />
+                <element signature="e#14277#15413#0" />
+                <element signature="e#25812#31094#0" />
+                <element signature="e#31100#31997#0" />
+                <element signature="e#32003#32357#0" />
+                <element signature="e#32363#32620#0" />
+                <element signature="e#32627#33655#0" />
+                <element signature="e#33661#35550#0" />
+                <element signature="e#35556#37067#0" />
+                <element signature="e#37073#40255#0" />
+                <element signature="e#40261#41586#0" />
               </folding>
             </state>
           </provider>
@@ -203,8 +172,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>pass_seg</find>
-      <find>avgX</find>
       <find>temp</find>
       <find>concatenated_box_filtered</find>
       <find>concatenated_box</find>
@@ -233,6 +200,8 @@
       <find>segmented_box_normal</find>
       <find>segmented_box</find>
       <find>concatenated_cloud</find>
+      <find>ymax</find>
+      <find>pin_transformation_matrix</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -276,10 +245,10 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2103" />
+    <option name="x" value="75" />
     <option name="y" value="-4" />
-    <option name="width" value="1847" />
-    <option name="height" value="1052" />
+    <option name="width" value="1845" />
+    <option name="height" value="1044" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -919,17 +888,18 @@
       <workItem from="1555658655732" duration="6374000" />
       <workItem from="1555665941214" duration="11035000" />
       <workItem from="1555680736695" duration="853000" />
+      <workItem from="1555682670153" duration="5223000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174284000" />
+    <option name="totallyTimeSpent" value="179507000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1984" y="-11" width="1857" height="1092" extended-state="6" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23161969" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23438364" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -944,7 +914,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="CMake" order="12" weight="0.25338894" />
+      <window_info anchor="bottom" id="CMake" order="12" weight="0.24770643" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -991,12 +961,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/pose_estimator/src/cloud_segmentation.cpp</url>
-          <line>361</line>
+          <line>366</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/pose_estimator/src/cloud_segmentation.cpp</url>
-          <line>370</line>
+          <line>375</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
@@ -1231,8 +1201,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pose_estimator/src/testing.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="124" selection-start-line="124" selection-end-line="135" selection-end-column="5" />
+        <state relative-caret-position="225">
+          <caret line="99" column="45" lean-forward="true" selection-start-line="99" selection-start-column="45" selection-end-line="99" selection-end-column="45" />
           <folding>
             <element signature="e#60#112#0" expanded="true" />
           </folding>
@@ -1241,19 +1211,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pose_estimator/src/cloud_segmentation.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="1014" lean-forward="true" selection-start-line="1014" selection-end-line="1014" />
+        <state relative-caret-position="362">
+          <caret line="1024" column="88" lean-forward="true" selection-start-line="1024" selection-start-column="88" selection-end-line="1024" selection-end-column="88" />
           <folding>
             <element signature="e#3#22#0" expanded="true" />
-            <element signature="e#25733#31015#0" />
-            <element signature="e#31021#31918#0" />
-            <element signature="e#31924#32278#0" />
-            <element signature="e#32284#32541#0" />
-            <element signature="e#32548#33576#0" />
-            <element signature="e#33582#35471#0" />
-            <element signature="e#35477#36988#0" />
-            <element signature="e#36994#40176#0" />
-            <element signature="e#40182#41507#0" />
+            <element signature="e#14277#15413#0" />
+            <element signature="e#25812#31094#0" />
+            <element signature="e#31100#31997#0" />
+            <element signature="e#32003#32357#0" />
+            <element signature="e#32363#32620#0" />
+            <element signature="e#32627#33655#0" />
+            <element signature="e#33661#35550#0" />
+            <element signature="e#35556#37067#0" />
+            <element signature="e#37073#40255#0" />
+            <element signature="e#40261#41586#0" />
           </folding>
         </state>
       </provider>
