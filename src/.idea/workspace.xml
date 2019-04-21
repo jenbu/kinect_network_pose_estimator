@@ -97,6 +97,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df18ee9f-c264-432e-9a90-9e70e42448d7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/src/cloud_segmentation.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/src/cloud_segmentation.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../devel/lib/pose_estimator/cloud_segmentation" beforeDir="false" afterPath="$PROJECT_DIR$/../devel/lib/pose_estimator/cloud_segmentation" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pose_estimator/src/cloud_segmentation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/pose_estimator/src/cloud_segmentation.cpp" afterDir="false" />
@@ -122,30 +123,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pose_estimator/src/cloud_segmentation.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="1024" column="88" lean-forward="true" selection-start-line="1024" selection-start-column="88" selection-end-line="1024" selection-end-column="88" />
+            <state relative-caret-position="9480">
+              <caret line="1090" column="33" lean-forward="true" selection-start-line="1090" selection-start-column="33" selection-end-line="1090" selection-end-column="33" />
               <folding>
                 <element signature="e#3#22#0" expanded="true" />
-                <element signature="e#14277#15413#0" />
-                <element signature="e#25812#31094#0" />
-                <element signature="e#31100#31997#0" />
-                <element signature="e#32003#32357#0" />
-                <element signature="e#32363#32620#0" />
-                <element signature="e#32627#33655#0" />
-                <element signature="e#33661#35550#0" />
-                <element signature="e#35556#37067#0" />
-                <element signature="e#37073#40255#0" />
-                <element signature="e#40261#41586#0" />
+                <element signature="e#13661#14797#0" />
+                <element signature="e#31617#32514#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/include/boost/smart_ptr/shared_ptr.hpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9600">
-              <caret line="640" selection-start-line="640" selection-end-line="640" />
             </state>
           </provider>
         </entry>
@@ -159,26 +143,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/launch/rosbag_record_js_topics.launch">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="691" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="691" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>temp</find>
       <find>concatenated_box_filtered</find>
       <find>concatenated_box</find>
       <find>keyboard_</find>
       <find>sor</find>
       <find>cloud_normal</find>
-      <find>aligned_box</find>
       <find>transformation</find>
       <find>pose</find>
       <find>aligned_boxEnd</find>
@@ -189,7 +162,6 @@
       <find>init</find>
       <find>initKinectTo</find>
       <find>initKinectToWorl</find>
-      <find>cameraMatrixColor</find>
       <find>readCameraInfo</find>
       <find>&lt;&lt; QHD</find>
       <find>&lt;&lt; QHD_width_DZ</find>
@@ -202,6 +174,9 @@
       <find>concatenated_cloud</find>
       <find>ymax</find>
       <find>pin_transformation_matrix</find>
+      <find>cameraMatrixColor</find>
+      <find>aligned_box</find>
+      <find>pin_xwidth</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -245,10 +220,10 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="75" />
+    <option name="x" value="171" />
     <option name="y" value="-4" />
-    <option name="width" value="1845" />
-    <option name="height" value="1044" />
+    <option name="width" value="1843" />
+    <option name="height" value="1036" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -272,14 +247,31 @@
               <item name="src" type="b2602c69:ProjectViewProjectNode" />
               <item name="src" type="47feb1d3:ProjectViewModuleNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pose_estimator" type="462c0819:PsiDirectoryNode" />
+              <item name="yolo_eb" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="src" type="b2602c69:ProjectViewProjectNode" />
               <item name="src" type="47feb1d3:ProjectViewModuleNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pose_estimator" type="462c0819:PsiDirectoryNode" />
+              <item name="yolo_eb" type="462c0819:PsiDirectoryNode" />
+              <item name="darknet_ros" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="47feb1d3:ProjectViewModuleNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="yolo_eb" type="462c0819:PsiDirectoryNode" />
+              <item name="darknet_ros" type="462c0819:PsiDirectoryNode" />
+              <item name="darknet_ros" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="yolo_eb" type="462c0819:PsiDirectoryNode" />
+              <item name="darknet_ros" type="462c0819:PsiDirectoryNode" />
+              <item name="darknet_ros" type="462c0819:PsiDirectoryNode" />
+              <item name="launch" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -889,32 +881,36 @@
       <workItem from="1555665941214" duration="11035000" />
       <workItem from="1555680736695" duration="853000" />
       <workItem from="1555682670153" duration="5223000" />
+      <workItem from="1555753945524" duration="6159000" />
+      <workItem from="1555767408623" duration="3576000" />
+      <workItem from="1555849731570" duration="2226000" />
+      <workItem from="1555853065859" duration="493000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="179507000" />
+    <option name="totallyTimeSpent" value="191961000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23438364" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24543947" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32925585" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27624872" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27624872" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.29765546" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.31294596" />
+      <window_info active="true" anchor="bottom" id="Messages" order="8" visible="true" weight="0.31294596" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="CMake" order="12" weight="0.24770643" />
+      <window_info anchor="bottom" id="CMake" order="12" weight="0.24087591" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -958,16 +954,6 @@
           <url>file://$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/src/YoloObjectDetector.cpp</url>
           <line>160</line>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/pose_estimator/src/cloud_segmentation.cpp</url>
-          <line>366</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/pose_estimator/src/cloud_segmentation.cpp</url>
-          <line>375</line>
-          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1178,6 +1164,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pose_estimator/src/testing.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="99" column="45" lean-forward="true" selection-start-line="99" selection-start-column="45" selection-end-line="99" selection-end-column="45" />
+          <folding>
+            <element signature="e#60#112#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pose_estimator/src/cloud_segmentation.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9480">
+          <caret line="1090" column="33" lean-forward="true" selection-start-line="1090" selection-start-column="33" selection-end-line="1090" selection-end-column="33" />
+          <folding>
+            <element signature="e#3#22#0" expanded="true" />
+            <element signature="e#13661#14797#0" />
+            <element signature="e#31617#32514#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file:///usr/include/boost/smart_ptr/shared_ptr.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9600">
@@ -1194,38 +1202,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/launch/rosbag_record_js_topics.launch">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="691" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="691" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pose_estimator/src/testing.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="99" column="45" lean-forward="true" selection-start-line="99" selection-start-column="45" selection-end-line="99" selection-end-column="45" />
-          <folding>
-            <element signature="e#60#112#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pose_estimator/src/cloud_segmentation.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="1024" column="88" lean-forward="true" selection-start-line="1024" selection-start-column="88" selection-end-line="1024" selection-end-column="88" />
-          <folding>
-            <element signature="e#3#22#0" expanded="true" />
-            <element signature="e#14277#15413#0" />
-            <element signature="e#25812#31094#0" />
-            <element signature="e#31100#31997#0" />
-            <element signature="e#32003#32357#0" />
-            <element signature="e#32363#32620#0" />
-            <element signature="e#32627#33655#0" />
-            <element signature="e#33661#35550#0" />
-            <element signature="e#35556#37067#0" />
-            <element signature="e#37073#40255#0" />
-            <element signature="e#40261#41586#0" />
-          </folding>
+        <state relative-caret-position="135">
+          <caret line="9" column="55" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
         </state>
       </provider>
     </entry>

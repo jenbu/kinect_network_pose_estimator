@@ -129,6 +129,8 @@ private:
     {
         spinner.stop();
         running = false;
+
+
     }
     void start()
     {
@@ -141,68 +143,27 @@ private:
             updateImage[i] = false;
         }
 
-
+        //Setting up the subscribers
         typedef message_filters::sync_policies::ApproximateTime<CompressedImage, CameraInfo, Image, CameraInfo, darknet_ros_msgs_eb::BoundingBoxes> ApproxSyncPolicy;
 
-        message_filters::Subscriber<CompressedImage> image_color_sub_j1(nh, "/jetson1/qhd/image_color/compressed", 1);
-        message_filters::Subscriber<CameraInfo> info_color_sub_j1(nh, "/jetson1/sd/camera_info", 1);
-        message_filters::Subscriber<Image> image_depth_sub_j1(nh, "/jetson1/sd/image_depth", 1);
-        message_filters::Subscriber<CameraInfo> info_depth_sub_j1(nh, "/jetson1/sd/camera_info", 1);
-        message_filters::Subscriber<darknet_ros_msgs_eb::BoundingBoxes> bounding_boxes_j1(nh, "/jetson1/bounding_boxes", 1);
+        message_filters::Subscriber<CompressedImage> image_color_subs[6] = {{nh, "/jetson1/qhd/image_color/compressed", 1}, {nh, "/jetson2/qhd/image_color/compressed", 1},
+                                                                            {nh, "/jetson3/qhd/image_color/compressed", 1}, {nh, "/jetson4/qhd/image_color/compressed", 1},
+                                                                            {nh, "/jetson5/qhd/image_color/compressed", 1}, {nh, "/jetson6/qhd/image_color/compressed", 1}};
+        message_filters::Subscriber<CameraInfo> info_color_subs[6] = {{nh, "/jetson1/sd/camera_info", 1}, {nh, "/jetson2/sd/camera_info", 1}, {nh, "/jetson3/sd/camera_info", 1},
+                                                                      {nh, "/jetson4/sd/camera_info", 1}, {nh, "/jetson5/sd/camera_info", 1}, {nh, "/jetson6/sd/camera_info", 1}};
+        message_filters::Subscriber<Image> image_depth_subs[6] = {{nh, "/jetson1/sd/image_depth", 1}, {nh, "/jetson2/sd/image_depth", 1}, {nh, "/jetson3/sd/image_depth", 1},
+                                                                  {nh, "/jetson4/sd/image_depth", 1}, {nh, "/jetson5/sd/image_depth", 1}, {nh, "/jetson6/sd/image_depth", 1}};
+        message_filters::Subscriber<darknet_ros_msgs_eb::BoundingBoxes> bounding_boxes[6] = {{nh, "/jetson1/bounding_boxes", 1}, {nh, "/jetson2/bounding_boxes", 1},
+                                                                                             {nh, "/jetson3/bounding_boxes", 1}, {nh, "/jetson4/bounding_boxes", 1},
+                                                                                             {nh, "/jetson5/bounding_boxes", 1}, {nh, "/jetson6/bounding_boxes", 1}};
+        message_filters::Synchronizer<ApproxSyncPolicy> *syncApprox[6];
 
-        message_filters::Synchronizer<ApproxSyncPolicy> *syncApprox_j1;
-        syncApprox_j1 = new message_filters::Synchronizer<ApproxSyncPolicy>(ApproxSyncPolicy(5), image_color_sub_j1, info_color_sub_j1, image_depth_sub_j1, info_depth_sub_j1, bounding_boxes_j1);
-        syncApprox_j1->registerCallback(boost::bind(&Receiver::callback, this, _1, _2, _3, _4, _5, 0));
 
-        message_filters::Subscriber<CompressedImage> image_color_sub_j2(nh, "/jetson2/qhd/image_color/compressed", 1);
-        message_filters::Subscriber<CameraInfo> info_color_sub_j2(nh, "/jetson2/sd/camera_info", 1);
-        message_filters::Subscriber<Image> image_depth_sub_j2(nh, "/jetson2/sd/image_depth", 1);
-        message_filters::Subscriber<CameraInfo> info_depth_sub_j2(nh, "/jetson2/sd/camera_info", 1);
-        message_filters::Subscriber<darknet_ros_msgs_eb::BoundingBoxes> bounding_boxes_j2(nh, "/jetson2/bounding_boxes", 1);
-
-        message_filters::Synchronizer<ApproxSyncPolicy> *syncApprox_j2;
-        syncApprox_j2 = new message_filters::Synchronizer<ApproxSyncPolicy>(ApproxSyncPolicy(5), image_color_sub_j2, info_color_sub_j2, image_depth_sub_j2, info_depth_sub_j2, bounding_boxes_j2);
-        syncApprox_j2->registerCallback(boost::bind(&Receiver::callback, this, _1, _2, _3, _4, _5, 1));
-
-        message_filters::Subscriber<CompressedImage> image_color_sub_j3(nh, "/jetson3/qhd/image_color/compressed", 1);
-        message_filters::Subscriber<CameraInfo> info_color_sub_j3(nh, "/jetson3/sd/camera_info", 1);
-        message_filters::Subscriber<Image> image_depth_sub_j3(nh, "/jetson3/sd/image_depth", 1);
-        message_filters::Subscriber<CameraInfo> info_depth_sub_j3(nh, "/jetson3/sd/camera_info", 1);
-        message_filters::Subscriber<darknet_ros_msgs_eb::BoundingBoxes> bounding_boxes_j3(nh, "/jetson3/bounding_boxes", 1);
-
-        message_filters::Synchronizer<ApproxSyncPolicy> *syncApprox_j3;
-        syncApprox_j3 = new message_filters::Synchronizer<ApproxSyncPolicy>(ApproxSyncPolicy(5), image_color_sub_j3, info_color_sub_j3, image_depth_sub_j3, info_depth_sub_j3, bounding_boxes_j3);
-        syncApprox_j3->registerCallback(boost::bind(&Receiver::callback, this, _1, _2, _3, _4, _5, 2));
-
-        message_filters::Subscriber<CompressedImage> image_color_sub_j4(nh, "/jetson4/qhd/image_color/compressed", 1);
-        message_filters::Subscriber<CameraInfo> info_color_sub_j4(nh, "/jetson4/sd/camera_info", 1);
-        message_filters::Subscriber<Image> image_depth_sub_j4(nh, "/jetson4/sd/image_depth", 1);
-        message_filters::Subscriber<CameraInfo> info_depth_sub_j4(nh, "/jetson4/sd/camera_info", 1);
-        message_filters::Subscriber<darknet_ros_msgs_eb::BoundingBoxes> bounding_boxes_j4(nh, "/jetson4/bounding_boxes", 1);
-
-        message_filters::Synchronizer<ApproxSyncPolicy> *syncApprox_j4;
-        syncApprox_j4 = new message_filters::Synchronizer<ApproxSyncPolicy>(ApproxSyncPolicy(5), image_color_sub_j4, info_color_sub_j4, image_depth_sub_j4, info_depth_sub_j4, bounding_boxes_j4);
-        syncApprox_j4->registerCallback(boost::bind(&Receiver::callback, this, _1, _2, _3, _4, _5, 3));
-
-        message_filters::Subscriber<CompressedImage> image_color_sub_j5(nh, "/jetson5/qhd/image_color/compressed", 1);
-        message_filters::Subscriber<CameraInfo> info_color_sub_j5(nh, "/jetson5/sd/camera_info", 1);
-        message_filters::Subscriber<Image> image_depth_sub_j5(nh, "/jetson5/sd/image_depth", 1);
-        message_filters::Subscriber<CameraInfo> info_depth_sub_j5(nh, "/jetson5/sd/camera_info", 1);
-        message_filters::Subscriber<darknet_ros_msgs_eb::BoundingBoxes> bounding_boxes_j5(nh, "/jetson5/bounding_boxes", 1);
-
-        message_filters::Synchronizer<ApproxSyncPolicy> *syncApprox_j5;
-        syncApprox_j5 = new message_filters::Synchronizer<ApproxSyncPolicy>(ApproxSyncPolicy(5), image_color_sub_j5, info_color_sub_j5, image_depth_sub_j5, info_depth_sub_j5, bounding_boxes_j5);
-        syncApprox_j5->registerCallback(boost::bind(&Receiver::callback, this, _1, _2, _3, _4, _5, 4));
-
-        message_filters::Subscriber<CompressedImage> image_color_sub_j6(nh, "/jetson6/qhd/image_color/compressed", 1);
-        message_filters::Subscriber<CameraInfo> info_color_sub_j6(nh, "/jetson6/sd/camera_info", 1);
-        message_filters::Subscriber<Image> image_depth_sub_j6(nh, "/jetson6/sd/image_depth", 1);
-        message_filters::Subscriber<CameraInfo> info_depth_sub_j6(nh, "/jetson6/sd/camera_info", 1);
-        message_filters::Subscriber<darknet_ros_msgs_eb::BoundingBoxes> bounding_boxes_j6(nh, "/jetson6/bounding_boxes", 1);
-
-        message_filters::Synchronizer<ApproxSyncPolicy> *syncApprox_j6;
-        syncApprox_j6 = new message_filters::Synchronizer<ApproxSyncPolicy>(ApproxSyncPolicy(5), image_color_sub_j6, info_color_sub_j6, image_depth_sub_j6, info_depth_sub_j6, bounding_boxes_j6);
-        syncApprox_j6->registerCallback(boost::bind(&Receiver::callback, this, _1, _2, _3, _4, _5, 5));
+        for(int i = 0; i < 6; i++)
+        {
+            syncApprox[i] = new message_filters::Synchronizer<ApproxSyncPolicy>(ApproxSyncPolicy(5), image_color_subs[i], info_color_subs[i], image_depth_subs[i], info_color_subs[i], bounding_boxes[i]);
+            syncApprox[i]->registerCallback(boost::bind(&Receiver::callback, this, _1, _2, _3, _4, _5, i));
+        }
 
         std::chrono::milliseconds duration(1);
 
@@ -217,10 +178,6 @@ private:
         aligned_box_normal = pcl::PointCloud<pcl::PointNormal>::Ptr(new pcl::PointCloud<pcl::PointNormal>());
         aligned_boxEnd = pcl::PointCloud<pcl::PointNormal>::Ptr(new pcl::PointCloud<pcl::PointNormal>());
         aligned_pin = pcl::PointCloud<pcl::PointXYZRGBA>::Ptr(new pcl::PointCloud<pcl::PointXYZRGBA>());
-        reader.read("/home/erlendb/Blender/box_end7_m.ply", *aligned_boxEnd);
-        reader.read("/home/erlendb/Blender/pin_end1.ply", *aligned_pin);
-
-
         concatenated_world = pcl::PointCloud<pcl::PointXYZRGBA>::Ptr(new pcl::PointCloud<pcl::PointXYZRGBA>());
         concatenated_box = pcl::PointCloud<pcl::PointXYZRGBA>::Ptr(new pcl::PointCloud<pcl::PointXYZRGBA>());
         concatenated_pin = pcl::PointCloud<pcl::PointXYZRGBA>::Ptr(new pcl::PointCloud<pcl::PointXYZRGBA>());
@@ -230,8 +187,13 @@ private:
         concatenated_pin_filtered = pcl::PointCloud<pcl::PointXYZRGBA>::Ptr(new pcl::PointCloud<pcl::PointXYZRGBA>());
         concatenated_box_filtered = pcl::PointCloud<pcl::PointXYZRGBA>::Ptr(new pcl::PointCloud<pcl::PointXYZRGBA>());
         temp = pcl::PointCloud<pcl::PointXYZRGBA>::Ptr(new pcl::PointCloud<pcl::PointXYZRGBA>());
+
+
+        reader.read("/home/erlendb/Blender/box_end7_m.ply", *aligned_boxEnd);
+        reader.read("/home/erlendb/Blender/pin_end1.ply", *aligned_pin);
         pcl::copyPointCloud(*aligned_boxEnd, *aligned_box);
 
+        //Transforming the models to have an upright position
         pin_transformation_matrix = Eigen::Matrix4d::Identity();
         box_transformation_matrix = Eigen::Matrix4d::Identity();
 
@@ -249,8 +211,59 @@ private:
                 0,              0,           0, 1;
         pcl::transformPointCloud(*aligned_pin, *aligned_pin, transformation_matrix);
 
+        double xmin_box = 1000.0; double xmax_box = -1000.0; double ymin_box = 1000.0; double ymax_box = -1000.0;
+        for(int i = 0; i < aligned_box->points.size(); i++)
+        {
+            if(aligned_box->points[i].x > xmax_box)
+                xmax_box = aligned_box->points[i].x;
+            if(aligned_box->points[i].x < xmin_box)
+                xmin_box = aligned_box->points[i].x;
+
+            if(aligned_box->points[i].y > ymax_box)
+                ymax_box = aligned_box->points[i].y;
+            if(aligned_box->points[i].y < ymin_box)
+                ymin_box = aligned_box->points[i].y;
+
+        }
+        box_xWidth = xmax_box-xmin_box;
+        box_yWidth = ymax_box-ymin_box;
+        cout << "box xwidth: " << xmax_box - xmin_box << endl;
+        cout << "box ywidth: " << ymax_box - ymin_box << endl;
+
+        double xmin_pin = 1000.0; double xmax_pin = -1000.0; double ymin_pin = 1000.0; double ymax_pin = -1000.0;
+        for(int i = 0; i < aligned_pin->points.size(); i++)
+        {
+            if(aligned_pin->points[i].x > xmax_pin)
+                xmax_pin = aligned_pin->points[i].x;
+            if(aligned_pin->points[i].x < xmin_pin)
+                xmin_pin = aligned_pin->points[i].x;
+            if(aligned_pin->points[i].y > ymax_pin)
+                ymax_pin = aligned_pin->points[i].y;
+            if(aligned_pin->points[i].y < ymin_pin)
+                ymin_pin = aligned_pin->points[i].y;
+
+        }
+        cout << "pin xwidth: " << xmax_pin - xmin_pin << endl;
+        cout << "pin ywidth: " << ymax_pin - ymin_pin<< endl;
+        pin_xWidth = xmax_pin - xmin_pin;
+        pin_yWidth = ymax_pin - ymin_pin;
+
+        transformation_matrix << 1,              0,           0, -box_xWidth/2,
+                                 0,              1,           0, box_yWidth/2,
+                                 0,              0,           1, 0,
+                                 0,              0,           0, 1;
+        pcl::transformPointCloud(*aligned_box, *aligned_box, transformation_matrix);
+
+        transformation_matrix << 1,              0,           0, -pin_xWidth/2,
+                                 0,              1,           0, -pin_yWidth/2,
+                                 0,              0,           1, 0,
+                                 0,              0,           0, 1;
+        pcl::transformPointCloud(*aligned_pin, *aligned_pin, transformation_matrix);
+
+
+
         spinner.start();
-        //sover helt til man får tak i data fra publishere
+
         while (!updateImage[1] || !updateCloud[1]/* || !updateImage[2] || !updateCloud[2]*/) {
             if (!ros::ok()) {
                 return;
@@ -393,48 +406,12 @@ private:
         visualizer->addPointCloud(aligned_box, ColorHandlerT(aligned_box, 255.0, 0.0, 255.0), "box-model");
         visualizer->addPointCloud(aligned_pin, ColorHandlerT(aligned_pin, 255.0, 0.0, 255.0), "pin-model");
 
-        double xmin_box = 1000.0; double xmax_box = -1000.0; double ymin_box = 1000.0; double ymax_box = -1000.0;
-        for(int i = 0; i < aligned_box->points.size(); i++)
-        {
-            if(aligned_box->points[i].x > xmax_box)
-                xmax_box = aligned_box->points[i].x;
-            if(aligned_box->points[i].x < xmin_box)
-                xmin_box = aligned_box->points[i].x;
-
-            if(aligned_box->points[i].y > ymax_box)
-                ymax_box = aligned_box->points[i].y;
-            if(aligned_box->points[i].y < ymin_box)
-                ymin_box = aligned_box->points[i].y;
-
-        }
-        box_xWidth = xmax_box-xmin_box;
-        box_yWidth = ymax_box-ymin_box;
-        cout << "box xwidth: " << xmax_box - xmin_box << endl;
-        cout << "box ywidth: " << ymax_box - ymin_box << endl;
-
-        double xmin_pin = 1000.0; double xmax_pin = -1000.0; double ymin_pin = 1000.0; double ymax_pin = -1000.0;
-        for(int i = 0; i < aligned_pin->points.size(); i++)
-        {
-            if(aligned_pin->points[i].x > xmax_pin)
-                xmax_pin = aligned_pin->points[i].x;
-            if(aligned_pin->points[i].x < xmin_pin)
-                xmin_pin = aligned_pin->points[i].x;
-            if(aligned_pin->points[i].y > ymax_pin)
-                ymax_pin = aligned_pin->points[i].y;
-            if(aligned_pin->points[i].y < ymin_pin)
-                ymin_pin = aligned_pin->points[i].y;
-
-        }
-        cout << "pin xwidth: " << xmax_pin - xmin_pin << endl;
-        cout << "pin ywidth: " << ymax_pin - ymin_pin<< endl;
-        pin_xWidth = xmax_pin - xmin_pin;
-        pin_yWidth = ymax_pin - ymin_pin;
 
         //Add pose text
-        os << "Box-end\n" << "x: " << -1 << endl << "y: " << -1 << endl << "z: " << -1 << endl;
+        os << "Box-end\n" << "x: " << -1  << " Rot_x: " << -1 << endl << "y: " << -1 << " Rot_y: " << -1 << endl << "z: " << -1 << " Rot_z: " << -1 << endl;
         visualizer->addText(os.str(), 10, 10, "box_text"); os.str(std::string());
-        os << "Pin-end\n" << "x: " << -1 << endl << "y: " << -1 << endl << "z: " << -1 << endl;
-        visualizer->addText(os.str(), 10, 60, "pin_text"); os.str(std::string());
+        os << "Pin-end\n" << "x: " << -1  << " Rot_x: " << -1 << endl << "y: " << -1 << " Rot_y: " << -1 << endl << "z: " << -1 << " Rot_z: " << -1 << endl;
+        visualizer->addText(os.str(), 10, 50, "pin_text"); os.str(std::string());
         visualizer->addCoordinateSystem(2.0);
         visualizer->initCameraParameters();
         visualizer->setBackgroundColor(0, 0, 0);
@@ -462,13 +439,8 @@ private:
                 lock.unlock();
 
 
+                cout << "Building cloud, layer " << iterator << endl;
 
-
-
-                cout << "inni i loop" << endl;
-
-                //cout << "QHD DZ:" <<QHD_WIDTH_DZ << endl;
-                //cout << "IR DZ:" << IR_HEIGHT_DZ << endl;
 
                 for(int i = 0; i < 6; i++)
                 {
@@ -476,10 +448,6 @@ private:
                     *concatenated_world += *cloud_world[i];
                     *concatenated_pin += *pin_cloud_world[i];
                     *concatenated_box += *box_cloud_world[i];
-
-                    //visualizer2->updatePointCloud(cloud_world[i], ColorHandlerT(cloud_world[i], 255.0, 255.0, 255.0), cloud_name[i]);
-                    //visualizer2->updatePointCloud(pin_cloud_world[i], ColorHandlerT(pin_cloud_world[i], 255.0, 0.0, 0.0), pin_cloudName[i]);
-                    //visualizer2->updatePointCloud(box_cloud_world[i], ColorHandlerT(box_cloud_world[i], 0.0, 255.0, 0.0), box_cloudName[i]);
 
                 }
 
@@ -499,8 +467,6 @@ private:
                         ICPalign(concatenated_box_filtered, concatenated_pin_filtered);
                     }
 
-
-                     //poseEstimation(concatenated_box_filtered, concatenated_pin);
                     //visualizer->updatePointCloud(concatenated_world, ColorHandlerT(concatenated_world, 255.0, 255.0, 255.0), "World cloud");
                     visualizer->updatePointCloud(concatenated_box, ColorHandlerT(concatenated_box, 255.0, 0.0, 0.0), "Box cloud");
                     visualizer->updatePointCloud(concatenated_pin, ColorHandlerT(concatenated_pin, 255.0, 0.0, 0.0), "Pin cloud");
@@ -513,16 +479,20 @@ private:
 
                     if(pose_box.size() > 0 && pose_pin.size() > 0)
                     {
-                        os << "Box-end\n" << "x: " << pose_box[0] << endl << "y: " << pose_box[1] << endl << "z: " << pose_box[2] << endl;
+
+                        os  << "Box-end\n" << "x: " <<  pose_box[0]  << " Rot_x: " << pose_box[3]  << endl << "y: " << pose_box[1]  << " Rot_y: " << pose_box[4]
+                        << endl << "z: " << pose_box[2]  << " Rot_z: " << pose_box[5]  << endl;
                         visualizer->updateText(os.str(), 10, 10, "box_text"); os.str(std::string());
-                        os << "Pin-end\n" << "x: " << pose_pin[0] << endl << "y: " << pose_pin[1] << endl << "z: " << pose_pin[2] << endl;
-                        visualizer->updateText(os.str(), 10, 60, "pin_text"); os.str(std::string());
+                        os << "Pin-end\n" << "x: " <<  pose_pin[0]  << " Rot_x: " << pose_pin[3]  << endl << "y: " << pose_pin[1]  << " Rot_y: " << pose_pin[4]
+                        << endl << "z: " << pose_pin[2]  << " Rot_z: " << pose_pin[5]  << endl;
+                        visualizer->updateText(os.str(), 10, 50, "pin_text"); os.str(std::string());
+
                     }
                     else
                     {
-                        os << "Box-end\n" << "x: " << -1 << endl << "y: " << -1 << endl << "z: " << -1 << endl;
+                        os << "Box-end\n" << "x: " << -1  << " Rot_x: " << -1 << endl << "y: " << -1 << " Rot_y: " << -1 << endl << "z: " << -1 << " Rot_z: " << -1 << endl;
                         visualizer->updateText(os.str(), 10, 10, "box_text"); os.str(std::string());
-                        os << "Pin-end\n" << "x: " << -1 << endl << "y: " << -1 << endl << "z: " << -1 << endl;
+                        os << "Pin-end\n" << "x: " << -1  << " Rot_x: " << -1 << endl << "y: " << -1 << " Rot_y: " << -1 << endl << "z: " << -1 << " Rot_z: " << -1 << endl;
                         visualizer->updateText(os.str(), 10, 60, "pin_text"); os.str(std::string());
                     }
 
@@ -586,8 +556,6 @@ private:
 
         cloud_box->clear();
         cloud_box->resize((size_t)depth.cols*depth.rows);
-        //cout << "det_inf.class_type size: " << det_inf.bounding_boxes[0].Class << endl;
-        //cout << "QHD width" << color.cols << "\nQHD height: " << color.rows << endl;
         cloud_pin->clear();
         cloud_pin->resize((size_t)depth.cols*depth.rows);
         cloud->clear();
@@ -1064,13 +1032,20 @@ private:
             PCL_ERROR ("\nICP has not converged.\n");
         }
         pose_box.empty();
-        pose_box.push_back((box_transformation_matrix(0,3)+box_xWidth/2));
-        pose_box.push_back(box_transformation_matrix(1,3)-box_yWidth/2);
+        pose_box.push_back(box_transformation_matrix(0,3));
+        pose_box.push_back(box_transformation_matrix(1,3));
         pose_box.push_back(box_transformation_matrix(2,3));
+        pose_box.push_back(atan2(box_transformation_matrix(2,1), box_transformation_matrix(2,2)));
+        pose_box.push_back(-sin(box_transformation_matrix(2,0)));
+        pose_box.push_back(atan2(box_transformation_matrix(1,0), box_transformation_matrix(0,0)));
         pose_pin.empty();
-        pose_pin.push_back(pin_transformation_matrix(0,3)+pin_xWidth/2);
-        pose_pin.push_back(pin_transformation_matrix(1,3)+pin_yWidth/2);
+        pose_pin.push_back(pin_transformation_matrix(0,3));
+        pose_pin.push_back(pin_transformation_matrix(1,3)); //Gimbal lock ved pi/2 rundt y
         pose_pin.push_back(pin_transformation_matrix(2,3));
+        pose_box.push_back(atan2(pin_transformation_matrix(2,1), pin_transformation_matrix(2,2)));
+        pose_box.push_back(-sin(pin_transformation_matrix(2,0)));
+        pose_box.push_back(atan2(pin_transformation_matrix(1,0), pin_transformation_matrix(0,0)));
+
     }
 
     void narrowPointCloud(pcl::PointCloud<pcl::PointXYZRGBA>::Ptr &concatenated_cloud, pcl::PointCloud<pcl::PointXYZRGBA>::Ptr &concatenated_cloud_filtered)
@@ -1112,7 +1087,7 @@ private:
 int main(int argc, char** argv)
 {
     cout << "start" << endl;
-    ros::init(argc, argv, "kyssMegiRaeva");
+    ros::init(argc, argv, "Pipe-detector");
     cout << "etter init" << endl;
     Receiver a;
     a.run();
