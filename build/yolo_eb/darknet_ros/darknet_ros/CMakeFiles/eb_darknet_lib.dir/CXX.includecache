@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -88,6 +88,28 @@ actionlib_msgs/GoalStatus.h
 darknet_ros_msgs_eb/CheckForObjectsFeedback.h
 -
 
+/home/erlendb/Programmering/Master/test_ws/devel/include/darknet_ros_msgs_eb/CheckForObjectsActionGoal.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+std_msgs/Header.h
+-
+actionlib_msgs/GoalID.h
+-
+darknet_ros_msgs_eb/CheckForObjectsGoal.h
+-
+
 /home/erlendb/Programmering/Master/test_ws/devel/include/darknet_ros_msgs_eb/CheckForObjectsActionResult.h
 string
 -
@@ -108,6 +130,40 @@ std_msgs/Header.h
 actionlib_msgs/GoalStatus.h
 -
 darknet_ros_msgs_eb/CheckForObjectsResult.h
+-
+
+/home/erlendb/Programmering/Master/test_ws/devel/include/darknet_ros_msgs_eb/CheckForObjectsFeedback.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
+/home/erlendb/Programmering/Master/test_ws/devel/include/darknet_ros_msgs_eb/CheckForObjectsGoal.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+sensor_msgs/Image.h
 -
 
 /home/erlendb/Programmering/Master/test_ws/devel/include/darknet_ros_msgs_eb/CheckForObjectsResult.h

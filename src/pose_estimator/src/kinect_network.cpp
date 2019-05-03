@@ -312,7 +312,7 @@ private:
             const std::string baseName = oss.str();
             cout << baseName << endl;
 
-            const std::string path = "/home/erlendb/Pictures/Masteroppgave_bilder/KinectNetwork/bilder17_04/";
+            const std::string path = "/home/erlendb/Pictures/Masteroppgave_bilder/KinectNetwork/bilder25_04/";
             const std::string cloudName = path /*+ "Cloud/"*/ + baseName + "_cloud.pcd";
             const std::string colorName = path /*+ "Color/"*/ + baseName + "_color.jpg";
             cv::imwrite(colorName, color[i]);
