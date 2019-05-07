@@ -27,15 +27,16 @@
 #include <pcl/features/fpfh_omp.h>
 #include <pcl/registration/sample_consensus_prerejective.h>
 #include <pcl/filters/statistical_outlier_removal.h>
+#include <pcl/registration/icp.h>
 
 class PoseEstimator
 {
 private:
     typedef pcl::PointXYZ PointT;
     typedef pcl::FPFHSignature33 FeatureT;
-    typedef pcl::FPFHEstimationOMP<pcl::PointNormal, pcl::PointNormal, FeatureT> FeatureEstimationT;
+    typedef pcl::FPFHEstimationOMP<pcl::PointXYZ, pcl::Normal, FeatureT> FeatureEstimationT;
     typedef pcl::PointCloud<FeatureT> FeatureCloudT;
-    typedef pcl::visualization::PointCloudColorHandlerCustom<pcl::PointNormal> ColorHandler;
+    typedef pcl::visualization::PointCloudColorHandlerCustom<pcl::PointXYZ> ColorHandler;
 
     bool aligned;
     bool model_assigned;
@@ -46,25 +47,25 @@ private:
     //pcl::visualization::PCLVisualizer::Ptr visualizer;
     pcl::PCDReader reader;
     pcl::PLYReader ply_reader;
-    pcl::PassThrough<pcl::PointNormal> pass;
-    pcl::NormalEstimation<pcl::PointNormal, pcl::Normal> ne;
-    pcl::SACSegmentationFromNormals<pcl::PointNormal, pcl::Normal> seg;
-    pcl::ExtractIndices<pcl::PointNormal> extract;
+    pcl::PassThrough<pcl::PointXYZ> pass;
+    pcl::NormalEstimation<pcl::PointXYZ, pcl::Normal> ne;
+    pcl::SACSegmentationFromNormals<pcl::PointXYZ, pcl::Normal> seg;
+    pcl::ExtractIndices<pcl::PointXYZ> extract;
     pcl::ExtractIndices<pcl::Normal> extract_normals;
-    pcl::search::KdTree<pcl::PointNormal>::Ptr tree;
-    pcl::VoxelGrid<pcl::PointNormal> vg;
-    pcl::NormalEstimationOMP<pcl::PointNormal, pcl::PointNormal> nest;
+    pcl::search::KdTree<pcl::PointXYZ>::Ptr tree;
+    pcl::VoxelGrid<pcl::PointXYZ> vg;
+    pcl::NormalEstimationOMP<pcl::PointXYZ, pcl::Normal> nest;
     FeatureEstimationT fest;
-    pcl::SampleConsensusPrerejective<pcl::PointNormal, pcl::PointNormal, FeatureT> align;
-    pcl::StatisticalOutlierRemoval<pcl::PointNormal> sor;
+    pcl::SampleConsensusPrerejective<pcl::PointXYZ, pcl::PointXYZ, FeatureT> align;
+    pcl::StatisticalOutlierRemoval<pcl::PointXYZ> sor;
 
-    pcl::PointCloud<pcl::PointNormal>::Ptr input_cloud;
-    pcl::PointCloud<pcl::PointNormal>::Ptr cloud_filtered, cloud_filtered2, cloud_filtered_return;
+    pcl::PointCloud<pcl::PointXYZ>::Ptr input_cloud;
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_filtered, cloud_filtered2, cloud_filtered_return;
     pcl::PointCloud<pcl::Normal>::Ptr cloud_normals, cloud_normals2;
     pcl::ModelCoefficients::Ptr coefficients_plane, coefficients_cylinder;
     pcl::PointIndices::Ptr inliers_plane, inliers_cylinder;
-    pcl::PointCloud<pcl::PointNormal>::Ptr pipe_model;
-    pcl::PointCloud<pcl::PointNormal>::Ptr segmented_pipe;
+    pcl::PointCloud<pcl::PointXYZ>::Ptr pipe_model;
+    pcl::PointCloud<pcl::PointXYZ>::Ptr segmented_pipe;
 
 
     FeatureCloudT::Ptr scene_features;
@@ -84,19 +85,21 @@ private:
 //Functions
 public:
     PoseEstimator();
-    bool start(pcl::PointCloud<pcl::PointNormal>::Ptr cloud, pcl::PointCloud<pcl::PointNormal>::Ptr aligned_model);
+    bool start(pcl::PointCloud<pcl::PointXYZ>::Ptr &cloud, pcl::PointCloud<pcl::PointXYZ>::Ptr aligned_model,
+            Eigen::Matrix4d &prealign_mat, Eigen::Matrix4d &alignment_mat);
 
     //Setters and getters
-    bool setModel(pcl::PointCloud<pcl::PointNormal>::Ptr model);
-    void getSegmented(pcl::PointCloud<pcl::PointNormal>::Ptr &seg_cloud);
-    void getFiltered(pcl::PointCloud<pcl::PointNormal>::Ptr &filtered_cloud);
+    bool setModel(pcl::PointCloud<pcl::PointXYZ>::Ptr model);
+    void getSegmented(pcl::PointCloud<pcl::PointXYZ>::Ptr &seg_cloud);
+    void getFiltered(pcl::PointCloud<pcl::PointXYZ>::Ptr &filtered_cloud);
     void getPose(std::vector<float> &input_vec);
 
 
 private:
-    void voxel_filter();
-    void extract_cylinder();
-    void pose_estimate();
+    void voxel_filter(pcl::PointCloud<pcl::PointXYZ>::Ptr &cloud);
+    void extract_cylinder(pcl::PointCloud<pcl::PointXYZ>::Ptr &cloud);
+    void pose_estimate(pcl::PointCloud<pcl::PointXYZ>::Ptr &cloud, pcl::PointCloud<pcl::PointXYZ>::Ptr &model,
+            Eigen::Matrix4d &prealign_mat, Eigen::Matrix4d &alignment_mat);
     void clearAll();
 };
 

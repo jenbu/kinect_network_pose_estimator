@@ -63,7 +63,6 @@ private:
 
     PoseEstimator pose_est;
     pcl::VoxelGrid<pcl::PointXYZRGBA> vg_a;
-    pcl::PassThrough<pcl::PointXYZRGBA> pass_seg;
 
     ros::AsyncSpinner spinner;
 
@@ -85,7 +84,8 @@ private:
     pcl::PointCloud<pcl::PointXYZRGBA>::Ptr cloud[6], box_cloud[6], pin_cloud[6];
     pcl::PointCloud<pcl::PointXYZRGBA>::Ptr cloud_world[6], box_cloud_world[6], pin_cloud_world[6];
     pcl::PointCloud<pcl::PointXYZRGBA>::Ptr concatenated_world, concatenated_pin, concatenated_box, segmented_box, segmented_pin, aligned_box, aligned_pin, concatenated_box_filtered, concatenated_pin_filtered;
-    pcl::PointCloud<pcl::PointNormal>::Ptr cloud_normal_box, cloud_normal_pin, aligned_boxEnd, aligned_pin_normal, aligned_box_normal, filtered_cloud, segmented_box_normal, segmented_pin_normal;
+    pcl::PointCloud<pcl::PointNormal>::Ptr aligned_boxEnd, filtered_cloud, segmented_box_normal, segmented_pin_normal;
+    pcl::PointCloud<pcl::PointXYZ>::Ptr aligned_box_xyz, aligned_pin_xyz, cloud_xyz_box, cloud_xyz_pin;
 
     pcl::PCDWriter writer;
     pcl::PLYReader reader;
@@ -180,10 +180,10 @@ private:
 
         segmented_box_normal = pcl::PointCloud<pcl::PointNormal>::Ptr(new pcl::PointCloud<pcl::PointNormal>());
         segmented_pin_normal = pcl::PointCloud<pcl::PointNormal>::Ptr(new pcl::PointCloud<pcl::PointNormal>());
-        cloud_normal_box = pcl::PointCloud<pcl::PointNormal>::Ptr(new pcl::PointCloud<pcl::PointNormal>());
-        cloud_normal_pin = pcl::PointCloud<pcl::PointNormal>::Ptr(new pcl::PointCloud<pcl::PointNormal>());
-        aligned_pin_normal = pcl::PointCloud<pcl::PointNormal>::Ptr(new pcl::PointCloud<pcl::PointNormal>());
-        aligned_box_normal = pcl::PointCloud<pcl::PointNormal>::Ptr(new pcl::PointCloud<pcl::PointNormal>());
+        cloud_xyz_box = pcl::PointCloud<pcl::PointXYZ>::Ptr(new pcl::PointCloud<pcl::PointXYZ>());
+        cloud_xyz_pin = pcl::PointCloud<pcl::PointXYZ>::Ptr(new pcl::PointCloud<pcl::PointXYZ>());
+        aligned_pin_xyz = pcl::PointCloud<pcl::PointXYZ>::Ptr(new pcl::PointCloud<pcl::PointXYZ>());
+        aligned_box_xyz = pcl::PointCloud<pcl::PointXYZ>::Ptr(new pcl::PointCloud<pcl::PointXYZ>());
         aligned_boxEnd = pcl::PointCloud<pcl::PointNormal>::Ptr(new pcl::PointCloud<pcl::PointNormal>());
         aligned_pin = pcl::PointCloud<pcl::PointXYZRGBA>::Ptr(new pcl::PointCloud<pcl::PointXYZRGBA>());
         concatenated_world = pcl::PointCloud<pcl::PointXYZRGBA>::Ptr(new pcl::PointCloud<pcl::PointXYZRGBA>());
@@ -495,16 +495,19 @@ private:
                 {
 
                     cout << "Begin processing" << endl;
-                    narrowPointCloud(concatenated_box, concatenated_box_filtered);
+                    /*narrowPointCloud(concatenated_box, concatenated_box_filtered);
                     narrowPointCloud(concatenated_pin, concatenated_pin_filtered);
                     sor_seg.setInputCloud (concatenated_pin_filtered);
                     sor_seg.filter(*concatenated_pin_filtered);
                     sor_seg.setInputCloud(concatenated_box_filtered);
                     sor_seg.filter(*concatenated_box_filtered);
+                     */
                     if(enablePE)
                     {
-                        //poseEstimation(concatenated_box_filtered, concatenated_pin_filtered);
-                        ICPalign(concatenated_box_filtered, concatenated_pin_filtered);
+                        pcl::copyPointCloud(*concatenated_box, *concatenated_box_filtered);
+                        pcl::copyPointCloud(*concatenated_pin, *concatenated_pin_filtered);
+                        poseEstimation(concatenated_box_filtered, concatenated_pin_filtered);
+                        //ICPalign(concatenated_box_filtered, concatenated_pin_filtered);
                     }
 
                     affine_trans_box.matrix() = box_transformation_matrix.cast<float>();
@@ -550,7 +553,7 @@ private:
                     if(save)
                     {
                         save = false;
-                        saveCloudAndImages(concatenated_box, concatenated_box_filtered, color);
+                        saveCloudAndImages(concatenated_box, concatenated_pin, color);
                     }
                     concatenated_world->clear();
                     concatenated_world->resize((size_t)depth[1].cols*depth[1].rows);
@@ -729,8 +732,6 @@ private:
 
             for(size_t c = 0; c < depth.cols; ++c, ++itP, ++itX)
             {
-
-                color_pixel = color.at<cv::Vec3b>(r,c);
                 depth_pixel = depth.at<uint16_t>(r,c);
 
                 register const float depthValue = depth_pixel / 1000.0f;
@@ -912,6 +913,7 @@ private:
         const std::string cloudNamePin = path /*+ "Cloud/"*/ + baseName + "pin" + "_cloud.pcd";
         const std::string depthName = path + baseName + "_depth.jpg";
 
+        /*
         for(int i = 0; i < 6; i++)
         {
             oss.str("");
@@ -920,14 +922,14 @@ private:
             cout << baseName << endl;
 
             const std::string path = "/home/erlendb/Pictures/Masteroppgave_bilder/Rapport/";
-            const std::string colorName = path /*+ "Color/"*/ + baseName + "_color.jpg";
+            const std::string colorName = path + baseName + "_color.jpg";
             cv::imwrite(colorName, color[i]);
-        }
+        }*/
 
-
+        cout << "saved shit" << endl;
         //cout << "Saving cloud: " << cloudName << endl;
-        //writer.writeBinary(cloudNameBox, *cloud_box);
-        //writer.writeBinary(cloudNamePin, *cloud_pin);
+        writer.writeBinary(cloudNameBox, *cloud_box);
+        writer.writeBinary(cloudNamePin, *cloud_pin);
         //OUT_INFO("saving color: " << colorName);
         //cv::imwrite(colorName, color);
         //OUT_INFO("saving depth: " << depthName);
@@ -1023,28 +1025,70 @@ private:
 
     void poseEstimation(const pcl::PointCloud<pcl::PointXYZRGBA>::Ptr &input_box_cloud, const pcl::PointCloud<pcl::PointXYZRGBA>::Ptr &input_pin_cloud)
     {
-        pose_box.empty(); pose_pin.empty();
+        Eigen::Matrix4d transformation_matrix_box = Eigen::Matrix4d::Identity(), transformation_matrix_pin = Eigen::Matrix4d::Identity();
+        box_transformation_matrix = Eigen::Matrix4d::Identity(); pin_transformation_matrix = Eigen::Matrix4d::Identity();
 
         cout << "Pin-end pose estimation" << endl;
-        pcl::copyPointCloud(*input_pin_cloud, *cloud_normal_pin);
-        pcl::copyPointCloud(*aligned_pin, *aligned_pin_normal);
-        pose_est.setModel(aligned_pin_normal);
-        pose_est.start(cloud_normal_pin, aligned_pin_normal);
-        pose_est.getSegmented(segmented_box_normal);
-        pcl::copyPointCloud(*segmented_box_normal, *segmented_box);
-        pcl::copyPointCloud(*aligned_pin_normal, *aligned_pin);
+        pcl::copyPointCloud(*input_box_cloud, *cloud_xyz_box);
+        pcl::copyPointCloud(*aligned_box, *aligned_box_xyz);
+        pose_est.setModel(aligned_box_xyz);
+        pose_est.start(cloud_xyz_box, aligned_box_xyz, box_prealigned_tfmat, icp_transformation_box);
+        pcl::copyPointCloud(*cloud_xyz_box, *input_box_cloud);
+        pcl::copyPointCloud(*aligned_box_xyz, *aligned_box);
+        box_transformation_matrix *= icp_transformation_box;
+        box_transformation_matrix *= box_prealigned_tfmat;
+
 
         cout << "Box-end pose estimation" << endl;
-        pcl::copyPointCloud(*input_box_cloud, *cloud_normal_box);
-        pcl::copyPointCloud(*aligned_box, *aligned_box_normal);
-        pose_est.setModel(aligned_box_normal);
-        pose_est.start(cloud_normal_box, aligned_box_normal);
-        //pose_est.getPose(pose_box);
-        pose_est.getSegmented(segmented_pin_normal);
-        pcl::copyPointCloud(*segmented_pin_normal, *segmented_pin);
-        pcl::copyPointCloud(*aligned_box_normal, *aligned_box);
-        if(pose_box.size() > 0)
-            cout << "Box pose: " << pose_box[0] << " " << pose_box[1] << " " << pose_box[2] << endl;
+        pcl::copyPointCloud(*input_pin_cloud, *cloud_xyz_pin);
+        pcl::copyPointCloud(*aligned_pin, *aligned_pin_xyz);
+        pose_est.setModel(aligned_pin_xyz);
+        pose_est.start(cloud_xyz_pin, aligned_pin_xyz, pin_prealigned_tfmat, icp_transformation_pin);
+        pcl::copyPointCloud(*cloud_xyz_pin, *input_pin_cloud);
+        pcl::copyPointCloud(*aligned_pin_xyz, *aligned_pin);
+        pin_transformation_matrix *= icp_transformation_pin;
+        pin_transformation_matrix *= pin_prealigned_tfmat;
+
+        pose_box.erase(pose_box.begin(), pose_box.begin()+6);
+
+        //Calculate angles and add pose to pose vectors.
+        double theta_y;
+        double theta_y1 = -sin(box_transformation_matrix(2,0));
+        double theta_y2 = M_PI + sin(theta_y1);
+        theta_y = theta_y1;
+
+
+        double theta_x = atan2(box_transformation_matrix(2,1), box_transformation_matrix(2,2)); //Fiks når cos(theta_y) = 0
+        double theta_z = atan2(box_transformation_matrix(1,0), box_transformation_matrix(0,0));
+
+        pose_box.push_back(box_transformation_matrix(0,3));
+        pose_box.push_back(box_transformation_matrix(1,3));
+        pose_box.push_back(box_transformation_matrix(2,3)); //plus factor is distance up to neck
+        pose_box.push_back(theta_x);
+        pose_box.push_back(theta_y);
+        pose_box.push_back(theta_z);
+
+        pose_pin.erase(pose_pin.begin(), pose_pin.begin()+6);
+        theta_y1 = -sin(pin_transformation_matrix(2,0));
+        theta_y2 = M_PI + sin(theta_y1);
+        theta_y = theta_y1;
+
+        theta_x = atan2(pin_transformation_matrix(2,1), pin_transformation_matrix(2,2)); //Fiks når cos(theta_y) = 0
+        theta_z = atan2(pin_transformation_matrix(1,0)/cos(theta_y), pin_transformation_matrix(0,0)/cos(theta_y));
+        pose_pin.push_back(pin_transformation_matrix(0,3));
+        pose_pin.push_back(pin_transformation_matrix(1,3)); //Gimbal lock ved pi/2 rundt y
+        pose_pin.push_back(pin_transformation_matrix(2,3));
+        pose_pin.push_back(theta_x);
+        pose_pin.push_back(theta_y);
+        pose_pin.push_back(theta_z);
+
+        if(recordData)
+        {
+            poseData << pose_box[0] << " " << pose_box[1] << " " << pose_box[2] << " "
+                     << pose_box[3] << " " << pose_box[4] << " " << pose_box[5] << " ";
+            poseData << pose_pin[0] << " " << pose_pin[1] << " " << pose_pin[2] << " "
+                     << pose_pin[3] << " " << pose_pin[4] << " " << pose_pin[5] << "\n";
+        }
 
     }
 
@@ -1057,7 +1101,7 @@ private:
         //icp_transformation_box = Eigen::Matrix4d::Identity(); //icp_transformation_pin = Eigen::Matrix4d::Identity();
 
 
-        double scene_sumX = 0, scene_sumY = 0, scene_sumZ = 0, model_sumX = 0, model_sumY = 0, model_sumZ;
+        double scene_sumX = 0, scene_sumY = 0, scene_sumZ = 0, model_sumX = 0, model_sumY = 0, model_sumZ = 0;
         double scene_avgX, scene_avgY, scene_avgZ, model_avgX, model_avgY, model_avgZ;
         for(int i = 0; i < input_box_cloud->points.size(); i++)
         {
@@ -1174,7 +1218,7 @@ private:
         icp.setInputTarget (input_pin_cloud);
         cout << "prealign_matrix: " << transformation_matrix_pin << endl;
         //pin_transformation_matrix = pin_prealigned_tfmat;
-        pin_transformation_matrix *= transformation_matrix_pin;
+        //pin_transformation_matrix *= transformation_matrix_pin;
 
         icp_iterator = 0;
         double fitness_pin = 100.0;
@@ -1251,6 +1295,7 @@ private:
     void narrowPointCloud(pcl::PointCloud<pcl::PointXYZRGBA>::Ptr &concatenated_cloud, pcl::PointCloud<pcl::PointXYZRGBA>::Ptr &concatenated_cloud_filtered)
     {
         pcl::PointCloud<pcl::PointXYZRGBA>::Ptr temp = pcl::PointCloud<pcl::PointXYZRGBA>::Ptr(new pcl::PointCloud<pcl::PointXYZRGBA>());
+        pcl::PassThrough<pcl::PointXYZRGBA> pass_seg;
         pass_seg.setInputCloud(concatenated_cloud);
         pass_seg.setFilterFieldName("z");
         pass_seg.setFilterLimits(0.45, 1.6);

@@ -98,160 +98,21 @@
   <component name="ChangeListManager">
     <list default="true" id="df18ee9f-c264-432e-9a90-9e70e42448d7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/src/cloud_segmentation.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/kinect_network.dir/src/kinect_network.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/kinect_network.dir/src/kinect_network.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/kinect_network.dir/src/pose_estimator.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/kinect_network.dir/src/pose_estimator.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/src/cloud_segmentation.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/src/cloud_segmentation.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/src/pose_estimator.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/src/pose_estimator.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/src/pose_estimator.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/src/pose_estimator.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/src/testing.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/src/testing.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet.dir/src/yolo_object_detector_node.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet.dir/src/yolo_object_detector_node.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/examples/art.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/examples/art.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/examples/attention.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/examples/attention.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/examples/captcha.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/examples/captcha.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/examples/cifar.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/examples/cifar.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/examples/classifier.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/examples/classifier.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/examples/coco.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/examples/coco.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/examples/darknet.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/examples/darknet.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/examples/detector.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/examples/detector.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/examples/go.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/examples/go.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/examples/lsd.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/examples/lsd.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/examples/nightmare.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/examples/nightmare.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/examples/regressor.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/examples/regressor.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/examples/rnn.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/examples/rnn.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/examples/segmenter.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/examples/segmenter.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/examples/super.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/examples/super.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/examples/tag.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/examples/tag.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/examples/yolo.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/examples/yolo.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/activation_layer.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/activation_layer.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/activations.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/activations.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/avgpool_layer.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/avgpool_layer.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/batchnorm_layer.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/batchnorm_layer.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/blas.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/blas.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/box.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/box.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/col2im.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/col2im.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/connected_layer.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/connected_layer.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/convolutional_layer.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/convolutional_layer.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/cost_layer.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/cost_layer.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/crnn_layer.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/crnn_layer.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/crop_layer.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/crop_layer.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/cuda.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/cuda.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/data.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/data.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/deconvolutional_layer.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/deconvolutional_layer.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/demo.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/demo.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/detection_layer.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/detection_layer.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/dropout_layer.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/dropout_layer.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/gemm.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/gemm.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/gru_layer.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/gru_layer.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/im2col.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/im2col.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/image.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/image.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/l2norm_layer.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/l2norm_layer.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/layer.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/layer.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/list.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/list.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/local_layer.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/local_layer.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/logistic_layer.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/logistic_layer.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/lstm_layer.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/lstm_layer.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/matrix.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/matrix.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/maxpool_layer.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/maxpool_layer.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/network.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/network.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/normalization_layer.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/normalization_layer.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/option_list.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/option_list.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/parser.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/parser.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/region_layer.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/region_layer.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/reorg_layer.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/reorg_layer.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/rnn_layer.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/rnn_layer.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/route_layer.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/route_layer.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/shortcut_layer.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/shortcut_layer.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/softmax_layer.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/softmax_layer.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/tree.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/tree.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/upsample_layer.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/upsample_layer.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/utils.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/utils.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/yolo_layer.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/__/darknet/src/yolo_layer.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/src/YoloObjectDetector.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/src/YoloObjectDetector.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/src/image_interface.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/src/image_interface.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_eb_generate_messages_check_deps_BoundingBox.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_eb_generate_messages_check_deps_BoundingBox.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_eb_generate_messages_check_deps_BoundingBox.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_eb_generate_messages_check_deps_BoundingBox.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_eb_generate_messages_check_deps_BoundingBoxes.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_eb_generate_messages_check_deps_BoundingBoxes.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_eb_generate_messages_check_deps_BoundingBoxes.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_eb_generate_messages_check_deps_BoundingBoxes.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsAction.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsAction.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsAction.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsAction.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsActionFeedback.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsActionFeedback.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsActionFeedback.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsActionFeedback.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsActionGoal.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsActionGoal.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsActionGoal.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsActionGoal.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsActionResult.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsActionResult.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsActionResult.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsActionResult.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsFeedback.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsFeedback.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsFeedback.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsFeedback.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsGoal.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsGoal.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsGoal.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsGoal.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsResult.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsResult.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsResult.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsResult.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_py.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_py.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_py.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_py.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_eb_generate_messages.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_eb_generate_messages.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_eb_generate_messages.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_eb_generate_messages.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_eb_generate_messages_cpp.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_eb_generate_messages_cpp.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_eb_generate_messages_cpp.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_eb_generate_messages_cpp.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_eb_generate_messages_eus.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_eb_generate_messages_eus.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_eb_generate_messages_eus.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_eb_generate_messages_eus.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_eb_generate_messages_lisp.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_eb_generate_messages_lisp.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_eb_generate_messages_lisp.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_eb_generate_messages_lisp.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_eb_generate_messages_nodejs.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_eb_generate_messages_nodejs.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_eb_generate_messages_nodejs.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_eb_generate_messages_nodejs.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_eb_generate_messages_py.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_eb_generate_messages_py.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_eb_generate_messages_py.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_eb_generate_messages_py.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_eus.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_eus.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_eus.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_eus.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_eus.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_eus.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_eus.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_eus.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_py.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_py.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_py.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_py.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../devel/lib/eb_darknet/eb_darknet" beforeDir="false" afterPath="$PROJECT_DIR$/../devel/lib/eb_darknet/eb_darknet" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../devel/lib/libeb_darknet_lib.so" beforeDir="false" afterPath="$PROJECT_DIR$/../devel/lib/libeb_darknet_lib.so" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../devel/lib/pose_estimator/cloud_segmentation" beforeDir="false" afterPath="$PROJECT_DIR$/../devel/lib/pose_estimator/cloud_segmentation" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../devel/lib/pose_estimator/kinect_network" beforeDir="false" afterPath="$PROJECT_DIR$/../devel/lib/pose_estimator/kinect_network" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../devel/lib/pose_estimator/testing" beforeDir="false" afterPath="$PROJECT_DIR$/../devel/lib/pose_estimator/testing" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pose_estimator/src/cloud_segmentation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/pose_estimator/src/cloud_segmentation.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pose_estimator/src/kinect_network.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/pose_estimator/src/kinect_network.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/src/pose_estimator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/pose_estimator/src/pose_estimator.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/src/pose_estimator.h" beforeDir="false" afterPath="$PROJECT_DIR$/pose_estimator/src/pose_estimator.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pose_estimator/src/testing.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/pose_estimator/src/testing.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yolo_eb" beforeDir="false" afterPath="$PROJECT_DIR$/yolo_eb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/config/yolov3-tiny-2c-ground.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/config/yolov3-tiny-2c-ground.yaml" afterDir="false" />
@@ -276,29 +137,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pose_estimator/src/cloud_segmentation.cpp">
+        <entry file="file://$PROJECT_DIR$/pose_estimator/src/pose_estimator.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="510" column="73" selection-start-line="510" selection-start-column="48" selection-end-line="510" selection-end-column="73" />
-              <folding>
-                <element signature="e#27912#34073#0" />
-                <element signature="e#34079#34976#0" />
-                <element signature="e#34982#35336#0" />
-                <element signature="e#35342#35599#0" />
-                <element signature="e#35606#36634#0" />
-                <element signature="e#39268#41258#0" />
-                <element signature="e#41264#44596#0" />
-                <element signature="e#44602#45929#0" />
-              </folding>
+            <state relative-caret-position="510">
+              <caret line="133" column="33" selection-start-line="133" selection-start-column="33" selection-end-line="133" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/launch/local_launcher.launch">
+        <entry file="file://$PROJECT_DIR$/pose_estimator/src/cloud_segmentation.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="99" selection-start-line="21" selection-start-column="99" selection-end-line="21" selection-end-column="99" />
+            <state relative-caret-position="126">
+              <caret line="435" column="39" selection-start-line="435" selection-start-column="39" selection-end-line="435" selection-end-column="39" />
+              <folding>
+                <element signature="e#3#22#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -307,36 +161,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>boundry_rmax</find>
-      <find>segmented_box_normal</find>
-      <find>segmented_box</find>
-      <find>concatenated_cloud</find>
-      <find>ymax</find>
-      <find>cameraMatrixColor</find>
-      <find>aligned_box</find>
-      <find>pin_xwidth</find>
-      <find>colorHandlerT</find>
-      <find>pose_box</find>
-      <find>pose_pin</find>
-      <find>avgX</find>
-      <find>fps</find>
-      <find>enableConsole</find>
-      <find>enableConsoleOutput</find>
-      <find>setBackgroundColor</find>
-      <find>vg.</find>
-      <find>to_world_matrix</find>
-      <find>init</find>
-      <find>poseData</find>
-      <find>saveCloudAndImages</find>
-      <find>callback(</find>
-      <find>box_transformation_matrix</find>
-      <find>box-end</find>
-      <find>index &lt;&lt;</find>
-      <find>icp_transformatio</find>
       <find>pin_transformation_matrix</find>
       <find>&quot;pose</find>
       <find>icp_transformation_box</find>
       <find>.txt</find>
+      <find>lookupY</find>
+      <find>look</find>
+      <find>updatePoint</find>
+      <find>pass_seg</find>
+      <find>cloud_plane</find>
+      <find>pipe_model</find>
+      <find>fest</find>
+      <find>normals</find>
+      <find>saveCloud</find>
+      <find>sor_seg</find>
+      <find>start</find>
+      <find>input_cloud</find>
+      <find>nest</find>
+      <find>cloud_normals</find>
+      <find>tree</find>
+      <find>getseg</find>
+      <find>model_ass</find>
+      <find>segmented_pipe</find>
+      <find>aligned_box</find>
+      <find>aligned_box_normal</find>
+      <find>cloud_normal_box</find>
+      <find>cloud_xyz</find>
+      <find>cloud_normal</find>
+      <find>enable</find>
+      <find>box_prealigned_tfmat</find>
+      <find>box_transformation</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -365,24 +219,24 @@
         <option value="$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/launch/Jenas_launcher.launch" />
         <option value="$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/launch/darknet_ros.launch" />
         <option value="$PROJECT_DIR$/pose_estimator/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/pose_estimator/src/pose_estimator.h" />
         <option value="$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/launch/Jenas_ground.launch" />
         <option value="$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/launch/local_launcher.launch" />
         <option value="$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/launch/launch_all.launch" />
-        <option value="$PROJECT_DIR$/pose_estimator/src/pose_estimator.cpp" />
         <option value="$PROJECT_DIR$/pose_estimator/src/kinect_network.cpp" />
         <option value="$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/src/YoloObjectDetector.cpp" />
-        <option value="$PROJECT_DIR$/pose_estimator/src/testing.cpp" />
         <option value="$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/launch/rosbag_record_js_topics.launch" />
+        <option value="$PROJECT_DIR$/pose_estimator/src/testing.cpp" />
+        <option value="$PROJECT_DIR$/pose_estimator/src/pose_estimator.h" />
         <option value="$PROJECT_DIR$/pose_estimator/src/cloud_segmentation.cpp" />
+        <option value="$PROJECT_DIR$/pose_estimator/src/pose_estimator.cpp" />
       </list>
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="524" />
+    <option name="x" value="282" />
     <option name="y" value="-4" />
-    <option name="width" value="938" />
+    <option name="width" value="1213" />
     <option name="height" value="1020" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -391,7 +245,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -409,13 +262,6 @@
               <item name="src" type="47feb1d3:ProjectViewModuleNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pose_estimator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="src" type="b2602c69:ProjectViewProjectNode" />
-              <item name="src" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pose_estimator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="src" type="b2602c69:ProjectViewProjectNode" />
@@ -447,19 +293,11 @@
               <item name="darknet_ros" type="462c0819:PsiDirectoryNode" />
               <item name="launch" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="src" type="b2602c69:ProjectViewProjectNode" />
-              <item name="src" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="yolo_eb" type="462c0819:PsiDirectoryNode" />
-              <item name="darknet_ros" type="462c0819:PsiDirectoryNode" />
-              <item name="darknet_ros" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1102,59 +940,49 @@
       <workItem from="1556870918103" duration="948000" />
       <workItem from="1556872448672" duration="952000" />
       <workItem from="1556877051602" duration="2954000" />
+      <workItem from="1557082491158" duration="4066000" />
+      <workItem from="1557090235200" duration="1126000" />
+      <workItem from="1557133992815" duration="1077000" />
+      <workItem from="1557135303404" duration="11755000" />
+      <workItem from="1557215977835" duration="4537000" />
+      <workItem from="1557221285151" duration="1502000" />
+      <workItem from="1557222975153" duration="453000" />
+      <workItem from="1557224854499" duration="1858000" />
+      <workItem from="1557226923163" duration="1825000" />
+      <workItem from="1557228840564" duration="895000" />
+      <workItem from="1557230232639" duration="1085000" />
+      <workItem from="1557232406707" duration="301000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="302019000" />
+    <option name="totallyTimeSpent" value="332422000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.36484244" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17965727" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32925585" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27624872" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25993884" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.29765546" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.31294596" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.3119266" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="CMake" order="12" weight="0.20750782" />
+      <window_info active="true" anchor="bottom" id="CMake" order="12" visible="true" weight="0.18654434" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26865673" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32925585" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.27624872" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.29765546" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.31294596" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="CMake" order="12" weight="0.24087591" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -1171,6 +999,11 @@
           <url>file://$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/src/YoloObjectDetector.cpp</url>
           <line>160</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/pose_estimator/src/cloud_segmentation.cpp</url>
+          <line>817</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1322,13 +1155,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/include/boost/smart_ptr/shared_ptr.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9600">
-          <caret line="640" selection-start-line="640" selection-end-line="640" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/include/pcl-1.9/pcl/filters/passthrough.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1680">
@@ -1342,23 +1168,6 @@
           <caret line="293" lean-forward="true" selection-start-line="293" selection-end-line="293" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pose_estimator/src/pose_estimator.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="182" column="32" lean-forward="true" selection-start-line="182" selection-start-column="32" selection-end-line="182" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pose_estimator/src/pose_estimator.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="53" column="52" lean-forward="true" selection-start-line="53" selection-start-column="52" selection-end-line="53" selection-end-column="52" />
-          <folding>
-            <element signature="e#111#128#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1391,20 +1200,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pose_estimator/src/testing.cpp">
+    <entry file="file:///usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="51" column="42" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
-          <folding>
-            <element signature="e#60#112#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/launch/rosbag_record_js_topics.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        <state relative-caret-position="15">
+          <caret line="744" selection-start-line="744" selection-end-line="744" />
         </state>
       </provider>
     </entry>
@@ -1415,27 +1214,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h">
+    <entry file="file://$PROJECT_DIR$/../../../iai_kinect2/kinect2_bridge/src/kinect2_bridge.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="744" selection-start-line="744" selection-end-line="744" />
+        <state relative-caret-position="-32">
+          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/boost/smart_ptr/shared_ptr.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="346" selection-start-line="346" selection-end-line="346" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pose_estimator/src/testing.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="87" column="31" lean-forward="true" selection-start-line="87" selection-start-column="31" selection-end-line="87" selection-end-column="31" />
+          <folding>
+            <element signature="e#60#112#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pose_estimator/src/pose_estimator.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="76" column="35" selection-start-line="76" selection-start-column="35" selection-end-line="76" selection-end-column="35" />
+          <folding>
+            <element signature="e#111#128#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/launch/rosbag_record_js_topics.launch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="183" selection-start-line="9" selection-start-column="172" selection-end-line="9" selection-end-column="183" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pose_estimator/src/cloud_segmentation.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="510" column="73" selection-start-line="510" selection-start-column="48" selection-end-line="510" selection-end-column="73" />
+        <state relative-caret-position="126">
+          <caret line="435" column="39" selection-start-line="435" selection-start-column="39" selection-end-line="435" selection-end-column="39" />
           <folding>
-            <element signature="e#27912#34073#0" />
-            <element signature="e#34079#34976#0" />
-            <element signature="e#34982#35336#0" />
-            <element signature="e#35342#35599#0" />
-            <element signature="e#35606#36634#0" />
-            <element signature="e#39268#41258#0" />
-            <element signature="e#41264#44596#0" />
-            <element signature="e#44602#45929#0" />
+            <element signature="e#3#22#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pose_estimator/src/pose_estimator.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="133" column="33" selection-start-line="133" selection-start-column="33" selection-end-line="133" selection-end-column="33" />
         </state>
       </provider>
     </entry>

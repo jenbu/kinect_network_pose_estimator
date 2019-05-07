@@ -13,9 +13,22 @@
 #include <pcl/filters/voxel_grid.h>
 #include <pcl/common/transforms.h>
 #include <pcl/filters/radius_outlier_removal.h>
+#include <pcl/filters/passthrough.h>
 #include <chrono>
 #include <pcl/console/time.h>   // TicToc
 #include <fstream>
+#include <pcl/filters/extract_indices.h>
+#include <pcl/filters/passthrough.h>
+#include <pcl/features/normal_3d.h>
+#include <pcl/sample_consensus/method_types.h>
+#include <pcl/sample_consensus/model_types.h>
+#include <pcl/segmentation/sac_segmentation.h>
+#include <pcl/visualization/pcl_visualizer.h>
+#include <pcl/features/normal_3d_omp.h>
+#include <pcl/features/fpfh_omp.h>
+#include <pcl/registration/sample_consensus_prerejective.h>
+#include <pcl/filters/statistical_outlier_removal.h>
+#include "pose_estimator.h"
 
 
 std::string path1 = "/home/erlendb/Pictures/4.19:13.32.170000box_cloud.pcd";
@@ -39,23 +52,223 @@ print4x4Matrix (const Eigen::Matrix4d & matrix)
 
 int main(int argc, char** args)
 {
+
+    typedef pcl::FPFHSignature33 FeatureT;
+    typedef pcl::FPFHEstimationOMP<pcl::PointXYZ, pcl::PointNormal, FeatureT> FeatureEstimationT;
     typedef pcl::visualization::PointCloudColorHandlerCustom<pcl::PointXYZ> ColorHandlerT;
+    typedef pcl::PointCloud<FeatureT> FeatureCloudT;
     pcl::PointCloud<pcl::PointXYZ>::Ptr unfiltered(new pcl::PointCloud<pcl::PointXYZ>());
     pcl::PointCloud<pcl::PointXYZ>::Ptr filtered(new pcl::PointCloud<pcl::PointXYZ>());
-    pcl::PointCloud<pcl::PointXYZ>::Ptr ir_lim(new pcl::PointCloud<pcl::PointXYZ>());
+    pcl::PointCloud<pcl::PointXYZ>::Ptr box_end(new pcl::PointCloud<pcl::PointXYZ>());
+    pcl::PointCloud<pcl::PointNormal>::Ptr cloud_normals(new pcl::PointCloud<pcl::PointNormal>());
+    pcl::PointCloud<pcl::PointNormal>::Ptr cloud_normals2(new pcl::PointCloud<pcl::PointNormal>());
+    pcl::PointCloud<pcl::PointNormal>::Ptr box_normals(new pcl::PointCloud<pcl::PointNormal>());
+    //pcl::PointCloud<pcl::PointXYZ>::Ptr inliers_plane(new pcl::PointCloud<pcl::PointXYZ>());
+    pcl::ModelCoefficients::Ptr coefficients_plane (new pcl::ModelCoefficients());
+    pcl::ModelCoefficients::Ptr coefficients_cylinder (new pcl::ModelCoefficients());
+    pcl::ExtractIndices<pcl::PointXYZ> extract;
+    pcl::ExtractIndices<pcl::PointNormal> extract_normals;
+    pcl::PointIndices::Ptr inliers_plane(new pcl::PointIndices());
+    pcl::PointIndices::Ptr inliers_cylinder(new pcl::PointIndices());
+    FeatureCloudT::Ptr scene_features(new FeatureCloudT());
+    FeatureCloudT::Ptr object_features(new FeatureCloudT());
 
+    PoseEstimator pose_est;
+
+    FeatureEstimationT fest;
+
+    pcl::VoxelGrid<pcl::PointXYZ> vg;
+    pcl::NormalEstimation<pcl::PointXYZ, pcl::PointNormal> ne;
+    pcl::SACSegmentationFromNormals<pcl::PointXYZ, pcl::PointNormal> seg;
+    pcl::search::KdTree<pcl::PointXYZ>::Ptr tree;
+    pcl::NormalEstimationOMP<pcl::PointXYZ, pcl::PointNormal> nest;
+    pcl::SampleConsensusPrerejective<pcl::PointXYZ, pcl::PointXYZ, FeatureT> align;
+
+
+    filtered->is_dense = false;
+    filtered->points.resize(500*500);
     pcl::PCDReader reader;
-    reader.read("/home/erlendb/Pictures/4.22:16.12.31140725926139648box_cloud.pcd", *unfiltered);
-    reader.read("/home/erlendb/Pictures/4.22:16.12.31140725926139648pin_cloud.pcd", *filtered);
-    reader.read("/home/erlendb/Pictures/Masteroppgave_bilder/Data160219/Cloud/2.16:13.35.220079_cloud.pcd", *ir_lim);
+    pcl::PLYReader ply_reader;
 
-    cout << ir_lim->points.size() << endl;
+    ply_reader.read("/home/erlendb/Blender/box_end7_m.ply", *box_end);
+    //reader.read("/home/erlendb/Pictures/4.22:16.12.31140725926139648box_cloud.pcd", *unfiltered);
+    //reader.read("/home/erlendb/Pictures/Masteroppgave_bilder/Bilder_poseTesting/3.19:17.7.3718135632_cloud.pcd", *unfiltered);
+    reader.read("/home/erlendb/Pictures/5.7:10.6.2476049535box_cloud.pcd", *filtered);
+    //reader.read("/home/erlendb/Pictures/Masteroppgave_bilder/Data160219/Cloud/2.16:13.35.220079_cloud.pcd", *ir_lim);
 
-    //pcl::visualization::PCLVisualizer::Ptr visualizer(new pcl::visualization::PCLVisualizer("Visualizer"));
-    int v1 = 1; double ymax = 1; double ymin = 0.0; double width = 1.0/2.0; int k = 0;
+
+
+
+
+    Eigen::Matrix4d transformation_matrix_box = Eigen::Matrix4d::Identity(); Eigen::Matrix4d transformation_matrix = Eigen::Matrix4d::Identity();
+
+
+    double theta = -M_PI/2;
+    transformation_matrix << 1,              0,           0, 0,
+            0,     cos(theta),  sin(theta), 0,
+            0,     -sin(theta), cos(theta), 0,
+            0,              0,           0, 1;
+
+    pcl::transformPointCloud(*box_end, *box_end, transformation_matrix);
+
+
+
+
+    /*double scene_sumX = 0, scene_sumY = 0, scene_sumZ = 0, model_sumX = 0, model_sumY = 0, model_sumZ = 0;
+    double scene_avgX, scene_avgY, scene_avgZ, model_avgX, model_avgY, model_avgZ;
+    for(int i = 0; i < filtered->points.size(); i++)
+    {
+        scene_sumX += filtered->points[i].x;
+        scene_sumY += filtered->points[i].y;
+        scene_sumZ += filtered->points[i].z;
+    }
+    for(int i = 0; i < box_end->points.size(); i++)
+    {
+        model_sumX += box_end->points[i].x;
+        model_sumY += box_end->points[i].y;
+        model_sumZ += box_end->points[i].z;
+    }
+    scene_avgX = scene_sumX/filtered->points.size();
+    scene_avgY = scene_sumY/filtered->points.size();
+    scene_avgZ = scene_sumZ/filtered->points.size();
+    model_avgX = model_sumX/box_end->points.size();
+    model_avgY = model_sumY/box_end->points.size();
+    model_avgZ = model_sumZ/box_end->points.size();
+
+    //cout << model_avgX << " " << model_avgY << " " << model_avgZ << endl;
+    cout << scene_avgX<< " " << scene_avgY << " " << scene_avgZ << endl;
+
+    if((scene_avgX-model_avgX) > 0.2 || (scene_avgX-model_avgX) < -0.2)
+        transformation_matrix_box(0,3) = scene_avgX - model_avgX;
+    else
+        transformation_matrix_box(0,3) = 0.0;
+    if((scene_avgY - model_avgY) > 0.1 || (scene_avgY - model_avgY) < -0.1)
+        transformation_matrix_box(1,3) = scene_avgY - model_avgY;
+    else
+        transformation_matrix_box(1,3) = 0.0;
+    if((scene_avgZ-model_avgZ) > 0.02 || (scene_avgZ-model_avgZ) < -0.02)
+        transformation_matrix_box(2, 3) = scene_avgZ - model_avgZ;
+    else
+        transformation_matrix_box(2, 3) = 0;
+
+    */
+
+
+    pcl::copyPointCloud(*filtered, *unfiltered);
+    pcl::visualization::PCLVisualizer::Ptr visualizer(new pcl::visualization::PCLVisualizer("Visualizer"));
+    visualizer->addPointCloud(unfiltered, ColorHandlerT(unfiltered, 255.0, 255.0, 255.0), "unfiltered");
+    visualizer->addPointCloud(box_end, ColorHandlerT(box_end, 255.0, 0.0, 255.0), "box");
+    visualizer->spinOnce(2000);
+    pose_est.setModel(box_end);
+    std::chrono::time_point<std::chrono::high_resolution_clock> start_time = std::chrono::high_resolution_clock::now();
+    pose_est.start(filtered, box_end);
+    std::chrono::time_point<std::chrono::high_resolution_clock> now_time = std::chrono::high_resolution_clock::now();
+    double elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(now_time - start_time).count() / 1000.0;
+    cout << "time lapsed: " << elapsed << endl;
+    visualizer->addPointCloud(filtered, ColorHandlerT(filtered, 0.0, 0.0, 255.0), "ir");
+    visualizer->updatePointCloud(box_end, ColorHandlerT(box_end, 255.0, 0.0, 255.0), "box");
+
 
     //visualizer->setBackgroundColor(255.0, 255.0, 255.0);
-    //visualizer->addPointCloud(ir_lim, ColorHandlerT(ir_lim, 0.0, 0.0, 255.0), "ir");
+
+
+    visualizer->addCoordinateSystem(0.5);
+    visualizer->spin();
+
+    //visualizer->spinOnce(3000);
+    //pcl::transformPointCloud(*box_end, *box_end, transformation_matrix_box);
+    //visualizer->updatePointCloud(box_end, ColorHandlerT(box_end, 255.0, 0.0, 255.0), "box");
+
+    /*
+    int iterations = 200;
+    pcl::IterativeClosestPoint<pcl::PointXYZ, pcl::PointXYZ> icp;
+    icp.setMaximumIterations (iterations);
+    icp.setEuclideanFitnessEpsilon(0.5); //Divergence criterion
+    icp.setTransformationEpsilon(1e-18); //Convergence criterion
+    //icp.setMaxCorrespondenceDistance(0.01);
+    icp.setMaxCorrespondenceDistance(0.5);
+    icp.setInputSource (box_end);
+    icp.setInputTarget (filtered);
+
+
+    int icp_iterator = 0;
+    while(icp_iterator < 150)
+    {
+
+        icp.align (*box_end);
+
+        if (icp.hasConverged ())
+        {
+            std::cout << "\nICP for box-end has converged, score is " << icp.getFitnessScore () << std::endl;
+            //std::cout << "\nICP transformation " << iterations << std::endl;
+            //icp_transformation_box *= icp.getFinalTransformation ().cast<double>();
+
+            //printTransformationMatrix(icp_transformation_box);
+            visualizer->updatePointCloud(box_end, ColorHandlerT(box_end, 255.0, 0.0, 255.0), "box");
+            visualizer->spinOnce(500);
+        }
+        else
+        {
+            PCL_ERROR ("\nICP has not converged.\n");
+        }
+        icp_iterator++;
+    }*/
+
+    /*
+
+
+    for(int i = 0; i < 10; i++)
+    {
+        // Estimate normals for scene
+        //pcl::console::print_highlight ("Estimating scene normals...\n");;
+        nest.setRadiusSearch (0.01);
+        nest.setInputCloud (filtered);
+        nest.compute (*cloud_normals);
+        nest.setInputCloud (box_end);
+        nest.compute (*box_normals);
+
+        // Estimate features
+        //pcl::console::print_highlight ("Estimating features...\n");
+        fest.setRadiusSearch (0.025);
+        fest.setInputCloud (filtered);
+        fest.setInputNormals (cloud_normals);
+        fest.compute (*scene_features);
+        fest.setInputCloud (box_end);
+        fest.setInputNormals (box_normals);
+        fest.compute (*object_features);
+
+        align.setInputSource (box_end);
+        align.setSourceFeatures (object_features);
+        align.setInputTarget (filtered);
+        align.setTargetFeatures (scene_features);
+        align.setRANSACOutlierRejectionThreshold(0.1);
+        align.setMaximumIterations (80000); // Number of RANSAC iterations
+        align.setNumberOfSamples (3); // Number of points to sample for generating/prerejecting a pose
+        align.setCorrespondenceRandomness (20); // Number of nearest features to use
+        align.setSimilarityThreshold (0.75f); // Polygonal edge length similarity threshold
+        align.setMaxCorrespondenceDistance (2.5f * leaf); // Inlier threshold
+        align.setInlierFraction (0.45f); // Required inlier fraction for accepting a pose hypothesis
+
+        pcl::console::print_highlight ("Ransac pose-estimating\n");
+        align.align (*box_end);
+        if (align.hasConverged ()) {
+            // Print results
+            printf("aligned!\n");
+
+        }
+        else {
+            pcl::console::print_error("Alignment failed!\n");
+        }
+        visualizer->updatePointCloud(box_end, ColorHandlerT(box_end, 255.0, 0.0, 255.0), "box");
+        visualizer->spinOnce(4000);
+    }*/
+
+
+
+
+
+
+
 
     /*
     visualizer->addCoordinateSystem(2.0);
@@ -68,13 +281,6 @@ int main(int argc, char** args)
     */
 
     //visualizer->spin();
-
-    ofstream myFile;
-    myFile.open("example.txt");
-    myFile << "Deviation X " << "Devation Y " << "Deviation Z\n";
-    myFile << 0.032 << " " << 0.321 << " "<< 1.324 << "\n";
-    myFile << 0.36 << " " << 0.121 <<  " "  << 0.924 << "\n";
-    myFile.close();
 
 
 

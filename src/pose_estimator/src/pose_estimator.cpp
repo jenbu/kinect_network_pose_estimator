@@ -6,11 +6,11 @@
 
 PoseEstimator::PoseEstimator() : yaw(0), roll(0), pitch(0), posX(0), posY(0), posZ(0), aligned(0)
 {
-    tree = pcl::search::KdTree<pcl::PointNormal>::Ptr(new pcl::search::KdTree<pcl::PointNormal>());
+    //tree = pcl::search::KdTree<pcl::PointXYZ>::Ptr(new pcl::search::KdTree<pcl::PointXYZ>());
     //cloud = pcl::PointCloud<PointT>::Ptr();
-    cloud_filtered = pcl::PointCloud<pcl::PointNormal>::Ptr(new pcl::PointCloud<pcl::PointNormal>());
-    cloud_filtered2 = pcl::PointCloud<pcl::PointNormal>::Ptr(new pcl::PointCloud<pcl::PointNormal>());
-    cloud_filtered_return = pcl::PointCloud<pcl::PointNormal>::Ptr(new pcl::PointCloud<pcl::PointNormal>());
+    cloud_filtered = pcl::PointCloud<pcl::PointXYZ>::Ptr(new pcl::PointCloud<pcl::PointXYZ>());
+    cloud_filtered2 = pcl::PointCloud<pcl::PointXYZ>::Ptr(new pcl::PointCloud<pcl::PointXYZ>());
+    cloud_filtered_return = pcl::PointCloud<pcl::PointXYZ>::Ptr(new pcl::PointCloud<pcl::PointXYZ>());
     cloud_normals = pcl::PointCloud<pcl::Normal>::Ptr(new pcl::PointCloud<pcl::Normal>());
     cloud_normals2 = pcl::PointCloud<pcl::Normal>::Ptr(new pcl::PointCloud<pcl::Normal>());
     coefficients_plane =  pcl::ModelCoefficients::Ptr(new pcl::ModelCoefficients());
@@ -20,33 +20,33 @@ PoseEstimator::PoseEstimator() : yaw(0), roll(0), pitch(0), posX(0), posY(0), po
     scene_features = FeatureCloudT::Ptr(new FeatureCloudT());
     object_features = FeatureCloudT::Ptr(new FeatureCloudT());
     leaf = 0.01f;
-    pipe_model = pcl::PointCloud<pcl::PointNormal>::Ptr (new pcl::PointCloud<pcl::PointNormal> ());
-    segmented_pipe = pcl::PointCloud<pcl::PointNormal>::Ptr (new pcl::PointCloud<pcl::PointNormal> ());
-    input_cloud = pcl::PointCloud<pcl::PointNormal>::Ptr (new pcl::PointCloud<pcl::PointNormal> ());
+    pipe_model = pcl::PointCloud<pcl::PointXYZ>::Ptr (new pcl::PointCloud<pcl::PointXYZ> ());
+    segmented_pipe = pcl::PointCloud<pcl::PointXYZ>::Ptr (new pcl::PointCloud<pcl::PointXYZ> ());
+    input_cloud = pcl::PointCloud<pcl::PointXYZ>::Ptr (new pcl::PointCloud<pcl::PointXYZ> ());
 
 }
 
 
-bool PoseEstimator::start(pcl::PointCloud<pcl::PointNormal>::Ptr cloud, pcl::PointCloud<pcl::PointNormal>::Ptr aligned_model)
+bool PoseEstimator::start(pcl::PointCloud<pcl::PointXYZ>::Ptr &cloud, pcl::PointCloud<pcl::PointXYZ>::Ptr aligned_model,
+                          Eigen::Matrix4d &prealign_mat, Eigen::Matrix4d &alignment_mat)
 {
-    input_cloud = cloud;
     //pcl::copyPointCloud(*input_cloud, *cloud_filtered);
 
     if(model_assigned)
     {
-        //voxel_filter();
-        //extract_cylinder();
+        voxel_filter(cloud);
+        extract_cylinder(cloud);
 
 
         start_time = std::chrono::high_resolution_clock::now();
-        pose_estimate();
+        pose_estimate(cloud, aligned_model, prealign_mat, alignment_mat);
         now_time = std::chrono::high_resolution_clock::now();
         double elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(now_time - start_time).count() / 1000.0;
         cout << "time lapsed: " << elapsed << endl;
         clearAll();
         if(aligned)
         {
-            aligned_model = pipe_model;
+            //aligned_model = pipe_model;
             return true;
         }
         else{
@@ -64,9 +64,9 @@ bool PoseEstimator::start(pcl::PointCloud<pcl::PointNormal>::Ptr cloud, pcl::Poi
 
 void PoseEstimator::clearAll()
 {
-    input_cloud.reset(new pcl::PointCloud<pcl::PointNormal>);
-    cloud_filtered.reset(new pcl::PointCloud<pcl::PointNormal>);
-    cloud_filtered2.reset(new pcl::PointCloud<pcl::PointNormal>);
+    input_cloud.reset(new pcl::PointCloud<pcl::PointXYZ>);
+    cloud_filtered.reset(new pcl::PointCloud<pcl::PointXYZ>);
+    cloud_filtered2.reset(new pcl::PointCloud<pcl::PointXYZ>);
     cloud_normals.reset(new pcl::PointCloud<pcl::Normal>);
     cloud_normals2.reset(new pcl::PointCloud<pcl::Normal>);
 
@@ -75,7 +75,7 @@ void PoseEstimator::clearAll()
 
 }
 
-void PoseEstimator::voxel_filter()
+void PoseEstimator::voxel_filter(pcl::PointCloud<pcl::PointXYZ>::Ptr &cloud)
 {
     //pass.setInputCloud(input_cloud);
     //pass.setFilterFieldName("z");
@@ -83,124 +83,157 @@ void PoseEstimator::voxel_filter()
     //pass.filter(*cloud_filtered);
 
 
-    //float leaf = 0.007f;
-    //vg.setInputCloud (input_cloud);
-    //vg.setLeafSize (leaf, leaf, leaf);
-    //vg.filter (*cloud_filtered);
+    float leaf = 0.008f;
+    vg.setInputCloud (cloud);
+    vg.setLeafSize (leaf, leaf, leaf);
+    vg.filter (*cloud);
     //cloud_filtered_return = cloud_filtered;
-    //std::cout << "PointCloud after filtering has: " << cloud_filtered->points.size ()  << " data points." << std::endl;
 
-    //cloud_filtered = input_cloud;
-    //sor.setInputCloud(cloud_filtered);
-    //sor.setMeanK (50);
-    //sor.setStddevMulThresh (1.0);
-    //sor.filter (*cloud_filtered);
-    //cloud_filtered = input_cloud;
+    pass.setInputCloud(cloud);
+    pass.setFilterFieldName("z");
+    pass.setFilterLimits(0.0, 2.0);
+    pass.filter(*cloud);
 
 }
 
-void PoseEstimator::extract_cylinder()
+void PoseEstimator::extract_cylinder(pcl::PointCloud<pcl::PointXYZ>::Ptr &cloud)
 {
     //cout << "filtered_cloud" << cloud_filtered->points.size() << endl;
     // Estimate point normals
-    cloud_filtered = input_cloud;
+
     ne.setSearchMethod (tree);
-    ne.setInputCloud (cloud_filtered);
+    ne.setInputCloud (cloud);
     ne.setKSearch (50);
     ne.compute (*cloud_normals);
 
-     // Create the segmentation object for the planar model and set all the parameters
-     seg.setOptimizeCoefficients (true);
-     seg.setModelType (pcl::SACMODEL_NORMAL_PLANE);
-     seg.setNormalDistanceWeight (0.1);
-     seg.setMethodType (pcl::SAC_RANSAC);
-     seg.setMaxIterations (1000);
-     seg.setDistanceThreshold (0.1);
-     seg.setInputCloud (cloud_filtered);
-     seg.setInputNormals (cloud_normals);
-     // Obtain the plane inliers and coefficients
-     seg.segment (*inliers_plane, *coefficients_plane);
-     //std::cerr << "Plane coefficients: " << *coefficients_plane << std::endl;
+    // Create the segmentation object for the planar model and set all the parameters
+    seg.setOptimizeCoefficients (true);
+    seg.setModelType (pcl::SACMODEL_NORMAL_PLANE);
+    seg.setNormalDistanceWeight (0.1);
+    seg.setMethodType (pcl::SAC_RANSAC);
+    seg.setMaxIterations (100);
+    seg.setDistanceThreshold (0.1);
+    seg.setInputCloud (cloud);
+    seg.setInputNormals (cloud_normals);
+    // Obtain the plane inliers and coefficients
+    seg.segment (*inliers_plane, *coefficients_plane);
+    //std::cerr << "Plane coefficients: " << *coefficients_plane << std::endl;
 
-     // Extract the planar inliers from the input cloud
-     extract.setInputCloud (cloud_filtered);
-     extract.setIndices (inliers_plane);
-     extract.setNegative (false);
-     pcl::PointCloud<pcl::PointNormal>::Ptr cloud_plane (new pcl::PointCloud<pcl::PointNormal> ());
-     extract.filter (*cloud_plane);
+    // Extract the planar inliers from the input cloud
+    extract.setInputCloud (cloud);
+    extract.setIndices (inliers_plane);
+    extract.setNegative (false);
+
+    // Remove the planar inliers, extract the rest
+    extract.setNegative (true);
+    extract.filter (*cloud);
+    extract_normals.setNegative (true);
+    extract_normals.setInputCloud (cloud_normals);
+    extract_normals.setIndices (inliers_plane);
+    extract_normals.filter(*cloud_normals2);
+
+    sor.setMeanK (50);
+    sor.setStddevMulThresh (0.2);
+    sor.setInputCloud (cloud);
+    sor.filter(*cloud);
+
+    ne.setInputCloud (cloud);
+    ne.compute (*cloud_normals2);
+
+    //segmented_pipe = cloud_filtered2;
 
 
-     // Remove the planar inliers, extract the rest
-     extract.setNegative (true);
-     extract.filter (*cloud_filtered2);
-     extract_normals.setNegative (true);
-     extract_normals.setInputCloud (cloud_normals);
-     extract_normals.setIndices (inliers_plane);
-     extract_normals.filter(*cloud_normals2);
+    // Create the segmentation object for cylinder segmentation and set all the parameters
+    seg.setOptimizeCoefficients (true);
+    seg.setModelType (pcl::SACMODEL_CYLINDER);
+    seg.setMethodType (pcl::SAC_RANSAC);
+    seg.setNormalDistanceWeight (0.1);
+    seg.setMaxIterations (10000);
+    seg.setDistanceThreshold (0.15);
+    seg.setRadiusLimits (0, 0.2);
+    seg.setInputCloud (cloud);
+    seg.setInputNormals (cloud_normals2);
 
-     //sor.setInputCloud(cloud_filtered2);
-     //sor.setMeanK (50);
-     //sor.setStddevMulThresh (0.5);
-     //sor.filter (*cloud_filtered2);
-     segmented_pipe = cloud_filtered2;
+    // Obtain the cylinder inliers and coefficients
+    seg.segment (*inliers_cylinder, *coefficients_cylinder);
 
-     /*
-     // Create the segmentation object for cylinder segmentation and set all the parameters
-     seg.setOptimizeCoefficients (true);
-     seg.setModelType (pcl::SACMODEL_CYLINDER);
-     seg.setMethodType (pcl::SAC_RANSAC);
-     seg.setNormalDistanceWeight (0.1);
-     seg.setMaxIterations (20000);
-     seg.setDistanceThreshold (0.05);
-     seg.setRadiusLimits (0, 0.1);
-     seg.setInputCloud (cloud_filtered2);
-     seg.setInputNormals (cloud_normals2);
+    extract.setInputCloud (cloud);
+    extract.setIndices (inliers_cylinder);
+    extract.setNegative (false);
+    extract.filter (*cloud);
 
-     // Obtain the cylinder inliers and coefficients
-     seg.segment (*inliers_cylinder, *coefficients_cylinder);
-     //std::cerr << "Cylinder coefficients: " << *coefficients_cylinder << std::endl;
-
-     // Write the cylinder inliers to disk
-     extract.setInputCloud (cloud_filtered2);
-     extract.setIndices (inliers_cylinder);
-     extract.setNegative (false);
-     //extract.filter (*segmented_pipe);
-     */
 }
 
-void PoseEstimator::pose_estimate()
+void PoseEstimator::pose_estimate(pcl::PointCloud<pcl::PointXYZ>::Ptr &cloud, pcl::PointCloud<pcl::PointXYZ>::Ptr &model,
+        Eigen::Matrix4d &prealign_mat, Eigen::Matrix4d &alignment_mat)
 {
-    segmented_pipe = input_cloud;
-    // Downsample
-    leaf = 0.008f;
-    pcl::console::print_highlight ("Downsampling...\n");
+    pcl::PointCloud<pcl::Normal>::Ptr pipe_normals(new pcl::PointCloud<pcl::Normal>());
+    Eigen::Matrix4d transformation_matrix = Eigen::Matrix4d::Identity();
 
-    vg.setLeafSize (leaf, leaf, leaf);
-    vg.setInputCloud (pipe_model);
-    vg.filter (*pipe_model);
-    vg.setLeafSize (leaf, leaf, leaf);
-    vg.setInputCloud (segmented_pipe);
-    vg.filter (*segmented_pipe);
+    //Prealignment
+    double scene_sumX = 0, scene_sumY = 0, scene_sumZ = 0, model_sumX = 0, model_sumY = 0, model_sumZ = 0;
+    double scene_avgX, scene_avgY, scene_avgZ, model_avgX, model_avgY, model_avgZ;
+    for(int i = 0; i < cloud->points.size(); i++)
+    {
+        scene_sumX += cloud->points[i].x;
+        scene_sumY += cloud->points[i].y;
+        scene_sumZ += cloud->points[i].z;
+    }
+    for(int i = 0; i < model->points.size(); i++)
+    {
+        model_sumX += model->points[i].x;
+        model_sumY += model->points[i].y;
+        model_sumZ += model->points[i].z;
+    }
+    scene_avgX = scene_sumX/cloud->points.size();
+    scene_avgY = scene_sumY/cloud->points.size();
+    scene_avgZ = scene_sumZ/cloud->points.size();
+    model_avgX = model_sumX/model->points.size();
+    model_avgY = model_sumY/model->points.size();
+    model_avgZ = model_sumZ/model->points.size();
+
+    //cout << model_avgX << " " << model_avgY << " " << model_avgZ << endl;
+    cout << scene_avgX<< " " << scene_avgY << " " << scene_avgZ << endl;
+
+    if((scene_avgX-model_avgX) > 0.2 || (scene_avgX-model_avgX) < -0.2)
+        transformation_matrix(0,3) = scene_avgX - model_avgX;
+    else
+        transformation_matrix(0,3) = 0.0;
+    if((scene_avgY - model_avgY) > 0.1 || (scene_avgY - model_avgY) < -0.1)
+        transformation_matrix(1,3) = scene_avgY - model_avgY;
+    else
+        transformation_matrix(1,3) = 0.0;
+    if((scene_avgZ-model_avgZ) > 0.02 || (scene_avgZ-model_avgZ) < -0.02)
+        transformation_matrix(2, 3) = scene_avgZ - model_avgZ;
+    else
+        transformation_matrix(2, 3) = 0;
+
+    pcl::transformPointCloud(*model, *model, transformation_matrix);
+    prealign_mat *= transformation_matrix;
 
     // Estimate normals for scene
     //pcl::console::print_highlight ("Estimating scene normals...\n");;
     nest.setRadiusSearch (0.01);
-    nest.setInputCloud (segmented_pipe);
-    nest.compute (*segmented_pipe);
+    nest.setInputCloud (cloud);
+    nest.compute (*cloud_normals);
+    nest.setInputCloud (model);
+    nest.compute (*pipe_normals);
 
     // Estimate features
     //pcl::console::print_highlight ("Estimating features...\n");
     fest.setRadiusSearch (0.025);
-    fest.setInputCloud (segmented_pipe);
-    fest.setInputNormals (segmented_pipe);
+    fest.setInputCloud (cloud);
+    fest.setInputNormals (cloud_normals);
     fest.compute (*scene_features);
-    fest.setInputCloud (pipe_model);
-    fest.setInputNormals (pipe_model);
+    fest.setInputCloud (model);
+    fest.setInputNormals (pipe_normals);
     fest.compute (*object_features);
 
-    align.setInputSource (pipe_model);
+    /*
+    //RANSAC alignment
+    align.setInputSource (model);
     align.setSourceFeatures (object_features);
-    align.setInputTarget (segmented_pipe);
+    align.setInputTarget (cloud);
     align.setTargetFeatures (scene_features);
     align.setRANSACOutlierRejectionThreshold(0.1);
     align.setMaximumIterations (80000); // Number of RANSAC iterations
@@ -211,7 +244,7 @@ void PoseEstimator::pose_estimate()
     align.setInlierFraction (0.45f); // Required inlier fraction for accepting a pose hypothesis
 
     pcl::console::print_highlight ("Ransac pose-estimating\n");
-    align.align (*pipe_model);
+    align.align (*model);
     if (align.hasConverged ()) {
         aligned = true;
         // Print results
@@ -251,15 +284,48 @@ void PoseEstimator::pose_estimate()
         aligned = false;
         pcl::console::print_error("Alignment failed!\n");
     }
+    */
+
+    //ICP Alignment
+    int iterations = 200;
+    pcl::IterativeClosestPoint<pcl::PointXYZ, pcl::PointXYZ> icp;
+    icp.setMaximumIterations (iterations);
+    icp.setEuclideanFitnessEpsilon(0.5); //Divergence criterion
+    icp.setTransformationEpsilon(1e-18); //Convergence criterion
+    //icp.setMaxCorrespondenceDistance(0.01);
+    icp.setMaxCorrespondenceDistance(0.5);
+    icp.setInputSource (model);
+    icp.setInputTarget (cloud);
+
+
+    int icp_iterator = 0;
+    while(icp_iterator < 60)
+    {
+
+        icp.align (*model);
+
+        if (icp.hasConverged ())
+        {
+            std::cout << "\nICP for box-end has converged, score is " << icp.getFitnessScore () << std::endl;
+            alignment_mat *= icp.getFinalTransformation ().cast<double>();
+            //std::cout << "\nICP transformation " << iterations << std::endl;
+            //icp_transformation_box *= icp.getFinalTransformation ().cast<double>();
+        }
+        else
+        {
+            PCL_ERROR ("\nICP has not converged.\n");
+        }
+        icp_iterator++;
+    }
 }
 
-bool PoseEstimator::setModel(pcl::PointCloud<pcl::PointNormal>::Ptr model)
+bool PoseEstimator::setModel(pcl::PointCloud<pcl::PointXYZ>::Ptr model)
 {
     pipe_model = model;
     model_assigned = true;
 }
 
-void PoseEstimator::getSegmented(pcl::PointCloud<pcl::PointNormal>::Ptr &seg_cloud)
+void PoseEstimator::getSegmented(pcl::PointCloud<pcl::PointXYZ>::Ptr &seg_cloud)
 {
     seg_cloud = segmented_pipe;
 }
@@ -279,7 +345,7 @@ void PoseEstimator::getPose(std::vector<float> &input_vec)
     }
 }
 
-void PoseEstimator::getFiltered(pcl::PointCloud<pcl::PointNormal>::Ptr &filtered_cloud)
+void PoseEstimator::getFiltered(pcl::PointCloud<pcl::PointXYZ>::Ptr &filtered_cloud)
 {
     filtered_cloud = cloud_filtered_return;
 }

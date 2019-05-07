@@ -1184,6 +1184,7 @@ pose_estimator/CMakeFiles/cloud_segmentation.dir/src/pose_estimator.cpp.o
  /usr/local/include/pcl-1.9/pcl/common/impl/projection_matrix.hpp
  /usr/local/include/pcl-1.9/pcl/common/impl/transforms.hpp
  /usr/local/include/pcl-1.9/pcl/common/io.h
+ /usr/local/include/pcl-1.9/pcl/common/point_operators.h
  /usr/local/include/pcl-1.9/pcl/common/point_tests.h
  /usr/local/include/pcl-1.9/pcl/common/projection_matrix.h
  /usr/local/include/pcl-1.9/pcl/common/time.h
@@ -1258,23 +1259,31 @@ pose_estimator/CMakeFiles/cloud_segmentation.dir/src/pose_estimator.cpp.o
  /usr/local/include/pcl-1.9/pcl/point_types.h
  /usr/local/include/pcl-1.9/pcl/register_point_struct.h
  /usr/local/include/pcl-1.9/pcl/registration/boost.h
+ /usr/local/include/pcl-1.9/pcl/registration/convergence_criteria.h
  /usr/local/include/pcl-1.9/pcl/registration/correspondence_estimation.h
  /usr/local/include/pcl-1.9/pcl/registration/correspondence_rejection.h
  /usr/local/include/pcl-1.9/pcl/registration/correspondence_rejection_poly.h
  /usr/local/include/pcl-1.9/pcl/registration/correspondence_sorting.h
  /usr/local/include/pcl-1.9/pcl/registration/correspondence_types.h
+ /usr/local/include/pcl-1.9/pcl/registration/default_convergence_criteria.h
  /usr/local/include/pcl-1.9/pcl/registration/eigen.h
+ /usr/local/include/pcl-1.9/pcl/registration/icp.h
  /usr/local/include/pcl-1.9/pcl/registration/impl/correspondence_estimation.hpp
  /usr/local/include/pcl-1.9/pcl/registration/impl/correspondence_rejection_poly.hpp
  /usr/local/include/pcl-1.9/pcl/registration/impl/correspondence_types.hpp
+ /usr/local/include/pcl-1.9/pcl/registration/impl/default_convergence_criteria.hpp
+ /usr/local/include/pcl-1.9/pcl/registration/impl/icp.hpp
  /usr/local/include/pcl-1.9/pcl/registration/impl/registration.hpp
  /usr/local/include/pcl-1.9/pcl/registration/impl/sample_consensus_prerejective.hpp
+ /usr/local/include/pcl-1.9/pcl/registration/impl/transformation_estimation_point_to_plane_lls.hpp
  /usr/local/include/pcl-1.9/pcl/registration/impl/transformation_estimation_svd.hpp
  /usr/local/include/pcl-1.9/pcl/registration/registration.h
  /usr/local/include/pcl-1.9/pcl/registration/sample_consensus_prerejective.h
  /usr/local/include/pcl-1.9/pcl/registration/transformation_estimation.h
+ /usr/local/include/pcl-1.9/pcl/registration/transformation_estimation_point_to_plane_lls.h
  /usr/local/include/pcl-1.9/pcl/registration/transformation_estimation_svd.h
  /usr/local/include/pcl-1.9/pcl/registration/transformation_validation.h
+ /usr/local/include/pcl-1.9/pcl/registration/warp_point_rigid.h
  /usr/local/include/pcl-1.9/pcl/sample_consensus/boost.h
  /usr/local/include/pcl-1.9/pcl/sample_consensus/eigen.h
  /usr/local/include/pcl-1.9/pcl/sample_consensus/impl/lmeds.hpp
@@ -1296,6 +1305,7 @@ pose_estimator/CMakeFiles/cloud_segmentation.dir/src/pose_estimator.cpp.o
  /usr/local/include/pcl-1.9/pcl/sample_consensus/impl/sac_model_parallel_plane.hpp
  /usr/local/include/pcl-1.9/pcl/sample_consensus/impl/sac_model_perpendicular_plane.hpp
  /usr/local/include/pcl-1.9/pcl/sample_consensus/impl/sac_model_plane.hpp
+ /usr/local/include/pcl-1.9/pcl/sample_consensus/impl/sac_model_registration.hpp
  /usr/local/include/pcl-1.9/pcl/sample_consensus/impl/sac_model_sphere.hpp
  /usr/local/include/pcl-1.9/pcl/sample_consensus/impl/sac_model_stick.hpp
  /usr/local/include/pcl-1.9/pcl/sample_consensus/lmeds.h
@@ -1321,6 +1331,7 @@ pose_estimator/CMakeFiles/cloud_segmentation.dir/src/pose_estimator.cpp.o
  /usr/local/include/pcl-1.9/pcl/sample_consensus/sac_model_parallel_plane.h
  /usr/local/include/pcl-1.9/pcl/sample_consensus/sac_model_perpendicular_plane.h
  /usr/local/include/pcl-1.9/pcl/sample_consensus/sac_model_plane.h
+ /usr/local/include/pcl-1.9/pcl/sample_consensus/sac_model_registration.h
  /usr/local/include/pcl-1.9/pcl/sample_consensus/sac_model_sphere.h
  /usr/local/include/pcl-1.9/pcl/sample_consensus/sac_model_stick.h
  /usr/local/include/pcl-1.9/pcl/search/impl/kdtree.hpp
