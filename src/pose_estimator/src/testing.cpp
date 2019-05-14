@@ -83,7 +83,7 @@ int main(int argc, char** args)
     pcl::search::KdTree<pcl::PointXYZ>::Ptr tree;
     pcl::NormalEstimationOMP<pcl::PointXYZ, pcl::PointNormal> nest;
     pcl::SampleConsensusPrerejective<pcl::PointXYZ, pcl::PointXYZ, FeatureT> align;
-
+    Eigen::Matrix4d a = Eigen::Matrix4d::Identity(); Eigen::Matrix4d b = Eigen::Matrix4d::Identity();
 
     filtered->is_dense = false;
     filtered->points.resize(500*500);
@@ -93,7 +93,8 @@ int main(int argc, char** args)
     ply_reader.read("/home/erlendb/Blender/box_end7_m.ply", *box_end);
     //reader.read("/home/erlendb/Pictures/4.22:16.12.31140725926139648box_cloud.pcd", *unfiltered);
     //reader.read("/home/erlendb/Pictures/Masteroppgave_bilder/Bilder_poseTesting/3.19:17.7.3718135632_cloud.pcd", *unfiltered);
-    reader.read("/home/erlendb/Pictures/5.7:10.6.2476049535box_cloud.pcd", *filtered);
+    //reader.read("/home/erlendb/Pictures/5.7:18.31.337253516640box_cloud.pcd", *filtered);
+    reader.read("/home/erlendb/Pictures/5.7:18.44.334294967295box_cloud.pcd", *filtered);
     //reader.read("/home/erlendb/Pictures/Masteroppgave_bilder/Data160219/Cloud/2.16:13.35.220079_cloud.pcd", *ir_lim);
 
 
@@ -114,59 +115,20 @@ int main(int argc, char** args)
 
 
 
-    /*double scene_sumX = 0, scene_sumY = 0, scene_sumZ = 0, model_sumX = 0, model_sumY = 0, model_sumZ = 0;
-    double scene_avgX, scene_avgY, scene_avgZ, model_avgX, model_avgY, model_avgZ;
-    for(int i = 0; i < filtered->points.size(); i++)
-    {
-        scene_sumX += filtered->points[i].x;
-        scene_sumY += filtered->points[i].y;
-        scene_sumZ += filtered->points[i].z;
-    }
-    for(int i = 0; i < box_end->points.size(); i++)
-    {
-        model_sumX += box_end->points[i].x;
-        model_sumY += box_end->points[i].y;
-        model_sumZ += box_end->points[i].z;
-    }
-    scene_avgX = scene_sumX/filtered->points.size();
-    scene_avgY = scene_sumY/filtered->points.size();
-    scene_avgZ = scene_sumZ/filtered->points.size();
-    model_avgX = model_sumX/box_end->points.size();
-    model_avgY = model_sumY/box_end->points.size();
-    model_avgZ = model_sumZ/box_end->points.size();
-
-    //cout << model_avgX << " " << model_avgY << " " << model_avgZ << endl;
-    cout << scene_avgX<< " " << scene_avgY << " " << scene_avgZ << endl;
-
-    if((scene_avgX-model_avgX) > 0.2 || (scene_avgX-model_avgX) < -0.2)
-        transformation_matrix_box(0,3) = scene_avgX - model_avgX;
-    else
-        transformation_matrix_box(0,3) = 0.0;
-    if((scene_avgY - model_avgY) > 0.1 || (scene_avgY - model_avgY) < -0.1)
-        transformation_matrix_box(1,3) = scene_avgY - model_avgY;
-    else
-        transformation_matrix_box(1,3) = 0.0;
-    if((scene_avgZ-model_avgZ) > 0.02 || (scene_avgZ-model_avgZ) < -0.02)
-        transformation_matrix_box(2, 3) = scene_avgZ - model_avgZ;
-    else
-        transformation_matrix_box(2, 3) = 0;
-
-    */
-
 
     pcl::copyPointCloud(*filtered, *unfiltered);
     pcl::visualization::PCLVisualizer::Ptr visualizer(new pcl::visualization::PCLVisualizer("Visualizer"));
     visualizer->addPointCloud(unfiltered, ColorHandlerT(unfiltered, 255.0, 255.0, 255.0), "unfiltered");
-    visualizer->addPointCloud(box_end, ColorHandlerT(box_end, 255.0, 0.0, 255.0), "box");
+    //visualizer->addPointCloud(box_end, ColorHandlerT(box_end, 255.0, 0.0, 255.0), "box");
     visualizer->spinOnce(2000);
     pose_est.setModel(box_end);
     std::chrono::time_point<std::chrono::high_resolution_clock> start_time = std::chrono::high_resolution_clock::now();
-    pose_est.start(filtered, box_end);
+    pose_est.start(filtered, box_end, a, b);
     std::chrono::time_point<std::chrono::high_resolution_clock> now_time = std::chrono::high_resolution_clock::now();
     double elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(now_time - start_time).count() / 1000.0;
     cout << "time lapsed: " << elapsed << endl;
     visualizer->addPointCloud(filtered, ColorHandlerT(filtered, 0.0, 0.0, 255.0), "ir");
-    visualizer->updatePointCloud(box_end, ColorHandlerT(box_end, 255.0, 0.0, 255.0), "box");
+    //visualizer->updatePointCloud(box_end, ColorHandlerT(box_end, 255.0, 0.0, 255.0), "box");
 
 
     //visualizer->setBackgroundColor(255.0, 255.0, 255.0);
@@ -174,45 +136,6 @@ int main(int argc, char** args)
 
     visualizer->addCoordinateSystem(0.5);
     visualizer->spin();
-
-    //visualizer->spinOnce(3000);
-    //pcl::transformPointCloud(*box_end, *box_end, transformation_matrix_box);
-    //visualizer->updatePointCloud(box_end, ColorHandlerT(box_end, 255.0, 0.0, 255.0), "box");
-
-    /*
-    int iterations = 200;
-    pcl::IterativeClosestPoint<pcl::PointXYZ, pcl::PointXYZ> icp;
-    icp.setMaximumIterations (iterations);
-    icp.setEuclideanFitnessEpsilon(0.5); //Divergence criterion
-    icp.setTransformationEpsilon(1e-18); //Convergence criterion
-    //icp.setMaxCorrespondenceDistance(0.01);
-    icp.setMaxCorrespondenceDistance(0.5);
-    icp.setInputSource (box_end);
-    icp.setInputTarget (filtered);
-
-
-    int icp_iterator = 0;
-    while(icp_iterator < 150)
-    {
-
-        icp.align (*box_end);
-
-        if (icp.hasConverged ())
-        {
-            std::cout << "\nICP for box-end has converged, score is " << icp.getFitnessScore () << std::endl;
-            //std::cout << "\nICP transformation " << iterations << std::endl;
-            //icp_transformation_box *= icp.getFinalTransformation ().cast<double>();
-
-            //printTransformationMatrix(icp_transformation_box);
-            visualizer->updatePointCloud(box_end, ColorHandlerT(box_end, 255.0, 0.0, 255.0), "box");
-            visualizer->spinOnce(500);
-        }
-        else
-        {
-            PCL_ERROR ("\nICP has not converged.\n");
-        }
-        icp_iterator++;
-    }*/
 
     /*
 

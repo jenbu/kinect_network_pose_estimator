@@ -97,9 +97,10 @@ public:
 
 private:
     void voxel_filter(pcl::PointCloud<pcl::PointXYZ>::Ptr &cloud);
-    void extract_cylinder(pcl::PointCloud<pcl::PointXYZ>::Ptr &cloud);
+    void RANSAC_segmentor(pcl::PointCloud<pcl::PointXYZ>::Ptr &cloud);
     void pose_estimate(pcl::PointCloud<pcl::PointXYZ>::Ptr &cloud, pcl::PointCloud<pcl::PointXYZ>::Ptr &model,
             Eigen::Matrix4d &prealign_mat, Eigen::Matrix4d &alignment_mat);
+    void square_exclusion_segmentor(pcl::PointCloud<pcl::PointXYZ>::Ptr &cloud);
     void clearAll();
 };
 

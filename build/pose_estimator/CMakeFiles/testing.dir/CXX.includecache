@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/home/erlendb/Programmering/Master/test_ws/src/pose_estimator/src/pose_estimator.cpp
+pose_estimator.h
+/home/erlendb/Programmering/Master/test_ws/src/pose_estimator/src/pose_estimator.h
+
 /home/erlendb/Programmering/Master/test_ws/src/pose_estimator/src/pose_estimator.h
 chrono
 -
@@ -47,62 +51,6 @@ pcl/filters/statistical_outlier_removal.h
 -
 pcl/registration/icp.h
 -
-
-/home/erlendb/Programmering/Master/test_ws/src/pose_estimator/src/testing.cpp
-pcl/filters/statistical_outlier_removal.h
--
-pcl/point_cloud.h
--
-pcl/point_types.h
--
-pcl/io/pcd_io.h
--
-pcl/io/ply_io.h
--
-pcl/visualization/cloud_viewer.h
--
-pcl/filters/statistical_outlier_removal.h
--
-pcl/registration/icp.h
--
-pcl/filters/voxel_grid.h
--
-pcl/common/transforms.h
--
-pcl/filters/radius_outlier_removal.h
--
-pcl/filters/passthrough.h
--
-chrono
--
-pcl/console/time.h
--
-fstream
--
-pcl/filters/extract_indices.h
--
-pcl/filters/passthrough.h
--
-pcl/features/normal_3d.h
--
-pcl/sample_consensus/method_types.h
--
-pcl/sample_consensus/model_types.h
--
-pcl/segmentation/sac_segmentation.h
--
-pcl/visualization/pcl_visualizer.h
--
-pcl/features/normal_3d_omp.h
--
-pcl/features/fpfh_omp.h
--
-pcl/registration/sample_consensus_prerejective.h
--
-pcl/filters/statistical_outlier_removal.h
--
-pose_estimator.h
-/home/erlendb/Programmering/Master/test_ws/src/pose_estimator/src/pose_estimator.h
 
 /usr/include/eigen3/Eigen/Cholesky
 Core
@@ -2490,12 +2438,6 @@ pcl/pcl_exports.h
 pcl/pcl_config.h
 -
 
-/usr/local/include/pcl-1.9/pcl/console/time.h
-boost/date_time/posix_time/posix_time.hpp
--
-pcl/console/print.h
--
-
 /usr/local/include/pcl-1.9/pcl/conversions.h
 pcl/PCLPointField.h
 -
@@ -2682,12 +2624,6 @@ pcl/filters/passthrough.h
 pcl/common/io.h
 -
 
-/usr/local/include/pcl-1.9/pcl/filters/impl/radius_outlier_removal.hpp
-pcl/filters/radius_outlier_removal.h
--
-pcl/common/io.h
--
-
 /usr/local/include/pcl-1.9/pcl/filters/impl/statistical_outlier_removal.hpp
 pcl/filters/statistical_outlier_removal.h
 -
@@ -2708,14 +2644,6 @@ pcl/filters/voxel_grid.h
 pcl/filters/filter_indices.h
 -
 pcl/filters/impl/passthrough.hpp
--
-
-/usr/local/include/pcl-1.9/pcl/filters/radius_outlier_removal.h
-pcl/filters/filter_indices.h
--
-pcl/search/pcl_search.h
--
-pcl/filters/impl/radius_outlier_removal.hpp
 -
 
 /usr/local/include/pcl-1.9/pcl/filters/statistical_outlier_removal.h
@@ -4030,14 +3958,6 @@ boost/foreach.hpp
 boost/date_time/posix_time/posix_time.hpp
 -
 boost/filesystem.hpp
--
-
-/usr/local/include/pcl-1.9/pcl/visualization/cloud_viewer.h
-pcl/visualization/pcl_visualizer.h
--
-boost/scoped_ptr.hpp
--
-string
 -
 
 /usr/local/include/pcl-1.9/pcl/visualization/common/actor_map.h
