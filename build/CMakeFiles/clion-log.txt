@@ -27,7 +27,7 @@
 -- +++ processing catkin package: 'eb_darknet'
 -- ==> add_subdirectory(yolo_eb/darknet_ros/darknet_ros)
 Darknet path dir = /home/erlendb/Programmering/Master/test_ws/src/yolo_eb/darknet_ros/darknet
--- Could NOT find CUDA (missing: CUDA_INCLUDE_DIRS CUDA_CUDART_LIBRARY) (found version "7.5")
+-- Could NOT find CUDA (missing: CUDA_INCLUDE_DIRS) (found version "7.5")
 -- Searching for X11...
 --  X11_INCLUDE_DIR: /usr/include
 --  X11_LIBRARIES: /usr/lib/x86_64-linux-gnu/libSM.so/usr/lib/x86_64-linux-gnu/libICE.so/usr/lib/x86_64-linux-gnu/libX11.so/usr/lib/x86_64-linux-gnu/libXext.so
@@ -104,19 +104,7 @@ but not all the files it references.
 -- looking for PCL_STEREO
 -- looking for PCL_PEOPLE
 -- HDF5: Using hdf5 compiler wrapper to determine C configuration
--- FLANN found (include: , lib: flann_cpp)
-CMake Warning (dev) at pose_estimator/CMakeLists.txt:38 (find_package):
-  Policy CMP0074 is not set: find_package uses <PackageName>_ROOT variables.
-  Run "cmake --help-policy CMP0074" for policy details.  Use the cmake_policy
-  command to set the policy and suppress this warning.
-
-  CMake variable PCL_ROOT is set to:
-
-    /usr/local
-
-  For compatibility, CMake is ignoring the variable.
-This warning is for project developers.  Use -Wno-dev to suppress it.
-
+-- pose_estimator: 1 messages, 0 services
 -- Configuring done
 CMake Warning (dev) at yolo_eb/darknet_ros/darknet_ros/CMakeLists.txt:218 (add_dependencies):
   Policy CMP0046 is not set: Error on non-existent dependency in

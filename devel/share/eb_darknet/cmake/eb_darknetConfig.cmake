@@ -74,7 +74,7 @@ if("TRUE" STREQUAL "TRUE")
 else()
   set(eb_darknet_SOURCE_PREFIX "")
   set(eb_darknet_DEVEL_PREFIX "")
-  set(eb_darknet_INSTALL_PREFIX /usr/local)
+  set(eb_darknet_INSTALL_PREFIX /home/erlendb/Programmering/Master/test_ws/install)
   set(eb_darknet_PREFIX ${eb_darknet_INSTALL_PREFIX})
 endif()
 

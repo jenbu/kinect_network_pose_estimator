@@ -8,6 +8,7 @@ bfccf5031456558c305c246dc0a19cc0 /home/erlendb/Programmering/Master/test_ws/deve
 db82341d7fffdc7bbd2cd481736c024a /home/erlendb/Programmering/Master/test_ws/devel/include/darknet_ros_msgs_eb/CheckForObjectsFeedback.h
 ecbfd42f24c47e1daf8753f25b048996 /home/erlendb/Programmering/Master/test_ws/devel/include/darknet_ros_msgs_eb/CheckForObjectsGoal.h
 0084025c21b7df5e0d92ccaace7485a6 /home/erlendb/Programmering/Master/test_ws/devel/include/darknet_ros_msgs_eb/CheckForObjectsResult.h
+3bc2a81a8e47cb987d76072d18527bdf /home/erlendb/Programmering/Master/test_ws/devel/include/pose_estimator/pipe_pose.h
 6706552c82f29f6dfa5c20d3bfe4255f /home/erlendb/Programmering/Master/test_ws/devel/lib/python2.7/dist-packages/darknet_ros_msgs_eb/msg/_BoundingBox.py
 ea4b683f8730b712f7405aea1b8301f8 /home/erlendb/Programmering/Master/test_ws/devel/lib/python2.7/dist-packages/darknet_ros_msgs_eb/msg/_BoundingBoxes.py
 6218d91e69b9fc87630acaf0a781bb71 /home/erlendb/Programmering/Master/test_ws/devel/lib/python2.7/dist-packages/darknet_ros_msgs_eb/msg/_CheckForObjectsAction.py
@@ -18,6 +19,8 @@ bb2f397639389293b7392475d5dc4c6e /home/erlendb/Programmering/Master/test_ws/deve
 ffd33a81d2f35f69d7c8784d2657f53a /home/erlendb/Programmering/Master/test_ws/devel/lib/python2.7/dist-packages/darknet_ros_msgs_eb/msg/_CheckForObjectsGoal.py
 c63a238436510d405dca358619e0df12 /home/erlendb/Programmering/Master/test_ws/devel/lib/python2.7/dist-packages/darknet_ros_msgs_eb/msg/_CheckForObjectsResult.py
 913847dbb60cd724b6de22e988dba34e /home/erlendb/Programmering/Master/test_ws/devel/lib/python2.7/dist-packages/darknet_ros_msgs_eb/msg/__init__.py
+847aebc76d401c9b64873b5b31c07381 /home/erlendb/Programmering/Master/test_ws/devel/lib/python2.7/dist-packages/pose_estimator/msg/__init__.py
+69527fba7730fc74c597f9289b6d32e7 /home/erlendb/Programmering/Master/test_ws/devel/lib/python2.7/dist-packages/pose_estimator/msg/_pipe_pose.py
 a4b595f1fdea0410ddd0f5b52b5c2ee2 /home/erlendb/Programmering/Master/test_ws/devel/share/common-lisp/ros/darknet_ros_msgs_eb/msg/BoundingBox.lisp
 260f9ffc1fa0104fd5021bf15c848401 /home/erlendb/Programmering/Master/test_ws/devel/share/common-lisp/ros/darknet_ros_msgs_eb/msg/BoundingBoxes.lisp
 771d640a64990fe00ae75d2545ae9a8b /home/erlendb/Programmering/Master/test_ws/devel/share/common-lisp/ros/darknet_ros_msgs_eb/msg/CheckForObjectsAction.lisp
@@ -27,6 +30,7 @@ f1a560ccef3a8cdc3f05cf83b962338c /home/erlendb/Programmering/Master/test_ws/deve
 28a44d42d1ea923772eaa5df15777686 /home/erlendb/Programmering/Master/test_ws/devel/share/common-lisp/ros/darknet_ros_msgs_eb/msg/CheckForObjectsFeedback.lisp
 5b1aba80ee9300e303fb437b6062dbb5 /home/erlendb/Programmering/Master/test_ws/devel/share/common-lisp/ros/darknet_ros_msgs_eb/msg/CheckForObjectsGoal.lisp
 f0df9b5a520047b686f850a0ce6c4369 /home/erlendb/Programmering/Master/test_ws/devel/share/common-lisp/ros/darknet_ros_msgs_eb/msg/CheckForObjectsResult.lisp
+028eac8dd4698f73c2814759871442dc /home/erlendb/Programmering/Master/test_ws/devel/share/common-lisp/ros/pose_estimator/msg/pipe_pose.lisp
 2d24d9c101a76c1758477b7a619a98ab /home/erlendb/Programmering/Master/test_ws/devel/share/gennodejs/ros/darknet_ros_msgs_eb/msg/BoundingBox.js
 7bc8d04dc4f6e565d1653fef01b4eb08 /home/erlendb/Programmering/Master/test_ws/devel/share/gennodejs/ros/darknet_ros_msgs_eb/msg/BoundingBoxes.js
 903fbe4bce4d1223d4891bf4267779fe /home/erlendb/Programmering/Master/test_ws/devel/share/gennodejs/ros/darknet_ros_msgs_eb/msg/CheckForObjectsAction.js
@@ -36,6 +40,7 @@ b9dd983f6c8fd0f41c58c162113299b8 /home/erlendb/Programmering/Master/test_ws/deve
 e88211c8e26ed4d1e3490bfa8bc61bc5 /home/erlendb/Programmering/Master/test_ws/devel/share/gennodejs/ros/darknet_ros_msgs_eb/msg/CheckForObjectsFeedback.js
 7078fc037cae656a9191eb55df7e6003 /home/erlendb/Programmering/Master/test_ws/devel/share/gennodejs/ros/darknet_ros_msgs_eb/msg/CheckForObjectsGoal.js
 e7c6c03b4172db3553b98c560bca1295 /home/erlendb/Programmering/Master/test_ws/devel/share/gennodejs/ros/darknet_ros_msgs_eb/msg/CheckForObjectsResult.js
+bc887a60ec8f79e0dc198670b3b066be /home/erlendb/Programmering/Master/test_ws/devel/share/gennodejs/ros/pose_estimator/msg/pipe_pose.js
 13028585f8fa2818822f6072b3189c59 /home/erlendb/Programmering/Master/test_ws/devel/share/roseus/ros/darknet_ros_msgs_eb/manifest.l
 3cc0c2de6bb066bf94f682fc6b2e4740 /home/erlendb/Programmering/Master/test_ws/devel/share/roseus/ros/darknet_ros_msgs_eb/msg/BoundingBox.l
 8906db9417a0eb87c4b36f335fa858cb /home/erlendb/Programmering/Master/test_ws/devel/share/roseus/ros/darknet_ros_msgs_eb/msg/BoundingBoxes.l
@@ -46,7 +51,15 @@ eb0688257c79a3be702a52a67254c25c /home/erlendb/Programmering/Master/test_ws/deve
 6d09836ac88e5cc934c788fa07b937ef /home/erlendb/Programmering/Master/test_ws/devel/share/roseus/ros/darknet_ros_msgs_eb/msg/CheckForObjectsFeedback.l
 27b5f2de685615642f4a191254b9157c /home/erlendb/Programmering/Master/test_ws/devel/share/roseus/ros/darknet_ros_msgs_eb/msg/CheckForObjectsGoal.l
 14853d7928d35888bf7dbe7faed4a8a0 /home/erlendb/Programmering/Master/test_ws/devel/share/roseus/ros/darknet_ros_msgs_eb/msg/CheckForObjectsResult.l
+ef7e96e76f07f054da07cd2a5c35c54a /home/erlendb/Programmering/Master/test_ws/devel/share/roseus/ros/pose_estimator/manifest.l
+505551637d607b144d776f91baf60c44 /home/erlendb/Programmering/Master/test_ws/devel/share/roseus/ros/pose_estimator/msg/pipe_pose.l
 355d9625a962dae5bcde91fce8852d02 CMakeFiles/clean_test_results
+e35766426681e11155229386f41bd06a pose_estimator/CMakeFiles/_pose_estimator_generate_messages_check_deps_pipe_pose
+82a17cb8225a480497341532da7a8421 pose_estimator/CMakeFiles/pose_estimator_generate_messages_cpp
+82a17cb8225a480497341532da7a8421 pose_estimator/CMakeFiles/pose_estimator_generate_messages_eus
+82a17cb8225a480497341532da7a8421 pose_estimator/CMakeFiles/pose_estimator_generate_messages_lisp
+82a17cb8225a480497341532da7a8421 pose_estimator/CMakeFiles/pose_estimator_generate_messages_nodejs
+82a17cb8225a480497341532da7a8421 pose_estimator/CMakeFiles/pose_estimator_generate_messages_py
 8958d270c0993727e13fd15d76796f64 yolo_eb/darknet_ros/darknet_ros/CMakeFiles/_run_tests_eb_darknet_rostest_test_object_detection.test
 a97f674437c81626e309e73494d786e2 yolo_eb/darknet_ros/darknet_ros/CMakeFiles/clean_test_results_eb_darknet
 8958d270c0993727e13fd15d76796f64 yolo_eb/darknet_ros/darknet_ros/CMakeFiles/run_tests_eb_darknet_rostest_test_object_detection.test

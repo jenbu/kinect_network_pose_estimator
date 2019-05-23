@@ -92,27 +92,15 @@ install/fast: preinstall/fast
 	/opt/clion-2019.1/bin/cmake/linux/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/opt/clion-2019.1/bin/cmake/linux/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
 
-# Special rule for the target test
-test/fast: test
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
 
-.PHONY : test/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/opt/clion-2019.1/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
+.PHONY : list_install_components/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -125,15 +113,27 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/opt/clion-2019.1/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
 
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
 
-.PHONY : list_install_components/fast
+.PHONY : edit_cache/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/opt/clion-2019.1/bin/cmake/linux/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,19 +168,79 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-pose_estimator/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule:
-	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pose_estimator/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-.PHONY : pose_estimator/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+pose_estimator/CMakeFiles/cloud_processor.dir/rule:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pose_estimator/CMakeFiles/cloud_processor.dir/rule
+.PHONY : pose_estimator/CMakeFiles/cloud_processor.dir/rule
 
 # Convenience name for target.
-dynamic_reconfigure_generate_messages_lisp: pose_estimator/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+cloud_processor: pose_estimator/CMakeFiles/cloud_processor.dir/rule
 
-.PHONY : dynamic_reconfigure_generate_messages_lisp
+.PHONY : cloud_processor
 
 # fast build rule for target.
-dynamic_reconfigure_generate_messages_lisp/fast:
-	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make pose_estimator/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_lisp/fast
+cloud_processor/fast:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/cloud_processor.dir/build.make pose_estimator/CMakeFiles/cloud_processor.dir/build
+.PHONY : cloud_processor/fast
+
+# Convenience name for target.
+pose_estimator/CMakeFiles/testing.dir/rule:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pose_estimator/CMakeFiles/testing.dir/rule
+.PHONY : pose_estimator/CMakeFiles/testing.dir/rule
+
+# Convenience name for target.
+testing: pose_estimator/CMakeFiles/testing.dir/rule
+
+.PHONY : testing
+
+# fast build rule for target.
+testing/fast:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/testing.dir/build.make pose_estimator/CMakeFiles/testing.dir/build
+.PHONY : testing/fast
+
+# Convenience name for target.
+pose_estimator/CMakeFiles/pose_estimator_genpy.dir/rule:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pose_estimator/CMakeFiles/pose_estimator_genpy.dir/rule
+.PHONY : pose_estimator/CMakeFiles/pose_estimator_genpy.dir/rule
+
+# Convenience name for target.
+pose_estimator_genpy: pose_estimator/CMakeFiles/pose_estimator_genpy.dir/rule
+
+.PHONY : pose_estimator_genpy
+
+# fast build rule for target.
+pose_estimator_genpy/fast:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/pose_estimator_genpy.dir/build.make pose_estimator/CMakeFiles/pose_estimator_genpy.dir/build
+.PHONY : pose_estimator_genpy/fast
+
+# Convenience name for target.
+pose_estimator/CMakeFiles/pose_estimator_generate_messages_py.dir/rule:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pose_estimator/CMakeFiles/pose_estimator_generate_messages_py.dir/rule
+.PHONY : pose_estimator/CMakeFiles/pose_estimator_generate_messages_py.dir/rule
+
+# Convenience name for target.
+pose_estimator_generate_messages_py: pose_estimator/CMakeFiles/pose_estimator_generate_messages_py.dir/rule
+
+.PHONY : pose_estimator_generate_messages_py
+
+# fast build rule for target.
+pose_estimator_generate_messages_py/fast:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/pose_estimator_generate_messages_py.dir/build.make pose_estimator/CMakeFiles/pose_estimator_generate_messages_py.dir/build
+.PHONY : pose_estimator_generate_messages_py/fast
+
+# Convenience name for target.
+pose_estimator/CMakeFiles/pose_estimator_gennodejs.dir/rule:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pose_estimator/CMakeFiles/pose_estimator_gennodejs.dir/rule
+.PHONY : pose_estimator/CMakeFiles/pose_estimator_gennodejs.dir/rule
+
+# Convenience name for target.
+pose_estimator_gennodejs: pose_estimator/CMakeFiles/pose_estimator_gennodejs.dir/rule
+
+.PHONY : pose_estimator_gennodejs
+
+# fast build rule for target.
+pose_estimator_gennodejs/fast:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/pose_estimator_gennodejs.dir/build.make pose_estimator/CMakeFiles/pose_estimator_gennodejs.dir/build
+.PHONY : pose_estimator_gennodejs/fast
 
 # Convenience name for target.
 pose_estimator/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule:
@@ -228,6 +288,36 @@ dynamic_reconfigure_generate_messages_py/fast:
 .PHONY : dynamic_reconfigure_generate_messages_py/fast
 
 # Convenience name for target.
+pose_estimator/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pose_estimator/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+.PHONY : pose_estimator/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_lisp: pose_estimator/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+
+.PHONY : dynamic_reconfigure_generate_messages_lisp
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_lisp/fast:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make pose_estimator/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_lisp/fast
+
+# Convenience name for target.
+pose_estimator/CMakeFiles/pose_estimator_generate_messages_lisp.dir/rule:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pose_estimator/CMakeFiles/pose_estimator_generate_messages_lisp.dir/rule
+.PHONY : pose_estimator/CMakeFiles/pose_estimator_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+pose_estimator_generate_messages_lisp: pose_estimator/CMakeFiles/pose_estimator_generate_messages_lisp.dir/rule
+
+.PHONY : pose_estimator_generate_messages_lisp
+
+# fast build rule for target.
+pose_estimator_generate_messages_lisp/fast:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/pose_estimator_generate_messages_lisp.dir/build.make pose_estimator/CMakeFiles/pose_estimator_generate_messages_lisp.dir/build
+.PHONY : pose_estimator_generate_messages_lisp/fast
+
+# Convenience name for target.
 pose_estimator/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule:
 	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pose_estimator/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
 .PHONY : pose_estimator/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
@@ -241,6 +331,21 @@ dynamic_reconfigure_generate_messages_nodejs: pose_estimator/CMakeFiles/dynamic_
 dynamic_reconfigure_generate_messages_nodejs/fast:
 	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make pose_estimator/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
 .PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
+
+# Convenience name for target.
+pose_estimator/CMakeFiles/pose_estimator_generate_messages_eus.dir/rule:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pose_estimator/CMakeFiles/pose_estimator_generate_messages_eus.dir/rule
+.PHONY : pose_estimator/CMakeFiles/pose_estimator_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+pose_estimator_generate_messages_eus: pose_estimator/CMakeFiles/pose_estimator_generate_messages_eus.dir/rule
+
+.PHONY : pose_estimator_generate_messages_eus
+
+# fast build rule for target.
+pose_estimator_generate_messages_eus/fast:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/pose_estimator_generate_messages_eus.dir/build.make pose_estimator/CMakeFiles/pose_estimator_generate_messages_eus.dir/build
+.PHONY : pose_estimator_generate_messages_eus/fast
 
 # Convenience name for target.
 pose_estimator/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule:
@@ -288,136 +393,166 @@ compressed_depth_image_transport_gencfg/fast:
 .PHONY : compressed_depth_image_transport_gencfg/fast
 
 # Convenience name for target.
-pose_estimator/CMakeFiles/testing.dir/rule:
-	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pose_estimator/CMakeFiles/testing.dir/rule
-.PHONY : pose_estimator/CMakeFiles/testing.dir/rule
+pose_estimator/CMakeFiles/pose_estimator_generate_messages_nodejs.dir/rule:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pose_estimator/CMakeFiles/pose_estimator_generate_messages_nodejs.dir/rule
+.PHONY : pose_estimator/CMakeFiles/pose_estimator_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-testing: pose_estimator/CMakeFiles/testing.dir/rule
+pose_estimator_generate_messages_nodejs: pose_estimator/CMakeFiles/pose_estimator_generate_messages_nodejs.dir/rule
 
-.PHONY : testing
+.PHONY : pose_estimator_generate_messages_nodejs
 
 # fast build rule for target.
-testing/fast:
-	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/testing.dir/build.make pose_estimator/CMakeFiles/testing.dir/build
-.PHONY : testing/fast
+pose_estimator_generate_messages_nodejs/fast:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/pose_estimator_generate_messages_nodejs.dir/build.make pose_estimator/CMakeFiles/pose_estimator_generate_messages_nodejs.dir/build
+.PHONY : pose_estimator_generate_messages_nodejs/fast
 
 # Convenience name for target.
-pose_estimator/CMakeFiles/kinect_network.dir/rule:
-	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pose_estimator/CMakeFiles/kinect_network.dir/rule
-.PHONY : pose_estimator/CMakeFiles/kinect_network.dir/rule
+pose_estimator/CMakeFiles/pose_estimator_generate_messages.dir/rule:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pose_estimator/CMakeFiles/pose_estimator_generate_messages.dir/rule
+.PHONY : pose_estimator/CMakeFiles/pose_estimator_generate_messages.dir/rule
 
 # Convenience name for target.
-kinect_network: pose_estimator/CMakeFiles/kinect_network.dir/rule
+pose_estimator_generate_messages: pose_estimator/CMakeFiles/pose_estimator_generate_messages.dir/rule
 
-.PHONY : kinect_network
+.PHONY : pose_estimator_generate_messages
 
 # fast build rule for target.
-kinect_network/fast:
-	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/kinect_network.dir/build.make pose_estimator/CMakeFiles/kinect_network.dir/build
-.PHONY : kinect_network/fast
+pose_estimator_generate_messages/fast:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/pose_estimator_generate_messages.dir/build.make pose_estimator/CMakeFiles/pose_estimator_generate_messages.dir/build
+.PHONY : pose_estimator_generate_messages/fast
 
 # Convenience name for target.
-pose_estimator/CMakeFiles/cloud_segmentation.dir/rule:
-	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pose_estimator/CMakeFiles/cloud_segmentation.dir/rule
-.PHONY : pose_estimator/CMakeFiles/cloud_segmentation.dir/rule
+pose_estimator/CMakeFiles/pose_estimator_generate_messages_cpp.dir/rule:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pose_estimator/CMakeFiles/pose_estimator_generate_messages_cpp.dir/rule
+.PHONY : pose_estimator/CMakeFiles/pose_estimator_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-cloud_segmentation: pose_estimator/CMakeFiles/cloud_segmentation.dir/rule
+pose_estimator_generate_messages_cpp: pose_estimator/CMakeFiles/pose_estimator_generate_messages_cpp.dir/rule
 
-.PHONY : cloud_segmentation
+.PHONY : pose_estimator_generate_messages_cpp
 
 # fast build rule for target.
-cloud_segmentation/fast:
-	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/cloud_segmentation.dir/build.make pose_estimator/CMakeFiles/cloud_segmentation.dir/build
-.PHONY : cloud_segmentation/fast
+pose_estimator_generate_messages_cpp/fast:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/pose_estimator_generate_messages_cpp.dir/build.make pose_estimator/CMakeFiles/pose_estimator_generate_messages_cpp.dir/build
+.PHONY : pose_estimator_generate_messages_cpp/fast
 
-src/cloud_segmentation.o: src/cloud_segmentation.cpp.o
+# Convenience name for target.
+pose_estimator/CMakeFiles/pose_estimator_genlisp.dir/rule:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pose_estimator/CMakeFiles/pose_estimator_genlisp.dir/rule
+.PHONY : pose_estimator/CMakeFiles/pose_estimator_genlisp.dir/rule
 
-.PHONY : src/cloud_segmentation.o
+# Convenience name for target.
+pose_estimator_genlisp: pose_estimator/CMakeFiles/pose_estimator_genlisp.dir/rule
+
+.PHONY : pose_estimator_genlisp
+
+# fast build rule for target.
+pose_estimator_genlisp/fast:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/pose_estimator_genlisp.dir/build.make pose_estimator/CMakeFiles/pose_estimator_genlisp.dir/build
+.PHONY : pose_estimator_genlisp/fast
+
+# Convenience name for target.
+pose_estimator/CMakeFiles/_pose_estimator_generate_messages_check_deps_pipe_pose.dir/rule:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pose_estimator/CMakeFiles/_pose_estimator_generate_messages_check_deps_pipe_pose.dir/rule
+.PHONY : pose_estimator/CMakeFiles/_pose_estimator_generate_messages_check_deps_pipe_pose.dir/rule
+
+# Convenience name for target.
+_pose_estimator_generate_messages_check_deps_pipe_pose: pose_estimator/CMakeFiles/_pose_estimator_generate_messages_check_deps_pipe_pose.dir/rule
+
+.PHONY : _pose_estimator_generate_messages_check_deps_pipe_pose
+
+# fast build rule for target.
+_pose_estimator_generate_messages_check_deps_pipe_pose/fast:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/_pose_estimator_generate_messages_check_deps_pipe_pose.dir/build.make pose_estimator/CMakeFiles/_pose_estimator_generate_messages_check_deps_pipe_pose.dir/build
+.PHONY : _pose_estimator_generate_messages_check_deps_pipe_pose/fast
+
+# Convenience name for target.
+pose_estimator/CMakeFiles/pose_estimator_gencpp.dir/rule:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pose_estimator/CMakeFiles/pose_estimator_gencpp.dir/rule
+.PHONY : pose_estimator/CMakeFiles/pose_estimator_gencpp.dir/rule
+
+# Convenience name for target.
+pose_estimator_gencpp: pose_estimator/CMakeFiles/pose_estimator_gencpp.dir/rule
+
+.PHONY : pose_estimator_gencpp
+
+# fast build rule for target.
+pose_estimator_gencpp/fast:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/pose_estimator_gencpp.dir/build.make pose_estimator/CMakeFiles/pose_estimator_gencpp.dir/build
+.PHONY : pose_estimator_gencpp/fast
+
+# Convenience name for target.
+pose_estimator/CMakeFiles/pose_estimator_geneus.dir/rule:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f CMakeFiles/Makefile2 pose_estimator/CMakeFiles/pose_estimator_geneus.dir/rule
+.PHONY : pose_estimator/CMakeFiles/pose_estimator_geneus.dir/rule
+
+# Convenience name for target.
+pose_estimator_geneus: pose_estimator/CMakeFiles/pose_estimator_geneus.dir/rule
+
+.PHONY : pose_estimator_geneus
+
+# fast build rule for target.
+pose_estimator_geneus/fast:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/pose_estimator_geneus.dir/build.make pose_estimator/CMakeFiles/pose_estimator_geneus.dir/build
+.PHONY : pose_estimator_geneus/fast
+
+src/cloud_processor.o: src/cloud_processor.cpp.o
+
+.PHONY : src/cloud_processor.o
 
 # target to build an object file
-src/cloud_segmentation.cpp.o:
-	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/cloud_segmentation.dir/build.make pose_estimator/CMakeFiles/cloud_segmentation.dir/src/cloud_segmentation.cpp.o
-.PHONY : src/cloud_segmentation.cpp.o
+src/cloud_processor.cpp.o:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/cloud_processor.dir/build.make pose_estimator/CMakeFiles/cloud_processor.dir/src/cloud_processor.cpp.o
+.PHONY : src/cloud_processor.cpp.o
 
-src/cloud_segmentation.i: src/cloud_segmentation.cpp.i
+src/cloud_processor.i: src/cloud_processor.cpp.i
 
-.PHONY : src/cloud_segmentation.i
+.PHONY : src/cloud_processor.i
 
 # target to preprocess a source file
-src/cloud_segmentation.cpp.i:
-	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/cloud_segmentation.dir/build.make pose_estimator/CMakeFiles/cloud_segmentation.dir/src/cloud_segmentation.cpp.i
-.PHONY : src/cloud_segmentation.cpp.i
+src/cloud_processor.cpp.i:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/cloud_processor.dir/build.make pose_estimator/CMakeFiles/cloud_processor.dir/src/cloud_processor.cpp.i
+.PHONY : src/cloud_processor.cpp.i
 
-src/cloud_segmentation.s: src/cloud_segmentation.cpp.s
+src/cloud_processor.s: src/cloud_processor.cpp.s
 
-.PHONY : src/cloud_segmentation.s
+.PHONY : src/cloud_processor.s
 
 # target to generate assembly for a file
-src/cloud_segmentation.cpp.s:
-	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/cloud_segmentation.dir/build.make pose_estimator/CMakeFiles/cloud_segmentation.dir/src/cloud_segmentation.cpp.s
-.PHONY : src/cloud_segmentation.cpp.s
+src/cloud_processor.cpp.s:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/cloud_processor.dir/build.make pose_estimator/CMakeFiles/cloud_processor.dir/src/cloud_processor.cpp.s
+.PHONY : src/cloud_processor.cpp.s
 
-src/kinect_network.o: src/kinect_network.cpp.o
+src/seg_pose_estimator.o: src/seg_pose_estimator.cpp.o
 
-.PHONY : src/kinect_network.o
+.PHONY : src/seg_pose_estimator.o
 
 # target to build an object file
-src/kinect_network.cpp.o:
-	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/kinect_network.dir/build.make pose_estimator/CMakeFiles/kinect_network.dir/src/kinect_network.cpp.o
-.PHONY : src/kinect_network.cpp.o
+src/seg_pose_estimator.cpp.o:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/cloud_processor.dir/build.make pose_estimator/CMakeFiles/cloud_processor.dir/src/seg_pose_estimator.cpp.o
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/testing.dir/build.make pose_estimator/CMakeFiles/testing.dir/src/seg_pose_estimator.cpp.o
+.PHONY : src/seg_pose_estimator.cpp.o
 
-src/kinect_network.i: src/kinect_network.cpp.i
+src/seg_pose_estimator.i: src/seg_pose_estimator.cpp.i
 
-.PHONY : src/kinect_network.i
-
-# target to preprocess a source file
-src/kinect_network.cpp.i:
-	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/kinect_network.dir/build.make pose_estimator/CMakeFiles/kinect_network.dir/src/kinect_network.cpp.i
-.PHONY : src/kinect_network.cpp.i
-
-src/kinect_network.s: src/kinect_network.cpp.s
-
-.PHONY : src/kinect_network.s
-
-# target to generate assembly for a file
-src/kinect_network.cpp.s:
-	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/kinect_network.dir/build.make pose_estimator/CMakeFiles/kinect_network.dir/src/kinect_network.cpp.s
-.PHONY : src/kinect_network.cpp.s
-
-src/pose_estimator.o: src/pose_estimator.cpp.o
-
-.PHONY : src/pose_estimator.o
-
-# target to build an object file
-src/pose_estimator.cpp.o:
-	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/testing.dir/build.make pose_estimator/CMakeFiles/testing.dir/src/pose_estimator.cpp.o
-	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/kinect_network.dir/build.make pose_estimator/CMakeFiles/kinect_network.dir/src/pose_estimator.cpp.o
-	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/cloud_segmentation.dir/build.make pose_estimator/CMakeFiles/cloud_segmentation.dir/src/pose_estimator.cpp.o
-.PHONY : src/pose_estimator.cpp.o
-
-src/pose_estimator.i: src/pose_estimator.cpp.i
-
-.PHONY : src/pose_estimator.i
+.PHONY : src/seg_pose_estimator.i
 
 # target to preprocess a source file
-src/pose_estimator.cpp.i:
-	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/testing.dir/build.make pose_estimator/CMakeFiles/testing.dir/src/pose_estimator.cpp.i
-	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/kinect_network.dir/build.make pose_estimator/CMakeFiles/kinect_network.dir/src/pose_estimator.cpp.i
-	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/cloud_segmentation.dir/build.make pose_estimator/CMakeFiles/cloud_segmentation.dir/src/pose_estimator.cpp.i
-.PHONY : src/pose_estimator.cpp.i
+src/seg_pose_estimator.cpp.i:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/cloud_processor.dir/build.make pose_estimator/CMakeFiles/cloud_processor.dir/src/seg_pose_estimator.cpp.i
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/testing.dir/build.make pose_estimator/CMakeFiles/testing.dir/src/seg_pose_estimator.cpp.i
+.PHONY : src/seg_pose_estimator.cpp.i
 
-src/pose_estimator.s: src/pose_estimator.cpp.s
+src/seg_pose_estimator.s: src/seg_pose_estimator.cpp.s
 
-.PHONY : src/pose_estimator.s
+.PHONY : src/seg_pose_estimator.s
 
 # target to generate assembly for a file
-src/pose_estimator.cpp.s:
-	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/testing.dir/build.make pose_estimator/CMakeFiles/testing.dir/src/pose_estimator.cpp.s
-	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/kinect_network.dir/build.make pose_estimator/CMakeFiles/kinect_network.dir/src/pose_estimator.cpp.s
-	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/cloud_segmentation.dir/build.make pose_estimator/CMakeFiles/cloud_segmentation.dir/src/pose_estimator.cpp.s
-.PHONY : src/pose_estimator.cpp.s
+src/seg_pose_estimator.cpp.s:
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/cloud_processor.dir/build.make pose_estimator/CMakeFiles/cloud_processor.dir/src/seg_pose_estimator.cpp.s
+	cd /home/erlendb/Programmering/Master/test_ws/build && $(MAKE) -f pose_estimator/CMakeFiles/testing.dir/build.make pose_estimator/CMakeFiles/testing.dir/src/seg_pose_estimator.cpp.s
+.PHONY : src/seg_pose_estimator.cpp.s
 
 src/testing.o: src/testing.cpp.o
 
@@ -454,31 +589,39 @@ help:
 	@echo "... depend"
 	@echo "... install/strip"
 	@echo "... install/local"
-	@echo "... dynamic_reconfigure_generate_messages_lisp"
+	@echo "... install"
+	@echo "... list_install_components"
+	@echo "... rebuild_cache"
+	@echo "... edit_cache"
+	@echo "... test"
+	@echo "... cloud_processor"
+	@echo "... testing"
+	@echo "... pose_estimator_genpy"
+	@echo "... pose_estimator_generate_messages_py"
+	@echo "... pose_estimator_gennodejs"
 	@echo "... dynamic_reconfigure_generate_messages_eus"
 	@echo "... compressed_image_transport_gencfg"
 	@echo "... dynamic_reconfigure_generate_messages_py"
+	@echo "... dynamic_reconfigure_generate_messages_lisp"
+	@echo "... pose_estimator_generate_messages_lisp"
 	@echo "... dynamic_reconfigure_generate_messages_nodejs"
+	@echo "... pose_estimator_generate_messages_eus"
 	@echo "... dynamic_reconfigure_generate_messages_cpp"
 	@echo "... dynamic_reconfigure_gencfg"
 	@echo "... compressed_depth_image_transport_gencfg"
-	@echo "... testing"
-	@echo "... kinect_network"
-	@echo "... install"
-	@echo "... test"
-	@echo "... edit_cache"
-	@echo "... cloud_segmentation"
-	@echo "... rebuild_cache"
-	@echo "... list_install_components"
-	@echo "... src/cloud_segmentation.o"
-	@echo "... src/cloud_segmentation.i"
-	@echo "... src/cloud_segmentation.s"
-	@echo "... src/kinect_network.o"
-	@echo "... src/kinect_network.i"
-	@echo "... src/kinect_network.s"
-	@echo "... src/pose_estimator.o"
-	@echo "... src/pose_estimator.i"
-	@echo "... src/pose_estimator.s"
+	@echo "... pose_estimator_generate_messages_nodejs"
+	@echo "... pose_estimator_generate_messages"
+	@echo "... pose_estimator_generate_messages_cpp"
+	@echo "... pose_estimator_genlisp"
+	@echo "... _pose_estimator_generate_messages_check_deps_pipe_pose"
+	@echo "... pose_estimator_gencpp"
+	@echo "... pose_estimator_geneus"
+	@echo "... src/cloud_processor.o"
+	@echo "... src/cloud_processor.i"
+	@echo "... src/cloud_processor.s"
+	@echo "... src/seg_pose_estimator.o"
+	@echo "... src/seg_pose_estimator.i"
+	@echo "... src/seg_pose_estimator.s"
 	@echo "... src/testing.o"
 	@echo "... src/testing.i"
 	@echo "... src/testing.s"

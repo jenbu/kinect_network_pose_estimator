@@ -44,7 +44,25 @@ std_msgs/Header.h
 darknet_ros_msgs_eb/BoundingBox.h
 -
 
-/home/erlendb/Programmering/Master/test_ws/src/pose_estimator/src/cloud_segmentation.cpp
+/home/erlendb/Programmering/Master/test_ws/devel/include/pose_estimator/pipe_pose.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+std_msgs/Header.h
+-
+
+/home/erlendb/Programmering/Master/test_ws/src/pose_estimator/src/cloud_processor.cpp
 stdlib.h
 -
 stdio.h
@@ -67,11 +85,13 @@ thread
 -
 chrono
 -
-pose_estimator.h
-/home/erlendb/Programmering/Master/test_ws/src/pose_estimator/src/pose_estimator.h
+seg_pose_estimator.h
+/home/erlendb/Programmering/Master/test_ws/src/pose_estimator/src/seg_pose_estimator.h
 darknet_ros_msgs_eb/BoundingBox.h
 -
 darknet_ros_msgs_eb/BoundingBoxes.h
+-
+pose_estimator/pipe_pose.h
 -
 pcl/point_cloud.h
 -
@@ -114,7 +134,7 @@ opencv2/opencv.hpp
 pcl/filters/extract_indices.h
 -
 
-/home/erlendb/Programmering/Master/test_ws/src/pose_estimator/src/pose_estimator.h
+/home/erlendb/Programmering/Master/test_ws/src/pose_estimator/src/seg_pose_estimator.h
 chrono
 -
 sstream

@@ -5,16 +5,16 @@
 		<Option title="gtest"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\opt\;CMake Files\..\..\..\..\..\..\opt\ros\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\catkin\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\platform\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\test\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\tools\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\templates\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\em\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\actionlib_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\actionlib_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\message_runtime\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\message_runtime\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\cpp_common\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\cpp_common\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\roscpp_serialization\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\roscpp_serialization\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\roscpp_traits\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\roscpp_traits\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\rostime\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\rostime\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\std_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\genmsg\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\genmsg\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\gencpp\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\gencpp\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\geneus\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\geneus\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\genlisp\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\genlisp\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\gennodejs\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\gennodejs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\genpy\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\genpy\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\geometry_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\geometry_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\sensor_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\sensor_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\message_generation\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\message_generation\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\OpenCV-3.3.1-dev\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\cv_bridge\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\cv_bridge\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\rosconsole\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\rosconsole\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\roscpp\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\roscpp\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\rosgraph_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\rosgraph_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\xmlrpcpp\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\xmlrpcpp\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\rospy\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\rospy\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\actionlib\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\actionlib\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\image_transport\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\image_transport\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\message_filters\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\message_filters\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\pluginlib\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\pluginlib\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\class_loader\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\class_loader\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\roslib\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\roslib\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\rospack\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\rospack\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\rostest\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\rostest\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\compressed_image_transport\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\compressed_image_transport\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\dynamic_reconfigure\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\dynamic_reconfigure\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\compressed_depth_image_transport\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\compressed_depth_image_transport\cmake\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\src\;CMake Files\..\..\..\..\..\..\usr\src\gmock\;CMake Files\..\..\..\..\..\..\usr\src\gtest\;CMake Files\..\..\..\..\..\..\usr\src\gtest\cmake\;CMake Files\..\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\..\usr\local\share\;CMake Files\..\..\..\..\..\..\usr\local\share\pcl-1.9\;CMake Files\..\..\..\..\..\..\usr\local\share\pcl-1.9\Modules\;CMake Files\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\usr\lib\cmake\;CMake Files\..\..\..\..\..\..\usr\lib\cmake\vtk-6.2\;CMake Files\..\..\..\..\..\..\usr\lib\cmake\vtk-6.2\Modules\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5OpenGL\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Sql\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5WebKitWidgets\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5WebKit\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Network\;CMake Files\..\..\kinect_ws\;CMake Files\..\..\kinect_ws\devel\;CMake Files\..\..\kinect_ws\devel\share\;CMake Files\..\..\kinect_ws\devel\share\kinect2_bridge\;CMake Files\..\..\kinect_ws\devel\share\kinect2_bridge\cmake\;CMake Files\..\..\kinect_ws\devel\share\kinect2_registration\;CMake Files\..\..\kinect_ws\devel\share\kinect2_registration\cmake\;CMake Files\..\build\;CMake Files\..\build\catkin\;CMake Files\..\build\catkin\catkin_generated\;CMake Files\..\build\catkin\catkin_generated\version\;CMake Files\..\build\catkin_generated\;CMake Files\..\build\catkin_generated\installspace\;CMake Files\..\build\yolo_eb\;CMake Files\..\build\yolo_eb\darknet_ros\;CMake Files\..\build\yolo_eb\darknet_ros\darknet_ros_msgs\;CMake Files\..\build\yolo_eb\darknet_ros\darknet_ros_msgs\catkin_generated\;CMake Files\..\build\yolo_eb\darknet_ros\darknet_ros_msgs\cmake\;CMake Files\..\build\yolo_eb\darknet_ros\darknet_ros\;CMake Files\..\build\yolo_eb\darknet_ros\darknet_ros\catkin_generated\;CMake Files\..\build\pose_estimator\;CMake Files\..\build\pose_estimator\catkin_generated\;CMake Files\..\devel\;CMake Files\..\devel\share\;CMake Files\..\devel\share\darknet_ros_msgs_eb\;CMake Files\..\devel\share\darknet_ros_msgs_eb\cmake\;CMake Files\yolo_eb\;CMake Files\yolo_eb\darknet_ros\;CMake Files\yolo_eb\darknet_ros\darknet_ros_msgs\;CMake Files\yolo_eb\darknet_ros\darknet_ros_msgs\action\;CMake Files\yolo_eb\darknet_ros\darknet_ros\;CMake Files\pose_estimator\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\opt\;CMake Files\..\..\..\..\..\..\opt\ros\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\catkin\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\platform\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\test\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\tools\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\templates\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\catkin\cmake\em\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\actionlib_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\actionlib_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\message_runtime\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\message_runtime\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\cpp_common\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\cpp_common\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\roscpp_serialization\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\roscpp_serialization\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\roscpp_traits\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\roscpp_traits\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\rostime\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\rostime\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\std_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\std_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\genmsg\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\genmsg\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\gencpp\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\gencpp\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\geneus\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\geneus\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\genlisp\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\genlisp\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\gennodejs\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\gennodejs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\genpy\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\genpy\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\geometry_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\geometry_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\sensor_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\sensor_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\message_generation\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\message_generation\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\OpenCV-3.3.1-dev\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\cv_bridge\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\cv_bridge\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\rosconsole\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\rosconsole\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\roscpp\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\roscpp\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\rosgraph_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\rosgraph_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\xmlrpcpp\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\xmlrpcpp\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\rospy\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\rospy\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\actionlib\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\actionlib\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\image_transport\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\image_transport\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\message_filters\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\message_filters\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\pluginlib\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\pluginlib\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\class_loader\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\class_loader\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\roslib\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\roslib\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\rospack\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\rospack\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\rostest\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\rostest\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\compressed_image_transport\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\compressed_image_transport\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\dynamic_reconfigure\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\dynamic_reconfigure\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\compressed_depth_image_transport\;CMake Files\..\..\..\..\..\..\opt\ros\kinetic\share\compressed_depth_image_transport\cmake\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\src\;CMake Files\..\..\..\..\..\..\usr\src\gmock\;CMake Files\..\..\..\..\..\..\usr\src\gtest\;CMake Files\..\..\..\..\..\..\usr\src\gtest\cmake\;CMake Files\..\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\..\usr\local\share\;CMake Files\..\..\..\..\..\..\usr\local\share\pcl-1.9\;CMake Files\..\..\..\..\..\..\usr\local\share\pcl-1.9\Modules\;CMake Files\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\usr\lib\cmake\;CMake Files\..\..\..\..\..\..\usr\lib\cmake\vtk-6.2\;CMake Files\..\..\..\..\..\..\usr\lib\cmake\vtk-6.2\Modules\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5OpenGL\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Sql\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5WebKitWidgets\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5WebKit\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Network\;CMake Files\..\..\kinect_ws\;CMake Files\..\..\kinect_ws\devel\;CMake Files\..\..\kinect_ws\devel\share\;CMake Files\..\..\kinect_ws\devel\share\kinect2_bridge\;CMake Files\..\..\kinect_ws\devel\share\kinect2_bridge\cmake\;CMake Files\..\..\kinect_ws\devel\share\kinect2_registration\;CMake Files\..\..\kinect_ws\devel\share\kinect2_registration\cmake\;CMake Files\..\build\;CMake Files\..\build\catkin\;CMake Files\..\build\catkin\catkin_generated\;CMake Files\..\build\catkin\catkin_generated\version\;CMake Files\..\build\catkin_generated\;CMake Files\..\build\catkin_generated\installspace\;CMake Files\..\build\yolo_eb\;CMake Files\..\build\yolo_eb\darknet_ros\;CMake Files\..\build\yolo_eb\darknet_ros\darknet_ros_msgs\;CMake Files\..\build\yolo_eb\darknet_ros\darknet_ros_msgs\catkin_generated\;CMake Files\..\build\yolo_eb\darknet_ros\darknet_ros_msgs\cmake\;CMake Files\..\build\yolo_eb\darknet_ros\darknet_ros\;CMake Files\..\build\yolo_eb\darknet_ros\darknet_ros\catkin_generated\;CMake Files\..\build\pose_estimator\;CMake Files\..\build\pose_estimator\catkin_generated\;CMake Files\..\build\pose_estimator\cmake\;CMake Files\..\devel\;CMake Files\..\devel\share\;CMake Files\..\devel\share\darknet_ros_msgs_eb\;CMake Files\..\devel\share\darknet_ros_msgs_eb\cmake\;CMake Files\..\devel\share\pose_estimator\;CMake Files\..\devel\share\pose_estimator\cmake\;CMake Files\yolo_eb\;CMake Files\yolo_eb\darknet_ros\;CMake Files\yolo_eb\darknet_ros\darknet_ros_msgs\;CMake Files\yolo_eb\darknet_ros\darknet_ros_msgs\action\;CMake Files\yolo_eb\darknet_ros\darknet_ros\;CMake Files\pose_estimator\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest_main">
@@ -27,20 +27,12 @@
 					<Add option="-DGTEST_CREATE_SHARED_LIBRARY=1"/>
 					<Add directory="/usr/src/gtest/include"/>
 					<Add directory="/usr/src/gtest"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 gtest_main"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 gtest_main"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest_main/fast">
@@ -53,20 +45,12 @@
 					<Add option="-DGTEST_CREATE_SHARED_LIBRARY=1"/>
 					<Add directory="/usr/src/gtest/include"/>
 					<Add directory="/usr/src/gtest"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest">
@@ -79,20 +63,12 @@
 					<Add option="-DGTEST_CREATE_SHARED_LIBRARY=1"/>
 					<Add directory="/usr/src/gtest/include"/>
 					<Add directory="/usr/src/gtest"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 gtest"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 gtest"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest/fast">
@@ -105,20 +81,12 @@
 					<Add option="-DGTEST_CREATE_SHARED_LIBRARY=1"/>
 					<Add directory="/usr/src/gtest/include"/>
 					<Add directory="/usr/src/gtest"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/erlendb/Programmering/Master/test_ws/build/gtest/gtest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
@@ -1250,6 +1218,15 @@
 		<Unit filename="/home/erlendb/Programmering/Master/test_ws/src/../build/pose_estimator/catkin_generated/package.cmake">
 			<Option virtualFolder="CMake Files\..\build\pose_estimator\catkin_generated\"/>
 		</Unit>
+		<Unit filename="/home/erlendb/Programmering/Master/test_ws/src/../build/pose_estimator/catkin_generated/pose_estimator-msg-extras.cmake.develspace.in">
+			<Option virtualFolder="CMake Files\..\build\pose_estimator\catkin_generated\"/>
+		</Unit>
+		<Unit filename="/home/erlendb/Programmering/Master/test_ws/src/../build/pose_estimator/catkin_generated/pose_estimator-msg-extras.cmake.installspace.in">
+			<Option virtualFolder="CMake Files\..\build\pose_estimator\catkin_generated\"/>
+		</Unit>
+		<Unit filename="/home/erlendb/Programmering/Master/test_ws/src/../build/pose_estimator/cmake/pose_estimator-genmsg.cmake">
+			<Option virtualFolder="CMake Files\..\build\pose_estimator\cmake\"/>
+		</Unit>
 		<Unit filename="/home/erlendb/Programmering/Master/test_ws/src/../devel/share/darknet_ros_msgs_eb/cmake/darknet_ros_msgs_eb-msg-extras.cmake">
 			<Option virtualFolder="CMake Files\..\devel\share\darknet_ros_msgs_eb\cmake\"/>
 		</Unit>
@@ -1261,6 +1238,9 @@
 		</Unit>
 		<Unit filename="/home/erlendb/Programmering/Master/test_ws/src/../devel/share/darknet_ros_msgs_eb/cmake/darknet_ros_msgs_ebConfig.cmake">
 			<Option virtualFolder="CMake Files\..\devel\share\darknet_ros_msgs_eb\cmake\"/>
+		</Unit>
+		<Unit filename="/home/erlendb/Programmering/Master/test_ws/src/../devel/share/pose_estimator/cmake/pose_estimator-msg-paths.cmake">
+			<Option virtualFolder="CMake Files\..\devel\share\pose_estimator\cmake\"/>
 		</Unit>
 		<Unit filename="/home/erlendb/Programmering/Master/test_ws/src/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\yolo_eb\darknet_ros\darknet_ros_msgs\"/>

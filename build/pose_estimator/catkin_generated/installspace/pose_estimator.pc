@@ -1,8 +1,8 @@
-prefix=/usr/local
+prefix=/home/erlendb/Programmering/Master/test_ws/install
 
 Name: pose_estimator
 Description: Description of pose_estimator
 Version: 0.0.0
-Cflags: 
-Libs: -L/usr/local/lib 
-Requires: 
+Cflags: -I/home/erlendb/Programmering/Master/test_ws/install/include
+Libs: -L/home/erlendb/Programmering/Master/test_ws/install/lib 
+Requires: message_runtime

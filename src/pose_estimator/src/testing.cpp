@@ -28,7 +28,7 @@
 #include <pcl/features/fpfh_omp.h>
 #include <pcl/registration/sample_consensus_prerejective.h>
 #include <pcl/filters/statistical_outlier_removal.h>
-#include "pose_estimator.h"
+#include "seg_pose_estimator.h"
 
 
 std::string path1 = "/home/erlendb/Pictures/4.19:13.32.170000box_cloud.pcd";
@@ -73,7 +73,7 @@ int main(int argc, char** args)
     FeatureCloudT::Ptr scene_features(new FeatureCloudT());
     FeatureCloudT::Ptr object_features(new FeatureCloudT());
 
-    PoseEstimator pose_est;
+    SegmentorPoseEstimator pose_est;
 
     FeatureEstimationT fest;
 

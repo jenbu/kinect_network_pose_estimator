@@ -29,13 +29,13 @@ find_package(catkin REQUIRED COMPONENTS
         roscpp rostime std_msgs sensor_msgs message_filters
         cv_bridge image_transport compressed_image_transport
         compressed_depth_image_transport kinect2_bridge
-        darknet_ros_msgs_eb
+        darknet_ros_msgs_eb message_generation
         )
 find_package(OpenCV REQUIRED)
 find_package(PCL REQUIRED)
 find_package(HDF5 REQUIRED)
-find_package(FLANN REQUIRED)
-find_package(PCL REQUIRED)
+#find_package(FLANN REQUIRED)
+
 
 
 ## System dependencies are found with CMake's conventions
@@ -72,11 +72,10 @@ find_package(PCL REQUIRED)
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-# add_message_files(
-#   FILES
-#   Message1.msg
-#   Message2.msg
-# )
+add_message_files(
+  FILES
+  pipe_pose.msg
+)
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -93,10 +92,10 @@ find_package(PCL REQUIRED)
 # )
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   std_msgs  # Or other packages containing msgs
-# )
+generate_messages(
+  DEPENDENCIES
+  std_msgs  # Or other packages containing msgs
+)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -130,7 +129,7 @@ find_package(PCL REQUIRED)
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES kinect_node
-#  CATKIN_DEPENDS other_catkin_pkg
+  CATKIN_DEPENDS message_runtime
 #  DEPENDS system_lib
 )
 
@@ -163,11 +162,11 @@ link_directories(${PCL_LIBRARY_DIRS})
 ## The recommended prefix ensures that target names across packages don't collide
 
 file(GLOB SOURCES
-        src/pose_estimator.h
-        src/pose_estimator.cpp
+        src/seg_pose_estimator.h
+        src/seg_pose_estimator.cpp
 )
 
-add_executable(testing src/testing.cpp src/pose_estimator.cpp)
+add_executable(testing src/testing.cpp src/seg_pose_estimator.cpp)
 target_link_libraries(testing
         ${catkin_LIBRARIES}
         ${OpenCV_LIBRARIES}
@@ -175,19 +174,14 @@ target_link_libraries(testing
         )
 
 
-add_executable(cloud_segmentation src/cloud_segmentation.cpp src/pose_estimator.cpp)
-target_link_libraries(cloud_segmentation
+add_executable(cloud_processor src/cloud_processor.cpp src/seg_pose_estimator.cpp)
+target_link_libraries(cloud_processor
         ${catkin_LIBRARIES}
         ${OpenCV_LIBRARIES}
         ${PCL_LIBRARIES}
         )
 
-add_executable(kinect_network src/kinect_network.cpp src/pose_estimator.cpp)
-target_link_libraries(kinect_network
-        ${catkin_LIBRARIES}
-        ${OpenCV_LIBRARIES}
-        ${PCL_LIBRARIES}
-        )
+
 
 #add_executable (build_tree src/pose_est.cpp)
 #target_link_libraries (build_tree ${PCL_LIBRARIES}

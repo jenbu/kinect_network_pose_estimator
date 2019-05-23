@@ -74,7 +74,7 @@ if("TRUE" STREQUAL "TRUE")
 else()
   set(darknet_ros_msgs_eb_SOURCE_PREFIX "")
   set(darknet_ros_msgs_eb_DEVEL_PREFIX "")
-  set(darknet_ros_msgs_eb_INSTALL_PREFIX /usr/local)
+  set(darknet_ros_msgs_eb_INSTALL_PREFIX /home/erlendb/Programmering/Master/test_ws/install)
   set(darknet_ros_msgs_eb_PREFIX ${darknet_ros_msgs_eb_INSTALL_PREFIX})
 endif()
 

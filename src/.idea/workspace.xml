@@ -2,92 +2,103 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="Project" targetName="gmock" />
-      <config projectName="Project" targetName="sensor_msgs_generate_messages_eus" />
-      <config projectName="Project" targetName="actionlib_generate_messages_lisp" />
-      <config projectName="Project" targetName="cloud_segmentation" />
-      <config projectName="Project" targetName="run_tests" />
-      <config projectName="Project" targetName="_darknet_ros_msgs_eb_generate_messages_check_deps_BoundingBox" />
-      <config projectName="Project" targetName="darknet_ros_msgs_eb_generate_messages_nodejs" />
-      <config projectName="Project" targetName="actionlib_msgs_generate_messages_nodejs" />
-      <config projectName="Project" targetName="std_msgs_generate_messages_lisp" />
-      <config projectName="Project" targetName="darknet_ros_msgs_eb_generate_messages_eus" />
-      <config projectName="Project" targetName="rosgraph_msgs_generate_messages_eus" />
-      <config projectName="Project" targetName="actionlib_generate_messages_cpp" />
-      <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_eus" />
-      <config projectName="Project" targetName="sensor_msgs_generate_messages_py" />
-      <config projectName="Project" targetName="download_extra_data" />
-      <config projectName="Project" targetName="actionlib_msgs_generate_messages_eus" />
-      <config projectName="Project" targetName="eb_darknet" />
-      <config projectName="Project" targetName="gtest_main" />
-      <config projectName="Project" targetName="eb_darknet_lib" />
-      <config projectName="Project" targetName="darknet_ros_msgs_eb_generate_messages" />
-      <config projectName="Project" targetName="tests" />
-      <config projectName="Project" targetName="rosgraph_msgs_generate_messages_py" />
-      <config projectName="Project" targetName="_run_tests_eb_darknet_rostest_test_object_detection.test" />
-      <config projectName="Project" targetName="roscpp_generate_messages_lisp" />
-      <config projectName="Project" targetName="run_tests_eb_darknet_rostest_test_object_detection.test" />
-      <config projectName="Project" targetName="_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsActionGoal" />
-      <config projectName="Project" targetName="kinect_network" />
-      <config projectName="Project" targetName="actionlib_msgs_generate_messages_lisp" />
-      <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_cpp" />
-      <config projectName="Project" targetName="clean_test_results_eb_darknet" />
-      <config projectName="Project" targetName="darknet_ros_msgs_eb_gennodejs" />
-      <config projectName="Project" targetName="rosgraph_msgs_generate_messages_nodejs" />
-      <config projectName="Project" targetName="roscpp_generate_messages_py" />
-      <config projectName="Project" targetName="actionlib_generate_messages_eus" />
-      <config projectName="Project" targetName="_run_tests_eb_darknet" />
-      <config projectName="Project" targetName="clean_test_results" />
-      <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_lisp" />
-      <config projectName="Project" targetName="compressed_depth_image_transport_gencfg" />
-      <config projectName="Project" targetName="actionlib_generate_messages_py" />
-      <config projectName="Project" targetName="roscpp_generate_messages_cpp" />
-      <config projectName="Project" targetName="rosgraph_msgs_generate_messages_lisp" />
-      <config projectName="Project" targetName="geometry_msgs_generate_messages_cpp" />
-      <config projectName="Project" targetName="darknet_ros_msgs_eb_genlisp" />
-      <config projectName="Project" targetName="actionlib_msgs_generate_messages_py" />
-      <config projectName="Project" targetName="geometry_msgs_generate_messages_nodejs" />
-      <config projectName="Project" targetName="gtest" />
-      <config projectName="Project" targetName="gmock_main" />
-      <config projectName="Project" targetName="_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsActionResult" />
-      <config projectName="Project" targetName="sensor_msgs_generate_messages_nodejs" />
-      <config projectName="Project" targetName="darknet_ros_msgs_eb_gencpp" />
-      <config projectName="Project" targetName="compressed_image_transport_gencfg" />
-      <config projectName="Project" targetName="_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsActionFeedback" />
       <config projectName="Project" targetName="run_tests_eb_darknet" />
-      <config projectName="Project" targetName="dynamic_reconfigure_gencfg" />
+      <config projectName="Project" targetName="roscpp_generate_messages_py" />
+      <config projectName="Project" targetName="clean_test_results_eb_darknet" />
+      <config projectName="Project" targetName="_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsActionGoal" />
       <config projectName="Project" targetName="actionlib_generate_messages_nodejs" />
-      <config projectName="Project" targetName="std_msgs_generate_messages_nodejs" />
-      <config projectName="Project" targetName="std_msgs_generate_messages_cpp" />
-      <config projectName="Project" targetName="_run_tests_eb_darknet_rostest" />
-      <config projectName="Project" targetName="doxygen" />
-      <config projectName="Project" targetName="roscpp_generate_messages_eus" />
-      <config projectName="Project" targetName="std_msgs_generate_messages_py" />
-      <config projectName="Project" targetName="_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsResult" />
-      <config projectName="Project" targetName="geometry_msgs_generate_messages_eus" />
-      <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_nodejs" />
-      <config projectName="Project" targetName="_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsGoal" />
-      <config projectName="Project" targetName="eb_darknet_object_detection-test" />
-      <config projectName="Project" targetName="sensor_msgs_generate_messages_cpp" />
-      <config projectName="Project" targetName="testing" />
-      <config projectName="Project" targetName="darknet_ros_msgs_eb_geneus" />
       <config projectName="Project" targetName="darknet_ros_msgs_eb_generate_messages_py" />
-      <config projectName="Project" targetName="_catkin_empty_exported_target" />
-      <config projectName="Project" targetName="_darknet_ros_msgs_eb_generate_messages_check_deps_BoundingBoxes" />
-      <config projectName="Project" targetName="darknet_ros_msgs_eb_generate_messages_lisp" />
-      <config projectName="Project" targetName="darknet_ros_msgs_eb_genpy" />
-      <config projectName="Project" targetName="sensor_msgs_generate_messages_lisp" />
-      <config projectName="Project" targetName="darknet_ros_msgs_eb_generate_messages_cpp" />
-      <config projectName="Project" targetName="geometry_msgs_generate_messages_lisp" />
-      <config projectName="Project" targetName="std_msgs_generate_messages_eus" />
-      <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_py" />
-      <config projectName="Project" targetName="run_tests_eb_darknet_rostest" />
-      <config projectName="Project" targetName="_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsFeedback" />
-      <config projectName="Project" targetName="actionlib_msgs_generate_messages_cpp" />
-      <config projectName="Project" targetName="_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsAction" />
+      <config projectName="Project" targetName="eb_darknet" />
+      <config projectName="Project" targetName="clean_test_results" />
+      <config projectName="Project" targetName="pose_estimator_generate_messages_eus" />
+      <config projectName="Project" targetName="geometry_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="darknet_ros_msgs_eb_gencpp" />
       <config projectName="Project" targetName="rosgraph_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="darknet_ros_msgs_eb_generate_messages_nodejs" />
+      <config projectName="Project" targetName="geometry_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="rosgraph_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="_darknet_ros_msgs_eb_generate_messages_check_deps_BoundingBoxes" />
+      <config projectName="Project" targetName="dynamic_reconfigure_gencfg" />
+      <config projectName="Project" targetName="pose_estimator_genpy" />
+      <config projectName="Project" targetName="actionlib_msgs_generate_messages_eus" />
+      <config projectName="Project" targetName="_pose_estimator_generate_messages_check_deps_pipe_pose" />
+      <config projectName="Project" targetName="actionlib_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="_catkin_empty_exported_target" />
+      <config projectName="Project" targetName="darknet_ros_msgs_eb_genpy" />
+      <config projectName="Project" targetName="actionlib_generate_messages_py" />
+      <config projectName="Project" targetName="cloud_processor" />
+      <config projectName="Project" targetName="rosgraph_msgs_generate_messages_nodejs" />
+      <config projectName="Project" targetName="darknet_ros_msgs_eb_geneus" />
+      <config projectName="Project" targetName="actionlib_generate_messages_eus" />
+      <config projectName="Project" targetName="rosgraph_msgs_generate_messages_eus" />
       <config projectName="Project" targetName="roscpp_generate_messages_nodejs" />
+      <config projectName="Project" targetName="download_extra_data" />
+      <config projectName="Project" targetName="pose_estimator_geneus" />
       <config projectName="Project" targetName="geometry_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="geometry_msgs_generate_messages_nodejs" />
+      <config projectName="Project" targetName="actionlib_generate_messages_lisp" />
+      <config projectName="Project" targetName="actionlib_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="actionlib_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="sensor_msgs_generate_messages_eus" />
+      <config projectName="Project" targetName="_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsActionFeedback" />
+      <config projectName="Project" targetName="std_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="pose_estimator_gennodejs" />
+      <config projectName="Project" targetName="_run_tests_eb_darknet_rostest_test_object_detection.test" />
+      <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_py" />
+      <config projectName="Project" targetName="actionlib_generate_messages_cpp" />
+      <config projectName="Project" targetName="gmock_main" />
+      <config projectName="Project" targetName="_run_tests_eb_darknet_rostest" />
+      <config projectName="Project" targetName="gtest_main" />
+      <config projectName="Project" targetName="_run_tests_eb_darknet" />
+      <config projectName="Project" targetName="pose_estimator_gencpp" />
+      <config projectName="Project" targetName="pose_estimator_generate_messages" />
+      <config projectName="Project" targetName="sensor_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsActionResult" />
+      <config projectName="Project" targetName="pose_estimator_generate_messages_cpp" />
+      <config projectName="Project" targetName="pose_estimator_generate_messages_nodejs" />
+      <config projectName="Project" targetName="darknet_ros_msgs_eb_gennodejs" />
+      <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_nodejs" />
+      <config projectName="Project" targetName="sensor_msgs_generate_messages_nodejs" />
+      <config projectName="Project" targetName="std_msgs_generate_messages_cpp" />
+      <config projectName="Project" targetName="_darknet_ros_msgs_eb_generate_messages_check_deps_BoundingBox" />
+      <config projectName="Project" targetName="darknet_ros_msgs_eb_genlisp" />
+      <config projectName="Project" targetName="run_tests_eb_darknet_rostest" />
+      <config projectName="Project" targetName="gtest" />
+      <config projectName="Project" targetName="std_msgs_generate_messages_nodejs" />
+      <config projectName="Project" targetName="rosgraph_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="sensor_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="std_msgs_generate_messages_py" />
+      <config projectName="Project" targetName="darknet_ros_msgs_eb_generate_messages" />
+      <config projectName="Project" targetName="darknet_ros_msgs_eb_generate_messages_lisp" />
+      <config projectName="Project" targetName="roscpp_generate_messages_eus" />
+      <config projectName="Project" targetName="gmock" />
+      <config projectName="Project" targetName="doxygen" />
+      <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_lisp" />
+      <config projectName="Project" targetName="tests" />
+      <config projectName="Project" targetName="std_msgs_generate_messages_eus" />
+      <config projectName="Project" targetName="run_tests_eb_darknet_rostest_test_object_detection.test" />
+      <config projectName="Project" targetName="eb_darknet_lib" />
+      <config projectName="Project" targetName="_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsGoal" />
+      <config projectName="Project" targetName="testing" />
+      <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_cpp" />
+      <config projectName="Project" targetName="_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsFeedback" />
+      <config projectName="Project" targetName="run_tests" />
+      <config projectName="Project" targetName="roscpp_generate_messages_cpp" />
+      <config projectName="Project" targetName="compressed_image_transport_gencfg" />
+      <config projectName="Project" targetName="actionlib_msgs_generate_messages_nodejs" />
+      <config projectName="Project" targetName="darknet_ros_msgs_eb_generate_messages_eus" />
+      <config projectName="Project" targetName="pose_estimator_genlisp" />
+      <config projectName="Project" targetName="sensor_msgs_generate_messages_lisp" />
+      <config projectName="Project" targetName="pose_estimator_generate_messages_lisp" />
+      <config projectName="Project" targetName="pose_estimator_generate_messages_py" />
+      <config projectName="Project" targetName="dynamic_reconfigure_generate_messages_eus" />
+      <config projectName="Project" targetName="_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsResult" />
+      <config projectName="Project" targetName="roscpp_generate_messages_lisp" />
+      <config projectName="Project" targetName="darknet_ros_msgs_eb_generate_messages_cpp" />
+      <config projectName="Project" targetName="compressed_depth_image_transport_gencfg" />
+      <config projectName="Project" targetName="_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsAction" />
+      <config projectName="Project" targetName="eb_darknet_object_detection-test" />
+      <config projectName="Project" targetName="geometry_msgs_generate_messages_eus" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -97,25 +108,793 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df18ee9f-c264-432e-9a90-9e70e42448d7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/src/cloud_segmentation.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/src/cloud_segmentation.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/src/pose_estimator.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/src/pose_estimator.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/CMakeError.log" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/CMakeError.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/CMakeRuleHashes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../build/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/Project.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../build/Project.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/catkin_generated/installspace/.rosinstall" beforeDir="false" afterPath="$PROJECT_DIR$/../build/catkin_generated/installspace/.rosinstall" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/catkin_generated/installspace/setup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../build/catkin_generated/installspace/setup.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/gtest/CMakeFiles/gmock.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/gtest/CMakeFiles/gmock.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/gtest/CMakeFiles/gmock_main.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/gtest/CMakeFiles/gmock_main.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/gtest/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/gtest/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/gtest/gmock.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../build/gtest/gmock.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/gtest/gtest/CMakeFiles/gtest.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/gtest/gtest/CMakeFiles/gtest.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/gtest/gtest/CMakeFiles/gtest_main.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/gtest/gtest/CMakeFiles/gtest_main.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/gtest/gtest/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/gtest/gtest/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/gtest/gtest/gtest.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../build/gtest/gtest/gtest.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/src/cloud_segmentation.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/cloud_segmentation.dir/src/pose_estimator.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/kinect_network.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/kinect_network.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/kinect_network.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/kinect_network.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/kinect_network.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/kinect_network.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/kinect_network.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/kinect_network.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/kinect_network.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/kinect_network.dir/src/kinect_network.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/kinect_network.dir/src/pose_estimator.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/src/pose_estimator.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/src/pose_estimator.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/pose_estimator.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/src/pose_estimator.cpp.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/src/testing.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/CMakeFiles/testing.dir/src/testing.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/catkin_generated/installspace/pose_estimator.pc" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/catkin_generated/installspace/pose_estimator.pc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/catkin_generated/installspace/pose_estimatorConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/catkin_generated/installspace/pose_estimatorConfig.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/catkin_generated/package.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/catkin_generated/package.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/catkin_generated/pkg.develspace.context.pc.py" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/catkin_generated/pkg.develspace.context.pc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/catkin_generated/pkg.installspace.context.pc.py" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/catkin_generated/pkg.installspace.context.pc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/catkin_generated/stamps/pose_estimator/package.xml.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/catkin_generated/stamps/pose_estimator/package.xml.stamp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/pose_estimator/pose_estimator.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../build/pose_estimator/pose_estimator.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_lib.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_object_detection-test.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/eb_darknet_object_detection-test.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/catkin_generated/installspace/eb_darknet.pc" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/catkin_generated/installspace/eb_darknet.pc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/catkin_generated/installspace/eb_darknetConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/catkin_generated/installspace/eb_darknetConfig.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/catkin_generated/pkg.installspace.context.pc.py" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/catkin_generated/pkg.installspace.context.pc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/eb_darknet.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros/eb_darknet.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_eb_generate_messages_cpp.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_eb_generate_messages_cpp.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_eb_generate_messages_eus.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_eb_generate_messages_eus.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_eb_generate_messages_lisp.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_eb_generate_messages_lisp.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_eb_generate_messages_nodejs.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_eb_generate_messages_nodejs.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_eb_generate_messages_py.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_eb_generate_messages_py.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/catkin_generated/installspace/darknet_ros_msgs_eb.pc" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/catkin_generated/installspace/darknet_ros_msgs_eb.pc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/catkin_generated/installspace/darknet_ros_msgs_ebConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/catkin_generated/installspace/darknet_ros_msgs_ebConfig.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/catkin_generated/pkg.installspace.context.pc.py" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/catkin_generated/pkg.installspace.context.pc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/darknet_ros_msgs_eb.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../build/yolo_eb/darknet_ros/darknet_ros_msgs/darknet_ros_msgs_eb.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devel/lib/pkgconfig/pose_estimator.pc" beforeDir="false" afterPath="$PROJECT_DIR$/../devel/lib/pkgconfig/pose_estimator.pc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devel/lib/pose_estimator/Pose2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devel/lib/pose_estimator/Pose_angled03_05.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devel/lib/pose_estimator/Pose_deviation.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devel/lib/pose_estimator/Pose_rett_29_04.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devel/lib/pose_estimator/Pose_vertical.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devel/lib/pose_estimator/Vertical_quarternions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../devel/lib/pose_estimator/Vertical_quarternions.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../devel/lib/pose_estimator/cloud_segmentation" beforeDir="false" afterPath="$PROJECT_DIR$/../devel/lib/pose_estimator/cloud_segmentation" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devel/lib/pose_estimator/example.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devel/lib/pose_estimator/kinect_network" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../devel/lib/pose_estimator/testing" beforeDir="false" afterPath="$PROJECT_DIR$/../devel/lib/pose_estimator/testing" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devel/share/darknet_ros_msgs_eb/cmake/darknet_ros_msgs_ebConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../devel/share/darknet_ros_msgs_eb/cmake/darknet_ros_msgs_ebConfig.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devel/share/eb_darknet/cmake/eb_darknetConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../devel/share/eb_darknet/cmake/eb_darknetConfig.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devel/share/pose_estimator/cmake/pose_estimatorConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../devel/share/pose_estimator/cmake/pose_estimatorConfig.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pose_estimator/src/cloud_segmentation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/pose_estimator/src/cloud_segmentation.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pose_estimator/src/pose_estimator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/pose_estimator/src/pose_estimator.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pose_estimator/src/pose_estimator.h" beforeDir="false" afterPath="$PROJECT_DIR$/pose_estimator/src/pose_estimator.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CATKIN_IGNORE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.4/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.4/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.4/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.4/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.4/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.4/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.4/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.4/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.4/CompilerIdCXX/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CTestTestfile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Project.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/catkin/catkin_generated/version/package.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/catkin_generated/env_cached.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/catkin_generated/generate_cached_setup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/catkin_generated/installspace/.rosinstall" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/catkin_generated/installspace/_setup_util.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/catkin_generated/installspace/env.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/catkin_generated/installspace/setup.bash" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/catkin_generated/installspace/setup.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/catkin_generated/installspace/setup.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/catkin_generated/order_packages.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/catkin_generated/order_packages.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/catkin_generated/setup_cached.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/catkin_generated/stamps/Project/_setup_util.py.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/catkin_generated/stamps/Project/interrogate_setup_dot_py.py.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/catkin_generated/stamps/Project/order_packages.cmake.em.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/catkin_generated/stamps/Project/package.xml.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/cloud_segmentation.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/cloud_segmentation.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/cloud_segmentation.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/cloud_segmentation.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/cloud_segmentation.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/cloud_segmentation.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/cloud_segmentation.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/cloud_segmentation.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/cloud_segmentation.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/cloud_segmentation.dir/src/cloud_seg.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/compressed_depth_image_transport_gencfg.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/compressed_depth_image_transport_gencfg.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/compressed_depth_image_transport_gencfg.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/compressed_depth_image_transport_gencfg.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/compressed_image_transport_gencfg.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/compressed_image_transport_gencfg.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/compressed_image_transport_gencfg.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/compressed_image_transport_gencfg.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/dynamic_reconfigure_gencfg.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/dynamic_reconfigure_gencfg.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/dynamic_reconfigure_gencfg.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/geometry_msgs_generate_messages_eus.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/geometry_msgs_generate_messages_eus.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/geometry_msgs_generate_messages_eus.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/geometry_msgs_generate_messages_py.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/geometry_msgs_generate_messages_py.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/geometry_msgs_generate_messages_py.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/hdf5/cmake_hdf5_test.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/roscpp_generate_messages_cpp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/roscpp_generate_messages_cpp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/roscpp_generate_messages_cpp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/roscpp_generate_messages_eus.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/roscpp_generate_messages_eus.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/roscpp_generate_messages_eus.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/roscpp_generate_messages_eus.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/roscpp_generate_messages_lisp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/roscpp_generate_messages_lisp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/roscpp_generate_messages_lisp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/roscpp_generate_messages_nodejs.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/roscpp_generate_messages_nodejs.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/roscpp_generate_messages_nodejs.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/roscpp_generate_messages_py.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/roscpp_generate_messages_py.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/roscpp_generate_messages_py.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/roscpp_generate_messages_py.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/sensor_msgs_generate_messages_eus.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/sensor_msgs_generate_messages_eus.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/sensor_msgs_generate_messages_eus.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/sensor_msgs_generate_messages_py.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/sensor_msgs_generate_messages_py.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/sensor_msgs_generate_messages_py.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/std_msgs_generate_messages_cpp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/std_msgs_generate_messages_cpp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/std_msgs_generate_messages_cpp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/std_msgs_generate_messages_eus.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/std_msgs_generate_messages_eus.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/std_msgs_generate_messages_eus.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/std_msgs_generate_messages_lisp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/std_msgs_generate_messages_lisp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/std_msgs_generate_messages_lisp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/std_msgs_generate_messages_nodejs.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/std_msgs_generate_messages_nodejs.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/std_msgs_generate_messages_nodejs.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/std_msgs_generate_messages_py.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/std_msgs_generate_messages_py.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/std_msgs_generate_messages_py.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/std_msgs_generate_messages_py.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/yolo_node_generate_messages_cpp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/yolo_node_generate_messages_cpp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/yolo_node_generate_messages_cpp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/yolo_node_generate_messages_cpp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/yolo_node_generate_messages_eus.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/yolo_node_generate_messages_eus.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/yolo_node_generate_messages_eus.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/yolo_node_generate_messages_eus.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/yolo_node_generate_messages_lisp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/yolo_node_generate_messages_lisp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/yolo_node_generate_messages_lisp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/yolo_node_generate_messages_lisp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/yolo_node_generate_messages_nodejs.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/yolo_node_generate_messages_nodejs.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/yolo_node_generate_messages_nodejs.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/yolo_node_generate_messages_nodejs.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/yolo_node_generate_messages_py.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/yolo_node_generate_messages_py.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/yolo_node_generate_messages_py.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CMakeFiles/yolo_node_generate_messages_py.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/CTestTestfile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/catkin_generated/installspace/cloud_segmentation.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/catkin_generated/installspace/cloud_segmentationConfig-version.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/catkin_generated/installspace/cloud_segmentationConfig.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/catkin_generated/ordered_paths.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/catkin_generated/package.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/catkin_generated/pkg.develspace.context.pc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/catkin_generated/pkg.installspace.context.pc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/catkin_generated/stamps/cloud_segmentation/package.xml.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/catkin_generated/stamps/cloud_segmentation/pkg.pc.em.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/cloud_segmentation.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cloud_segmentation/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/_run_tests_darknet_ros.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/_run_tests_darknet_ros.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/_run_tests_darknet_ros.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/_run_tests_darknet_ros.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/_run_tests_darknet_ros_rostest.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/_run_tests_darknet_ros_rostest.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/_run_tests_darknet_ros_rostest.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/_run_tests_darknet_ros_rostest.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/_run_tests_darknet_ros_rostest_test_object_detection.test.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/_run_tests_darknet_ros_rostest_test_object_detection.test.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/_run_tests_darknet_ros_rostest_test_object_detection.test.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/_run_tests_darknet_ros_rostest_test_object_detection.test.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/actionlib_generate_messages_cpp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/actionlib_generate_messages_cpp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/actionlib_generate_messages_cpp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/actionlib_generate_messages_eus.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/actionlib_generate_messages_eus.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/actionlib_generate_messages_eus.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/actionlib_generate_messages_eus.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/actionlib_generate_messages_lisp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/actionlib_generate_messages_lisp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/actionlib_generate_messages_lisp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/actionlib_generate_messages_nodejs.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/actionlib_generate_messages_nodejs.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/actionlib_generate_messages_nodejs.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/actionlib_generate_messages_py.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/actionlib_generate_messages_py.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/actionlib_generate_messages_py.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/actionlib_generate_messages_py.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/clean_test_results_darknet_ros.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/clean_test_results_darknet_ros.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/clean_test_results_darknet_ros.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/clean_test_results_darknet_ros.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/darknet_ros.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/darknet_ros.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/darknet_ros.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/darknet_ros.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/darknet_ros.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/darknet_ros.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/darknet_ros.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/darknet_ros_lib.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/darknet_ros_lib.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/darknet_ros_lib.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/darknet_ros_lib.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/darknet_ros_lib.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/darknet_ros_lib.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/darknet_ros_lib.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/darknet_ros_object_detection-test.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/darknet_ros_object_detection-test.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/darknet_ros_object_detection-test.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/darknet_ros_object_detection-test.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/darknet_ros_object_detection-test.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/darknet_ros_object_detection-test.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/darknet_ros_object_detection-test.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/roscpp_generate_messages_cpp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/roscpp_generate_messages_cpp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/roscpp_generate_messages_cpp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/roscpp_generate_messages_eus.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/roscpp_generate_messages_eus.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/roscpp_generate_messages_eus.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/roscpp_generate_messages_eus.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/roscpp_generate_messages_lisp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/roscpp_generate_messages_lisp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/roscpp_generate_messages_lisp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/roscpp_generate_messages_nodejs.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/roscpp_generate_messages_nodejs.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/roscpp_generate_messages_nodejs.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/roscpp_generate_messages_py.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/roscpp_generate_messages_py.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/roscpp_generate_messages_py.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/roscpp_generate_messages_py.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/run_tests_darknet_ros.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/run_tests_darknet_ros.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/run_tests_darknet_ros.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/run_tests_darknet_ros.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/run_tests_darknet_ros_rostest.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/run_tests_darknet_ros_rostest.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/run_tests_darknet_ros_rostest.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/run_tests_darknet_ros_rostest.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/run_tests_darknet_ros_rostest_test_object_detection.test.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/run_tests_darknet_ros_rostest_test_object_detection.test.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/run_tests_darknet_ros_rostest_test_object_detection.test.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CMakeFiles/run_tests_darknet_ros_rostest_test_object_detection.test.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/CTestTestfile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/catkin_generated/installspace/darknet_ros.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/catkin_generated/installspace/darknet_rosConfig-version.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/catkin_generated/installspace/darknet_rosConfig.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/catkin_generated/ordered_paths.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/catkin_generated/package.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/catkin_generated/pkg.develspace.context.pc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/catkin_generated/pkg.installspace.context.pc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/catkin_generated/stamps/darknet_ros/package.xml.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/catkin_generated/stamps/darknet_ros/pkg.pc.em.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros/darknet_ros.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_catkin_empty_exported_target.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_catkin_empty_exported_target.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_generate_messages_check_deps_BoundingBox.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_generate_messages_check_deps_BoundingBox.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_generate_messages_check_deps_BoundingBox.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_generate_messages_check_deps_BoundingBox.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_generate_messages_check_deps_BoundingBoxes.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_generate_messages_check_deps_BoundingBoxes.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_generate_messages_check_deps_BoundingBoxes.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_generate_messages_check_deps_BoundingBoxes.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_generate_messages_check_deps_CheckForObjectsAction.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_generate_messages_check_deps_CheckForObjectsAction.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_generate_messages_check_deps_CheckForObjectsAction.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_generate_messages_check_deps_CheckForObjectsAction.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_generate_messages_check_deps_CheckForObjectsActionFeedback.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_generate_messages_check_deps_CheckForObjectsActionFeedback.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_generate_messages_check_deps_CheckForObjectsActionFeedback.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_generate_messages_check_deps_CheckForObjectsActionFeedback.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_generate_messages_check_deps_CheckForObjectsActionGoal.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_generate_messages_check_deps_CheckForObjectsActionGoal.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_generate_messages_check_deps_CheckForObjectsActionGoal.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_generate_messages_check_deps_CheckForObjectsActionGoal.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_generate_messages_check_deps_CheckForObjectsActionResult.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_generate_messages_check_deps_CheckForObjectsActionResult.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_generate_messages_check_deps_CheckForObjectsActionResult.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_generate_messages_check_deps_CheckForObjectsActionResult.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_generate_messages_check_deps_CheckForObjectsFeedback.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_generate_messages_check_deps_CheckForObjectsFeedback.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_generate_messages_check_deps_CheckForObjectsFeedback.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_generate_messages_check_deps_CheckForObjectsFeedback.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_generate_messages_check_deps_CheckForObjectsGoal.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_generate_messages_check_deps_CheckForObjectsGoal.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_generate_messages_check_deps_CheckForObjectsGoal.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_generate_messages_check_deps_CheckForObjectsGoal.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_generate_messages_check_deps_CheckForObjectsResult.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_generate_messages_check_deps_CheckForObjectsResult.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_generate_messages_check_deps_CheckForObjectsResult.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/_darknet_ros_msgs_generate_messages_check_deps_CheckForObjectsResult.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_py.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_py.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/actionlib_msgs_generate_messages_py.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_gencpp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_gencpp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_gencpp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_gencpp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_generate_messages.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_generate_messages.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_generate_messages.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_generate_messages.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_generate_messages_cpp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_generate_messages_cpp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_generate_messages_cpp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_generate_messages_cpp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_generate_messages_eus.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_generate_messages_eus.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_generate_messages_eus.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_generate_messages_eus.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_generate_messages_lisp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_generate_messages_lisp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_generate_messages_lisp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_generate_messages_lisp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_generate_messages_nodejs.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_generate_messages_nodejs.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_generate_messages_nodejs.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_generate_messages_nodejs.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_generate_messages_py.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_generate_messages_py.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_generate_messages_py.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_generate_messages_py.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_geneus.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_geneus.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_geneus.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_geneus.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_genlisp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_genlisp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_genlisp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_genlisp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_gennodejs.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_gennodejs.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_gennodejs.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_gennodejs.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_genpy.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_genpy.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_genpy.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/darknet_ros_msgs_genpy.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_eus.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_eus.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_eus.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/geometry_msgs_generate_messages_py.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_eus.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_eus.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_eus.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_py.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_py.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/sensor_msgs_generate_messages_py.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/CTestTestfile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/catkin_generated/darknet_ros_msgs-msg-extras.cmake.develspace.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/catkin_generated/darknet_ros_msgs-msg-extras.cmake.installspace.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/catkin_generated/installspace/darknet_ros_msgs-msg-extras.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/catkin_generated/installspace/darknet_ros_msgs-msg-paths.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/catkin_generated/installspace/darknet_ros_msgs.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/catkin_generated/installspace/darknet_ros_msgsConfig-version.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/catkin_generated/installspace/darknet_ros_msgsConfig.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/catkin_generated/ordered_paths.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/catkin_generated/package.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/catkin_generated/pkg.develspace.context.pc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/catkin_generated/pkg.installspace.context.pc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/catkin_generated/stamps/darknet_ros_msgs/CheckForObjects.action.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/catkin_generated/stamps/darknet_ros_msgs/package.xml.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/catkin_generated/stamps/darknet_ros_msgs/pkg-genmsg.cmake.em.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/catkin_generated/stamps/darknet_ros_msgs/pkg.pc.em.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/cmake/darknet_ros_msgs-genmsg-context.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/cmake/darknet_ros_msgs-genmsg.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs/darknet_ros_msgs.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs_eb/catkin_generated/darknet_ros_msgs_eb-msg-extras.cmake.develspace.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs_eb/catkin_generated/darknet_ros_msgs_eb-msg-extras.cmake.installspace.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs_eb/catkin_generated/installspace/darknet_ros_msgs_eb-msg-paths.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs_eb/catkin_generated/ordered_paths.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs_eb/catkin_generated/stamps/darknet_ros_msgs_eb/CheckForObjects.action.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs_eb/catkin_generated/stamps/darknet_ros_msgs_eb/pkg-genmsg.cmake.em.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs_eb/cmake/darknet_ros_msgs_eb-genmsg-context.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/darknet_ros/darknet_ros_msgs_eb/cmake/darknet_ros_msgs_eb-genmsg.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/.catkin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/.rosinstall" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/_setup_util.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/env.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/lib/cloud_segmentation/cloud_segmentation" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/lib/pkgconfig/cloud_segmentation.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/lib/pkgconfig/darknet_ros.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/lib/pkgconfig/darknet_ros_msgs.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/lib/pkgconfig/darknet_ros_msgs_eb.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/lib/python2.7/dist-packages/darknet_ros_msgs/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/lib/python2.7/dist-packages/darknet_ros_msgs_eb/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/setup.bash" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/setup.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/setup.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/share/cloud_segmentation/cmake/cloud_segmentationConfig-version.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/share/cloud_segmentation/cmake/cloud_segmentationConfig.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/share/darknet_ros/cmake/darknet_rosConfig-version.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/share/darknet_ros/cmake/darknet_rosConfig.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/share/darknet_ros_msgs/cmake/darknet_ros_msgs-msg-extras.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/share/darknet_ros_msgs/cmake/darknet_ros_msgs-msg-paths.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/share/darknet_ros_msgs/cmake/darknet_ros_msgsConfig-version.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/share/darknet_ros_msgs/cmake/darknet_ros_msgsConfig.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/share/darknet_ros_msgs/msg/CheckForObjectsAction.msg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/share/darknet_ros_msgs/msg/CheckForObjectsActionFeedback.msg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/share/darknet_ros_msgs/msg/CheckForObjectsActionGoal.msg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/share/darknet_ros_msgs/msg/CheckForObjectsActionResult.msg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/share/darknet_ros_msgs/msg/CheckForObjectsFeedback.msg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/share/darknet_ros_msgs/msg/CheckForObjectsGoal.msg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/share/darknet_ros_msgs/msg/CheckForObjectsResult.msg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/share/darknet_ros_msgs_eb/cmake/darknet_ros_msgs_eb-msg-extras.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/share/darknet_ros_msgs_eb/cmake/darknet_ros_msgs_eb-msg-paths.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/share/darknet_ros_msgs_eb/cmake/darknet_ros_msgs_ebConfig-version.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/share/darknet_ros_msgs_eb/cmake/darknet_ros_msgs_ebConfig.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/share/darknet_ros_msgs_eb/msg/CheckForObjectsAction.msg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/share/darknet_ros_msgs_eb/msg/CheckForObjectsActionFeedback.msg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/share/darknet_ros_msgs_eb/msg/CheckForObjectsActionGoal.msg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/share/darknet_ros_msgs_eb/msg/CheckForObjectsActionResult.msg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/share/darknet_ros_msgs_eb/msg/CheckForObjectsFeedback.msg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/share/darknet_ros_msgs_eb/msg/CheckForObjectsGoal.msg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/devel/share/darknet_ros_msgs_eb/msg/CheckForObjectsResult.msg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/CMakeFiles/gmock.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/CMakeFiles/gmock.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/CMakeFiles/gmock.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/CMakeFiles/gmock.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/CMakeFiles/gmock.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/CMakeFiles/gmock.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/CMakeFiles/gmock.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/CMakeFiles/gmock_main.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/CMakeFiles/gmock_main.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/CMakeFiles/gmock_main.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/CMakeFiles/gmock_main.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/CMakeFiles/gmock_main.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/CMakeFiles/gmock_main.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/CMakeFiles/gmock_main.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/CTestTestfile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/gmock.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/gtest/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/gtest/CMakeFiles/gtest.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/gtest/CMakeFiles/gtest.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/gtest/CMakeFiles/gtest.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/gtest/CMakeFiles/gtest.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/gtest/CMakeFiles/gtest.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/gtest/CMakeFiles/gtest.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/gtest/CMakeFiles/gtest.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/gtest/CMakeFiles/gtest_main.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/gtest/CMakeFiles/gtest_main.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/gtest/CMakeFiles/gtest_main.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/gtest/CMakeFiles/gtest_main.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/gtest/CMakeFiles/gtest_main.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/gtest/CMakeFiles/gtest_main.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/gtest/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/gtest/CTestTestfile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/gtest/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/gtest/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/gtest/gtest.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/yolo_eb/darknet_ros/darknet_ros/catkin_generated/installspace/darknet_ros.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/yolo_eb/darknet_ros/darknet_ros/catkin_generated/installspace/darknet_rosConfig-version.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/yolo_eb/darknet_ros/darknet_ros/catkin_generated/installspace/darknet_rosConfig.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/yolo_eb/darknet_ros/darknet_ros/catkin_generated/ordered_paths.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/yolo_eb/darknet_ros/darknet_ros/catkin_generated/package.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/yolo_eb/darknet_ros/darknet_ros/catkin_generated/pkg.develspace.context.pc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/yolo_eb/darknet_ros/darknet_ros/catkin_generated/pkg.installspace.context.pc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/yolo_eb/darknet_ros/darknet_ros/catkin_generated/stamps/darknet_ros/package.xml.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/yolo_eb/darknet_ros/darknet_ros/catkin_generated/stamps/darknet_ros/pkg.pc.em.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/yolo_eb/darknet_ros/darknet_ros_msgs_eb/catkin_generated/darknet_ros_msgs_eb-msg-extras.cmake.develspace.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/yolo_eb/darknet_ros/darknet_ros_msgs_eb/catkin_generated/darknet_ros_msgs_eb-msg-extras.cmake.installspace.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/yolo_eb/darknet_ros/darknet_ros_msgs_eb/catkin_generated/installspace/darknet_ros_msgs_eb-msg-extras.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/yolo_eb/darknet_ros/darknet_ros_msgs_eb/catkin_generated/installspace/darknet_ros_msgs_eb-msg-paths.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/yolo_eb/darknet_ros/darknet_ros_msgs_eb/catkin_generated/installspace/darknet_ros_msgs_eb.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/yolo_eb/darknet_ros/darknet_ros_msgs_eb/catkin_generated/installspace/darknet_ros_msgs_ebConfig-version.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/yolo_eb/darknet_ros/darknet_ros_msgs_eb/catkin_generated/installspace/darknet_ros_msgs_ebConfig.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/yolo_eb/darknet_ros/darknet_ros_msgs_eb/catkin_generated/ordered_paths.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/yolo_eb/darknet_ros/darknet_ros_msgs_eb/catkin_generated/package.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/yolo_eb/darknet_ros/darknet_ros_msgs_eb/catkin_generated/pkg.develspace.context.pc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/yolo_eb/darknet_ros/darknet_ros_msgs_eb/catkin_generated/pkg.installspace.context.pc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/yolo_eb/darknet_ros/darknet_ros_msgs_eb/catkin_generated/stamps/darknet_ros_msgs_eb/CheckForObjects.action.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/yolo_eb/darknet_ros/darknet_ros_msgs_eb/catkin_generated/stamps/darknet_ros_msgs_eb/package.xml.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/yolo_eb/darknet_ros/darknet_ros_msgs_eb/catkin_generated/stamps/darknet_ros_msgs_eb/pkg-genmsg.cmake.em.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/yolo_eb/darknet_ros/darknet_ros_msgs_eb/catkin_generated/stamps/darknet_ros_msgs_eb/pkg.pc.em.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/yolo_eb/darknet_ros/darknet_ros_msgs_eb/cmake/darknet_ros_msgs_eb-genmsg-context.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/yolo_eb/darknet_ros/darknet_ros_msgs_eb/cmake/darknet_ros_msgs_eb-genmsg.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pose_estimator/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/CATKIN_IGNORE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/CMakeFiles/3.13.4/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/CMakeFiles/3.13.4/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/CMakeFiles/3.13.4/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/CMakeFiles/3.13.4/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/CMakeFiles/3.13.4/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/CMakeFiles/3.13.4/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/CMakeFiles/3.13.4/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/CMakeFiles/3.13.4/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/CMakeFiles/3.13.4/CompilerIdCXX/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/CMakeFiles/CMakeError.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/CMakeFiles/feature_tests.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/CMakeFiles/feature_tests.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/catkin/catkin_generated/version/package.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/catkin_generated/env_cached.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/catkin_generated/generate_cached_setup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/catkin_generated/installspace/.rosinstall" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/catkin_generated/installspace/_setup_util.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/catkin_generated/installspace/env.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/catkin_generated/installspace/setup.bash" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/catkin_generated/installspace/setup.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/catkin_generated/installspace/setup.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/catkin_generated/setup_cached.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/catkin_generated/stamps/pose_estimator/_setup_util.py.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/catkin_generated/stamps/pose_estimator/interrogate_setup_dot_py.py.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/catkin_generated/stamps/pose_estimator/package.xml.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/devel/.catkin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/devel/.rosinstall" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/devel/_setup_util.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/devel/env.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/devel/setup.bash" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/devel/setup.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/cmake-build-debug/devel/setup.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/package.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pose_estimator/package.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/src/cloud_segmentation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/pose_estimator/src/cloud_processor.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/src/kinect_network.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/src/pose_estimator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/pose_estimator/src/seg_pose_estimator.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pose_estimator/src/pose_estimator.h" beforeDir="false" afterPath="$PROJECT_DIR$/pose_estimator/src/seg_pose_estimator.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pose_estimator/src/testing.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/pose_estimator/src/testing.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_ws/.catkin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_ws/devel./.catkin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_ws/devel/.catkin" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/yolo_eb" beforeDir="false" afterPath="$PROJECT_DIR$/yolo_eb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/config/yolov3-tiny-2c-ground.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/config/yolov3-tiny-2c-ground.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/config/yolov3-tiny-2c.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/config/yolov3-tiny-2c.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/launch/launch_all.launch" beforeDir="false" afterPath="$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/launch/launch_all.launch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/launch/local_launcher.launch" beforeDir="false" afterPath="$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/launch/local_launcher.launch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/launch/rosbag_record_js_topics.launch" beforeDir="false" afterPath="$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/launch/rosbag_record_js_topics.launch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/src/YoloObjectDetector.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/src/YoloObjectDetector.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/../build/" />
@@ -131,21 +910,32 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pose_estimator/src/cloud_segmentation.cpp">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pose_estimator/src/cloud_processor.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="1092" column="157" selection-start-line="1092" selection-start-column="157" selection-end-line="1092" selection-end-column="157" />
+            <state relative-caret-position="370">
+              <caret line="1104" column="69" selection-start-line="1104" selection-start-column="69" selection-end-line="1104" selection-end-column="69" />
               <folding>
                 <element signature="e#3#22#0" expanded="true" />
-                <element signature="e#3950#14491#0" />
-                <element signature="e#14497#15633#0" />
-                <element signature="e#28483#34018#0" />
-                <element signature="e#34024#34921#0" />
-                <element signature="e#34927#35281#0" />
-                <element signature="e#35287#35544#0" />
-                <element signature="e#35550#36578#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pose_estimator/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="172" column="24" lean-forward="true" selection-start-line="172" selection-start-column="24" selection-end-line="172" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pose_estimator/msg/pipe_pose.msg">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -154,26 +944,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>nest</find>
-      <find>cloud_normals</find>
-      <find>tree</find>
-      <find>getseg</find>
-      <find>model_ass</find>
-      <find>segmented_pipe</find>
-      <find>aligned_box</find>
-      <find>aligned_box_normal</find>
-      <find>cloud_normal_box</find>
-      <find>cloud_xyz</find>
-      <find>cloud_normal</find>
-      <find>enable</find>
-      <find>box_prealigned_tfmat</find>
-      <find>box_transformation</find>
-      <find>pin-end pose</find>
-      <find>start_time</find>
-      <find>iterator</find>
-      <find>Time</find>
-      <find>ColorHandlerT</find>
-      <find>concatenated</find>
       <find>concatenated_box_filtered</find>
       <find>pose_estimation</find>
       <find>pose</find>
@@ -184,6 +954,26 @@
       <find>quaternion</find>
       <find>vertical</find>
       <find>poseData</find>
+      <find>save</find>
+      <find>qua</find>
+      <find>quaternio</find>
+      <find>master</find>
+      <find>quaternions</find>
+      <find>setback</find>
+      <find>M_PI</find>
+      <find>quater</find>
+      <find>setBac</find>
+      <find>backgrou</find>
+      <find>.tx</find>
+      <find>add_mess</find>
+      <find>dar</find>
+      <find>pose_est</find>
+      <find>Pose_es</find>
+      <find>PoseEstimat</find>
+      <find>PoseEstimator</find>
+      <find>pub</find>
+      <find>pub =</find>
+      <find>pub_pin</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -211,26 +1001,28 @@
         <option value="$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/launch/yolo_v3_tiny_gone.launch" />
         <option value="$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/launch/Jenas_launcher.launch" />
         <option value="$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/launch/darknet_ros.launch" />
-        <option value="$PROJECT_DIR$/pose_estimator/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/launch/Jenas_ground.launch" />
-        <option value="$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/launch/local_launcher.launch" />
-        <option value="$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/launch/launch_all.launch" />
         <option value="$PROJECT_DIR$/pose_estimator/src/kinect_network.cpp" />
         <option value="$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/src/YoloObjectDetector.cpp" />
         <option value="$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/launch/rosbag_record_js_topics.launch" />
         <option value="$PROJECT_DIR$/pose_estimator/src/testing.cpp" />
+        <option value="$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/launch/launch_all.launch" />
+        <option value="$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/launch/local_launcher.launch" />
+        <option value="$PROJECT_DIR$/pose_estimator/package.xml" />
+        <option value="$PROJECT_DIR$/pose_estimator/msg/pipe_pose.msg" />
         <option value="$PROJECT_DIR$/pose_estimator/src/pose_estimator.h" />
         <option value="$PROJECT_DIR$/pose_estimator/src/pose_estimator.cpp" />
         <option value="$PROJECT_DIR$/pose_estimator/src/cloud_segmentation.cpp" />
+        <option value="$PROJECT_DIR$/pose_estimator/CMakeLists.txt" />
       </list>
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="64" />
-    <option name="y" value="-11" />
-    <option name="width" value="1857" />
-    <option name="height" value="1092" />
+    <option name="x" value="65" />
+    <option name="y" value="-4" />
+    <option name="width" value="1855" />
+    <option name="height" value="1084" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -238,6 +1030,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -261,24 +1054,55 @@
               <item name="src" type="47feb1d3:ProjectViewModuleNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pose_estimator" type="462c0819:PsiDirectoryNode" />
+              <item name="msg" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pose_estimator" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="src" type="b2602c69:ProjectViewProjectNode" />
               <item name="src" type="47feb1d3:ProjectViewModuleNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test_ws" type="462c0819:PsiDirectoryNode" />
+              <item name="yolo_eb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="yolo_eb" type="462c0819:PsiDirectoryNode" />
+              <item name="darknet_ros" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="yolo_eb" type="462c0819:PsiDirectoryNode" />
+              <item name="darknet_ros" type="462c0819:PsiDirectoryNode" />
+              <item name="darknet_ros" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+            </path>
+            <path>
+              <item name="src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+              <item name="Scratches" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/CMakeLists.txt" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -302,7 +1126,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="CMake Application.cloud_segmentation">
+  <component name="RunManager" selected="CMake Application.cloud_processor">
     <configuration name="_catkin_empty_exported_target" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_catkin_empty_exported_target" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -349,6 +1173,11 @@
       </method>
     </configuration>
     <configuration name="_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsResult" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsResult" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="_pose_estimator_generate_messages_check_deps_pipe_pose" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_pose_estimator_generate_messages_check_deps_pipe_pose" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -428,7 +1257,7 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="cloud_segmentation" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="cloud_segmentation" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="cloud_segmentation">
+    <configuration name="cloud_processor" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="cloud_processor" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="cloud_processor">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -598,7 +1427,57 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="kinect_network" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="kinect_network" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="kinect_network">
+    <configuration name="pose_estimator_gencpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="pose_estimator_gencpp" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="pose_estimator_generate_messages" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="pose_estimator_generate_messages" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="pose_estimator_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="pose_estimator_generate_messages_cpp" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="pose_estimator_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="pose_estimator_generate_messages_eus" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="pose_estimator_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="pose_estimator_generate_messages_lisp" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="pose_estimator_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="pose_estimator_generate_messages_nodejs" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="pose_estimator_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="pose_estimator_generate_messages_py" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="pose_estimator_geneus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="pose_estimator_geneus" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="pose_estimator_genlisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="pose_estimator_genlisp" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="pose_estimator_gennodejs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="pose_estimator_gennodejs" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="pose_estimator_genpy" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="pose_estimator_genpy" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -744,6 +1623,8 @@
       <item itemvalue="CMake Application._darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsFeedback" />
       <item itemvalue="CMake Application._darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsGoal" />
       <item itemvalue="CMake Application._darknet_ros_msgs_eb_generate_messages_check_deps_CheckForObjectsResult" />
+      <item itemvalue="CMake Application._pose_estimator_generate_messages_check_deps_pipe_pose" />
+      <item itemvalue="CMake Application.cloud_processor" />
       <item itemvalue="CMake Application._run_tests_eb_darknet" />
       <item itemvalue="CMake Application._run_tests_eb_darknet_rostest" />
       <item itemvalue="CMake Application._run_tests_eb_darknet_rostest_test_object_detection.test" />
@@ -759,7 +1640,6 @@
       <item itemvalue="CMake Application.actionlib_msgs_generate_messages_py" />
       <item itemvalue="CMake Application.clean_test_results" />
       <item itemvalue="CMake Application.clean_test_results_eb_darknet" />
-      <item itemvalue="CMake Application.cloud_segmentation" />
       <item itemvalue="CMake Application.compressed_depth_image_transport_gencfg" />
       <item itemvalue="CMake Application.compressed_image_transport_gencfg" />
       <item itemvalue="CMake Application.darknet_ros_msgs_eb_gencpp" />
@@ -793,7 +1673,17 @@
       <item itemvalue="CMake Application.gmock_main" />
       <item itemvalue="CMake Application.gtest" />
       <item itemvalue="CMake Application.gtest_main" />
-      <item itemvalue="CMake Application.kinect_network" />
+      <item itemvalue="CMake Application.pose_estimator_gencpp" />
+      <item itemvalue="CMake Application.pose_estimator_generate_messages" />
+      <item itemvalue="CMake Application.pose_estimator_generate_messages_cpp" />
+      <item itemvalue="CMake Application.pose_estimator_generate_messages_eus" />
+      <item itemvalue="CMake Application.pose_estimator_generate_messages_lisp" />
+      <item itemvalue="CMake Application.pose_estimator_generate_messages_nodejs" />
+      <item itemvalue="CMake Application.pose_estimator_generate_messages_py" />
+      <item itemvalue="CMake Application.pose_estimator_geneus" />
+      <item itemvalue="CMake Application.pose_estimator_genlisp" />
+      <item itemvalue="CMake Application.pose_estimator_gennodejs" />
+      <item itemvalue="CMake Application.pose_estimator_genpy" />
       <item itemvalue="CMake Application.roscpp_generate_messages_cpp" />
       <item itemvalue="CMake Application.roscpp_generate_messages_eus" />
       <item itemvalue="CMake Application.roscpp_generate_messages_lisp" />
@@ -942,32 +1832,60 @@
       <workItem from="1557774718925" duration="838000" />
       <workItem from="1557775805644" duration="841000" />
       <workItem from="1557779785881" duration="2885000" />
+      <workItem from="1557835605861" duration="131000" />
+      <workItem from="1557835960417" duration="1657000" />
+      <workItem from="1557844520303" duration="2869000" />
+      <workItem from="1557904899394" duration="388000" />
+      <workItem from="1557915860403" duration="1221000" />
+      <workItem from="1557919809542" duration="1302000" />
+      <workItem from="1557932978126" duration="304000" />
+      <workItem from="1557947333356" duration="775000" />
+      <workItem from="1558106021812" duration="1888000" />
+      <workItem from="1558111576780" duration="3096000" />
+      <workItem from="1558118605116" duration="4887000" />
+      <workItem from="1558167731318" duration="3866000" />
+      <workItem from="1558182310522" duration="432000" />
+      <workItem from="1558267581417" duration="3131000" />
+      <workItem from="1558350404251" duration="6205000" />
+      <workItem from="1558428183406" duration="1461000" />
+      <workItem from="1558440539865" duration="616000" />
+      <workItem from="1558517247525" duration="368000" />
+      <workItem from="1558517683648" duration="1765000" />
+      <workItem from="1558523761495" duration="1669000" />
+      <workItem from="1558525704508" duration="1155000" />
+      <workItem from="1558610601369" duration="964000" />
+      <workItem from="1558612511258" duration="445000" />
+      <workItem from="1558613151426" duration="719000" />
+      <workItem from="1558614376135" duration="528000" />
+      <workItem from="1558615483760" duration="404000" />
+      <workItem from="1558616184006" duration="1657000" />
+      <workItem from="1558618064700" duration="270000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="365510000" />
+    <option name="totallyTimeSpent" value="409683000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13377556" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18186843" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32925585" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25891948" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24159022" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.29765546" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.3119266" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.31906217" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="CMake" order="12" weight="0.16921508" />
+      <window_info anchor="bottom" id="CMake" order="12" weight="0.12742099" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1021,8 +1939,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/darknet_ros/darknet_ros/src/cloud_segmentation" />
-    <entry file="file://$PROJECT_DIR$/darknet_ros/darknet_ros/src/cloud_segmentation.cpp" />
     <entry file="file://$PROJECT_DIR$/darknet_ros/darknet_ros/include/darknet_ros/image_interface.h" />
     <entry file="file://$PROJECT_DIR$/darknet_ros/darknet_ros/include/darknet_ros/YoloObjectDetector.hpp" />
     <entry file="file://$PROJECT_DIR$/../../kinect_ws/src/kinect_node/src/kinect_network.cpp" />
@@ -1050,13 +1966,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pose_estimator/package.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="599">
-          <caret line="59" column="45" selection-start-line="59" selection-start-column="45" selection-end-line="59" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -1146,13 +2055,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pose_estimator/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2835">
-          <caret line="189" column="9" selection-start-line="189" selection-start-column="9" selection-end-line="189" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/include/pcl-1.9/pcl/registration/impl/sample_consensus_prerejective.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
@@ -1174,16 +2076,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pose_estimator/src/kinect_network.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="293" lean-forward="true" selection-start-line="293" selection-end-line="293" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/pose_estimator/src/kinect_network.cpp" />
     <entry file="file://$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/src/YoloObjectDetector.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="990">
@@ -1205,24 +2098,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/launch/launch_all.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="104" selection-start-line="21" selection-start-column="104" selection-end-line="21" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="744" selection-start-line="744" selection-end-line="744" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/launch/local_launcher.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="99" selection-start-line="21" selection-start-column="99" selection-end-line="21" selection-end-column="99" />
         </state>
       </provider>
     </entry>
@@ -1257,37 +2136,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pose_estimator/src/pose_estimator.h">
+    <entry file="file://$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/launch/local_launcher.launch">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="102" column="80" selection-start-line="102" selection-start-column="80" selection-end-line="102" selection-end-column="80" />
-          <folding>
-            <element signature="e#111#128#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pose_estimator/src/pose_estimator.cpp">
+    <entry file="file://$PROJECT_DIR$/yolo_eb/darknet_ros/darknet_ros/launch/launch_all.launch">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+        <state relative-caret-position="225">
+          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pose_estimator/src/cloud_segmentation.cpp">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pose_estimator/pose_est_msgs/pipe_pose.msg" />
+    <entry file="file:///opt/ros/kinetic/share/genmsg/cmake/genmsg-extras.cmake">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="1092" column="157" selection-start-line="1092" selection-start-column="157" selection-end-line="1092" selection-end-column="157" />
+        <state relative-caret-position="1395">
+          <caret line="93" selection-start-line="93" selection-end-line="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pose_estimator/src/seg_pose_estimator.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="56" column="1" selection-start-line="56" selection-start-column="1" selection-end-line="56" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pose_estimator/package.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="773">
+          <caret line="68" column="22" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pose_estimator/src/seg_pose_estimator.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pose_estimator/src/cloud_processor.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="1104" column="69" selection-start-line="1104" selection-start-column="69" selection-end-line="1104" selection-end-column="69" />
           <folding>
             <element signature="e#3#22#0" expanded="true" />
-            <element signature="e#3950#14491#0" />
-            <element signature="e#14497#15633#0" />
-            <element signature="e#28483#34018#0" />
-            <element signature="e#34024#34921#0" />
-            <element signature="e#34927#35281#0" />
-            <element signature="e#35287#35544#0" />
-            <element signature="e#35550#36578#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pose_estimator/msg/pipe_pose.msg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pose_estimator/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="172" column="24" lean-forward="true" selection-start-line="172" selection-start-column="24" selection-end-line="172" selection-end-column="24" />
         </state>
       </provider>
     </entry>
